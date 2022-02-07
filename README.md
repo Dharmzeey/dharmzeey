@@ -1,2 +1,2 @@
-# dharmzeey.github.io
+# dharmzeey
 my portfolio
