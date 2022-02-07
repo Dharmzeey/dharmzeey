@@ -1,0 +1,36 @@
+:root {
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: 3rem;
+}
+
+footer div {
+  margin: 0rem 2rem;
+}
+
+.social a {
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--light-color);
+  padding: 0.5rem
+}
+
+@media screen and (max-width: 500px) {
+  footer {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+}
