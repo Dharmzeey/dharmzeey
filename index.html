@@ -1,80 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <!-- <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/utility.css"> -->
+  <link rel="stylesheet" href="dist/output.css">
   <title>Dharmzeey</title>
 </head>
-<body>
-  <header>
 
+<body>
+  <header class="flex justify-between">
+    <h3 class="text-3xl text-center">
+      <a href="#">DHARMZEEY WORLD</a>
+    </h3>
+    <nav class="text-2xl">
+      <ul class="flex justify-between">
+        <li class="mx-8">
+          <a href="">Home</a>
+        </li>
+        <li class="mx-8">
+          <a href="./html/about.html">About</a>
+        </li>
+        <li class="mx-8">
+          <a href="./html/projects.html">Projects</a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
-  <h1>DHARMZEEY WORLD</h1>
-  <h2>A self Taught Programmer with quality knowledge whom learnt all from free resources.</h2>
 
-  <a target="myframe" href="./html/about.html">About Me</a>
-  <iframe name="myframe" src="" frameborder="2"></iframe>
+  <div class="container mx-auto grid gap-5 grid-cols-2 mt-24 p-24">
+    <div class="mr-10">
+      <img src="./img/Dharmzeey.jpeg" alt="Dharmzeey" class="shadow-2xl shadow-black">
+    </div>
+    <div class="flex justify-center flex-col align-middle">
+      <div>
+        <h2 class="text-3xl">A self Taught Programmer with quality knowledge whom learnt all from free resources.</h2>
 
-  <div id="intro">
-    <p>
-      Hope you have a nice stay here on my page. <br>
-      Feel free to check each sections for more information <br>
-      Your feedback, comments and also engagement is also highly welcomed and appreciated.
-    </p>
+      <!-- <a target="myframe" href="./html/about.html">About Me</a>
+      <iframe name="myframe" src="" frameborder="2"></iframe> -->
   
-    <p>
-      <p>FrontEnd</p>
-      I am very good at HTML CSS and JS but with no knowledge of any frontend framework or library
-    </p>
-    <p>I have tonns of work which I engaged myself during my free time using just FrontEnd Technologies. I will link the soon</p>
-  
-    <p>Also I took python as my favorite programming language</p>
+      <div id="intro">
+        <p class="text-2xl">
+          Hope you have a nice stay here on my page. <br>
+          Feel free to check each sections for more information. <br>
+          Your feedback, comments and also engagement is also highly welcomed and appreciated. <br>
+          I hope to meet new people.
+        </p>
+      </div>
+      </div>
+    </div>
   </div>
 
-  <div id="python">
-    <h2>PYTHON</h2>
-    <P>I have worked with few frameworks:</P>
-    <ul>
   
-      Data
-      <li>Openpyxl</li>
-      Openpyxl was used when I was working with Django, I had to read data from excel file and upload it to my models. Also when I worked wih Selenium, the data I scrapped was written to an excel file
-      <br>
-      <br>
-  
-      Scraping and Automation
-      <li>Beautiful Soup</li>
-      I used beautiful to scrape information from a website
-  
-      <li>Selenium</li>
-      <p style="display: inline;">Using Selenium I developed a web scraping bot that fetches user data <span>of students of my school </span> <span>I was able to accomplish this by taking the matric numbers of students and writing it twice.This was possible because our portal is wack, most students use their matric number as username and password. Also when we input our details twice and it is incorrect, it will reset to matric number as username and password after 24h hours so I exploited that opportunity and ran a script that feeds the input with matric number twice, if successful, it will go to the personal details and fetch all the details. But if not, it will log the matric number that was reseted onto and excel file, which I can then rerun the script after 24 hours. I also took care of other errors like old password and student whose profile are not up-to-date</span>
-        <p style="display: inline;">I can not link the source code because of securty reasons</p>
-      </p>
-  
-      <br>
-  
-      Web Development
-      <li>Flask</li>
-      When I was trying to build a bot and I need to receive data from a webhook and serve the information to a site, and I needed a small web framework to do that. 
-      <li>Django</li>
-      I got into django because of my knowledge in frontend and I wanted to compliment it. 
-      I build a web application for my department. It is a plant documentation Web App whereby user can search for trees in University of Ibadan using different means. Also authorized users can upload trees to the database. You can check it <a href="">HERE</a>
-    </ul>
-  </div>
-
-  <div id="leraning">
-    <h2>LEARNING</h2>
-    <p>In expanding my knowledge, I have taken Flutter as my next technology to learn</p>
-    <p>Also, I plan to learn more of the blockchain using solidity and python</p>
-    <p>As a python person, I am also interested in AI and ML</p>
-  </div>
-
-
-  <p>I hope to meet new people </p>
 
   <!-- <p>Born in the early 21st Century</p>
   <p>A tech lover and also passionate for Innovatuon and technology advancement</p> -->
@@ -95,4 +78,5 @@
 
   </footer>
 </body>
+
 </html>
