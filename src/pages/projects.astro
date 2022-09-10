@@ -1,0 +1,69 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+
+const completedProjects = await Astro.glob('../updates/completed/*.md');
+const ongoingProjects = await Astro.glob('../updates/ongoing/*.md');
+// console.log(completedProjects)
+// console.log(JSON.stringify(completedProjects))
+
+---
+
+<Layout title="Dharmzeey Projects">
+  <div>These are the two main project of my projects</div>
+  <section>
+    <div>
+      {completedProjects.map(project => (
+        <Card>
+          <h2>{project.frontmatter.title}</h2>
+          <div>{project.frontmatter.intro}</div>
+          <img src={`${project.frontmatter.image}`} alt="">
+
+          <a class="btn" href="">View</a>
+        </Card>
+      ))}
+    </div>
+  </section>
+
+
+  <section>
+    Here are also few of my ongoing projects
+    <div>{ongoingProjects.map(project => (
+      <Card>
+        <div>{project.frontmatter.title}</div>
+        </Card>
+    ))}</div>
+  </section>
+
+  <section>
+    <h2 class="text-center">Selenium Projects</h2>
+    <Card>
+      I wrote a web scrapping scripts which helps me get some user data and writes them in a txt and excel file, You can check out the source code here 
+      <a href="">Here</a>
+    </Card>
+
+    <Card>
+      Also, I wrote an automation script which helps me log in some username and password and performs daily task and sign in. You can also check the source code  
+      <a href="">Here</a>
+    </Card>
+  </section>
+
+  <div>
+    Hope you like them.. If you do not mind kindly give a feedback
+  </div>
+
+  <section>
+    You can also contact me via my social media 
+    <ul>
+      <li><a href="mailto:olanrewajuofficiall@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+
+      <li><a href="https://github.com/dharmzeey"><i class="fa-brands fa-github"></i></a></li>
+
+      <li><a href="https://www.twitter.com/dharmzeey"><i class="fa-brands fa-twitter"></i></a></li>
+
+      <li><a href="https://www.instagram.com/dharmzeey"><i class="fa-brands fa-instagram"></i></a></li>
+
+      <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+    </ul>
+  </section>
+</Layout>
