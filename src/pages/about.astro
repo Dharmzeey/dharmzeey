@@ -1,20 +1,156 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Dharmzeey About">
-  <section>
-    <div>
-      I am Olanrewaju Adam also go by the alais Dharmzeey, I love that nick 
-    </div>
-    <div>
-      A self taught full stack developer with few years experience.
-      <br>
-      I have not worked with a big tech company 😚 before but I have few projects I have gotten my hands wet with. I hope you will like them.
-      <br>
-      Stick around and enjoy
-    </div>
+  <div class="p-2">
+    <h1 class="heading">
+      <span class="m-10">Adam Olanrewaju</span>
+      <div class="h-60 w-full bg-[url('/images/about.jpg')] bg-cover bg-center mb-10"></div>
+      <!-- <img class="h-60 mt-4 w-full" src="/images/about.jpg" alt="" /> -->
+    </h1>
+    <section>
+      <div>
+        I am Adam Olanrewaju also go by the alais <strong>Dharmzeey</strong>, I love that nick
+      </div>
+      <Card>
+        <div>
+          A general intro: I am a guy who loves science and Tech <span id="intro" class="cursor-pointer hover:opacity-40 font-black uppercase"
+            >Read More <i class="fa-solid fa-angles-down"></i>
+          </span>
+        </div>
+        <p class="hidden" id="personal">
+          with how it solves a lot of
+          problems and create innovations and inventions and has a strong passion
+          for it which is why I am into software development.
+          <br />
+          I also love space and space adventures, hopefully I will be in the International
+          Space Station one day and also live long enough to witness life on the Red
+          Planet .🙂
+          <br />
+          I am a lover of cats and I admire them so much, even I do not have one and
+          also I love nature and always trying my best to preserve it.
+          <br />
+          Finally I love to analyse the Financial Market 💹.
+        </p>
+      </Card>
+      <div class="-mt-12">
+        A self taught full stack developer with few years experience.
+        <br />
+        I have not worked with a big tech company 😚 before but I have few projects
+        I have gotten my hands wet with. I hope you will like them.
+        <br />
+        Stick around and enjoy
+      </div>
+    </section>
 
-    
-  </section>
+    <section class="p-4">
+      <div>Below are my Web Development stacks</div>
+      <ul>
+        <li>HTML</li>
+        <li>Vanilla CSS</li>
+        <li>Tailwind CSS</li>
+        <li>Vanilla JS</li>
+        <li>Jquery</li>
+        <li>Astro</li>
+        <li>Django</li>
+      </ul>
+      <div>My Python stacks</div>
+      <ul>
+        <li>Selenium</li>
+        <li>Openpyxl</li>
+        <li>Beautiful Soup</li>
+      </ul>
+    </section>
+
+    <section>
+      <div id="more-projects">
+        Check out some of my projects <a href="/projects">Here </a>
+        <br />
+        Hope you like them?. If you do not mind kindly give a feedback
+      </div>
+    </section>
+
+    <section class="mb-24">
+      You can also contact me via my social media
+      <ul class="list-none flex gap-4">
+        <li>
+          <a href="mailto:olanrewajuofficiall@gmail.com"
+            ><i class="fa-solid fa-envelope"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://github.com/dharmzeey"
+            ><i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.twitter.com/dharmzeey"
+            ><i class="fa-brands fa-twitter"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.instagram.com/dharmzeey"
+            ><i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+
+        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+
+        <li>
+          <a href="">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <Footer />
 </Layout>
+
+<style is:global>
+  #nav-link {
+    @apply list-none;
+  }
+
+  #nav-link a,
+  #nav a {
+    @apply text-white no-underline;
+  }
+
+  #more-projects a {
+    @apply text-blue-800 font-bold cursor-pointer;
+  }
+
+  section {
+    @apply leading-10 tracking-widest;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  i {
+    @apply text-xl;
+  }
+
+  .scale-up {
+    @apply scale-y-0 transition ease-in-out delay-150 transform;
+  }
+</style>
+
+<script>
+  const readMore = document.getElementById("intro");
+  const details = document.getElementById("personal");
+
+  readMore.addEventListener("click", () => {
+    // details.classList.toggle("scale-up");
+    details.classList.toggle("hidden");
+  })
+</script>

@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+
+// import "../styles/utils.css"
+
+export async function getStaticPaths() {
+  const completedProjects = await Astro.glob('../updates/completed/*.md');
+  const ongoingProjects = await Astro.glob("../updates/ongoing/*.md");
+
+  const projects = completedProjects.concat(ongoingProjects)
+
+  return projects.map(project => (
+  {
+    params: {
+      slug: project.frontmatter.slug
+    },
+    props:{
+      project
+    }
+  }
+  ));
+}
+
+const {Content, frontmatter } = Astro.props.project
+---
+
+
+<Layout title={frontmatter.title}>
+  <section>
+    <Card>
+      <h2 class="mb-4 heading">
+        {frontmatter.title}
+      </h2>
+        <div>
+          <Content />
+        </div>
+    </Card>
+  </section>
+</Layout>
+
+<style is:global>
+  #nav-link {
+    @apply list-none;
+  }
+
+  #nav-link a, #nav a, .list-none a {
+    @apply text-white no-underline;;
+  }
+  a {
+    @apply text-blue-800 font-bold cursor-pointer;
+  }
+
+  section{
+    @apply leading-10 tracking-widest;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  h1 {
+    @apply text-3xl mt-6;
+  }
+
+  h2 {
+    @apply text-2xl mb-6 mt-2;
+  }
+
+</style>
