@@ -7,17 +7,13 @@ image: /images/abuadfarm/Admin-home.png
 ---
 
 
-<<<<<<< HEAD
+
 Website: [Visit Web Page](https://abuadfarm.herokuapp.com)
-- **I removed all pictures and painted the names because of some reasons**
-=======
-url: [Visit Web Page](https://uitrees.herokuapp.com)
 
+**I removed all pictures and painted the names because of some reasons**
 
-Details: 
 # ABUAD Farm
 
->>>>>>> 0d0cd7007c04f0dbdabb76b64ae70c733fe4ddf6
 
 I designed this web Application on the foundation of a Manufacturing Company.
 It is a Django Project, which I also used djangorestframework for some serialization.
