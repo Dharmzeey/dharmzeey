@@ -25,7 +25,7 @@ Started on 07-09-2022 using [Astro](https://astro.build)
 
 Almost at Completion as at 12-09-2022
 
-Completed 16-09-2022
+Completed 16-09-2022 using [Astro](https://astro.build)
 
 STAY TUNED 😄
 
