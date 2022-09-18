@@ -21,7 +21,7 @@ I also plan to learn other frameworks like
 
 Well still under construction as at 04-04-2022
 
-Started on 07-09-2022 using [Astro](https://astro.build)
+Started rebuilding on 07-09-2022 using [Astro](https://astro.build)
 
 Almost at Completion as at 12-09-2022
 
