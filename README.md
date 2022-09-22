@@ -26,9 +26,12 @@ Started rebuilding on 07-09-2022 using [Astro](https://astro.build)
 Almost at Completion as at 12-09-2022
 
 Completed 16-09-2022 using [Astro](https://astro.build)
+
+### Built with
 + Astro
 + Vanilla CSS
 + Tailwind CSS
++ Vanilla JS
 
 ## View Here [Dharmzeey](https://dharmzeey.netlify.app/)
 
