@@ -4,8 +4,6 @@ import Card from "../components/Card.astro";
 
 const completedProjects = await Astro.glob("../updates/completed/*.md");
 const ongoingProjects = await Astro.glob("../updates/ongoing/*.md");
-// console.log(completedProjects)
-// console.log(JSON.stringify(completedProjects))
 ---
 
 <Layout title="Dharmzeey Projects">
@@ -21,7 +19,7 @@ const ongoingProjects = await Astro.glob("../updates/ongoing/*.md");
             <div class="mb-6 tracking-wider">{project.frontmatter.intro}</div>
             <div class="px-4 project-img">
               <img
-                class="contain" src={`${project.frontmatter.image}`} alt=""
+                class="contain" src={`${project.frontmatter.image}`} alt={`${project.frontmatter.title}`}
               />
             </div>
 
