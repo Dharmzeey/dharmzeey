@@ -2,6 +2,7 @@
 title: My Blog
 slug: my-blog
 intro: Just a site where I update my daily activities or events I take part
+image: /images/blog/idea.jpg
 ---
 Source Code: [GitHub](https://github.com/Dharmzeey/blog)
 
