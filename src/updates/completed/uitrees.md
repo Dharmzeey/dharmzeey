@@ -29,8 +29,18 @@ It works in a way that when a tree is located,
 When a user (anyone) wants to search for tree name, they can general search or specify search
 ![general search](/images/uitrees/general-search.png)
 ## **General Search**
+The general search returns any tree name that contains the search keyword, either from the scientific name, common name or local name
 ![specify search](/images/uitrees/specify-search.png)
 ## **Specify Search**
+The specific search can either be 
+- Common Name
+- Local Name
+- Scientific Name
+- Location Name
+- Coordinates (This field is has its input element attribute editable = false, so it will be auto filled by the javascript geolocation)
+
+These will return result strictly based on the search restriction
+
 - They get results depending on what they search
 - If they do not see the result, they can request for the tree name of that location and the authorized individual recieve the request and do the necessary
 ![Tree Request](/images/uitrees/request-tree.png)

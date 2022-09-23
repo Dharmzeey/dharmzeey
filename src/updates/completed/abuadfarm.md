@@ -10,7 +10,7 @@ image: /images/abuadfarm/Admin-home.png
 
 Website: [Visit Web Page](https://abuadfarm.herokuapp.com)
 
-**I removed all pictures and painted the names because of some reasons**
+**I removed all pictures(and replaced it with same dummy images) and painted the names because of some reasons**
 
 # ABUAD Farm
 
@@ -24,6 +24,7 @@ It has different Apps that handled different functionalities
 
 You can check the mini documentation [Here](https://github.com/Dharmzeey/ABUADFarm/blob/master/code_docs.txt)
 ![image](/images/abuadfarm/Home-page.png)
+## **Home Page**
 
 
 # ADMIN
@@ -32,11 +33,14 @@ You can check the mini documentation [Here](https://github.com/Dharmzeey/ABUADFa
 - Can view all the Units.
 - Can view all the customers on the Database, regardless of the unit they have made purchase from 
 - Can see all messages sent to all customers 
-![image](/images/abuadfarm/Admin-customers.png)
+![image](/images/abuadfarm/Admin-home.png)
+## **Admin Home Page**
+
 
 - Ultimately, can have access to all the features, models and everything of the Django Admin panel and also perform CRUD operations on everything in the Django Admin Panel 
 
-![image](/images/abuadfarm/Admin-home.png)
+![image](/images/abuadfarm/Admin-customers.png)
+## **Customers**
 
 # STAFFS
 **The Staffs is also Django Staff, they only have restricted access to the models and customers concerning their units alone and has restricted access to the Django Admin panel.**
@@ -48,13 +52,18 @@ You can check the mini documentation [Here](https://github.com/Dharmzeey/ABUADFa
 - Add customers product purchase for each customer who made purchase from their units 
 
 # USERS
+![image](/images/abuadfarm/user-homepage.png)
+## **User Homepage**
 **Customers only have access to their accounts alone(which contains all the units they made purchases)**
 **All accounts created have user and  profiles model**
 **But they are later given different statuses**
 - Users are customers who created account and made purchase from any unit 
 ## Users can:
 - Have access to their Dashboard, Messages, Notifications and Profiles 
+![image](/images/abuadfarm/user-dashboard.png)
+## **User Dashboard**
 
+All the charts on the webpage (Admin Home, Customer Details and User Dashboard) are accomplished with [Amcharts js](https://www.amcharts.com/) and the data passed are serialized with [Djangorestframework](https://www.django-rest-framework.org/) Serializer
 
 ***
 ## Frameworks
