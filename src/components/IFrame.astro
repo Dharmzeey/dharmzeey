@@ -1,0 +1,13 @@
+---
+export interface Props{
+  link: string;
+  title: string;
+}
+const { link } = Astro.props as Props;
+const { title } = Astro.props as Props;
+---
+
+<div id="iframe-container" class="w-full">
+  <span>Quick Video:</span>
+  <iframe id="video-iframe" class="m-auto" width="560" height="315" src={`${link}`} title={`${title}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

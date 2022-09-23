@@ -4,8 +4,8 @@ slug: abuad-farm
 intro: This is a web application that is based off of a operation in manufacturing company with different units.
 url: https://abuadfarm.herokuapp.com
 image: /images/abuadfarm/Admin-home.png
+youtubeLink: https://www.youtube.com/embed/ZQgALAhBvow
 ---
-
 
 
 Website: [Visit Web Page](https://abuadfarm.herokuapp.com)
@@ -82,4 +82,4 @@ All the charts on the webpage (Admin Home, Customer Details and User Dashboard) 
 **Click Account and login with this details**
 
  ( Username: Testing, 
-  Password: Heroku1 )
+  Password: Herokuapp )
