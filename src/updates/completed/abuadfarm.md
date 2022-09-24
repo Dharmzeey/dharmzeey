@@ -4,7 +4,9 @@ slug: abuad-farm
 intro: This is a web application that is based off of a operation in manufacturing company with different units.
 url: https://abuadfarm.herokuapp.com
 image: /images/abuadfarm/Admin-home.png
-youtubeLink: https://www.youtube.com/embed/ZQgALAhBvow
+youtubeLink: https://www.youtube.com/embed/m7tt7HRKY-4
+fullVideo: https://www.youtube.com/embed/ZQgALAhBvow
+
 ---
 
 

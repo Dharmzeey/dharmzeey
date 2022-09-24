@@ -2,12 +2,18 @@
 export interface Props{
   link: string;
   title: string;
+  fullVideo: string;
 }
 const { link = "https://dharmzeey.netlify.com" } = Astro.props as Props;
 const { title } = Astro.props as Props;
+const { fullVideo } = Astro.props as Props;
 ---
 
 <div id="iframe-container" class="w-full">
   <span>Quick Video:</span>
+  <br>
+
   <iframe id="video-iframe" class="m-auto" width="560" height="315" src={`${link}`} title={`${title}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <span>Watch Detailed Video Here: <a target="_blank" href={`${fullVideo}`}>Video</a></span>
+  <br>
 </div>

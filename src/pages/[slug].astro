@@ -25,7 +25,7 @@ const { Content, frontmatter } = Astro.props.project;
 <Layout title={frontmatter.title}>
   <section>
     <Card>
-      <IFrame link={frontmatter.youtubeLink} title={frontmatter.title} />
+      <IFrame link={frontmatter.youtubeLink} title={frontmatter.title} fullVideo={frontmatter.fullVideo} />
       <h2 class="mb-4 heading">
         {frontmatter.title}
       </h2>

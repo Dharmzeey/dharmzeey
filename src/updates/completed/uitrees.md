@@ -4,6 +4,8 @@ slug: ui-trees-documentation
 intro: Documentation of Trees in the University of Ibadan.
 url: https://uitrees.herokuapp.com
 image: /images/uitrees/homepage.png
+youtubeLink: https://www.youtube.com/embed/nzRS95f5WOU
+fullVideo: https://www.youtube.com/embed/VGAk1o3rU2I
 ---
 Website: [Visit Web Page](https://uitrees.herokuapp.com)
 
