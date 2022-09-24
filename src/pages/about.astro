@@ -16,27 +16,27 @@ import Footer from "../components/Footer.astro";
                 ><i class="fa-solid fa-envelope"></i>
               </a>
             </li>
-    
+
             <li>
               <a target="_blank" href="https://github.com/dharmzeey"
                 ><i class="fa-brands fa-github"></i>
               </a>
             </li>
-    
+
             <li>
               <a href="https://www.twitter.com/dharmzeey"
                 ><i class="fa-brands fa-twitter"></i>
               </a>
             </li>
-    
+
             <li>
               <a href="https://www.instagram.com/dharmzeey"
                 ><i class="fa-brands fa-instagram"></i>
               </a>
             </li>
-    
+
             <!-- <li><a href=""><i class="fa-brands fa-facebook"></i></a></li> -->
-    
+
             <li>
               <a href="https://www.linkedin.com/in/olanrewaju-adam-1b0922172/">
                 <i class="fa-brands fa-linkedin"></i>
@@ -45,62 +45,98 @@ import Footer from "../components/Footer.astro";
           </ul>
         </section>
         <!-- <div class="w-full absolute flex justify-center"> -->
-          <div id="show-me" class="container h-full bg-slate-900/90 w-full m-auto fixed top-0 transition duration-700 cursor-pointer z-10 scale-0 origin-[50%_25%]">
-            <!-- This below is the styling I use on above div(#show-me) when it dose not by default have scale-0 -->
-            <!-- left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  -->
-            <div class="h-3/4 my-auto md:h-full">
-              <img id="img-padding" src="/images/dharmzeey.jpeg" class="h-5/6 md:h-full m-auto shadow-2xl shadow-black transition-[padding] duration-700" alt="">
-            </div>
+        <div
+          id="show-me"
+          class="container h-full bg-slate-900/90 w-full m-auto fixed top-0 transition duration-700 cursor-pointer z-10 scale-0 origin-[50%_25%]"
+        >
+          <!-- This below is the styling I use on above div(#show-me) when it dose not by default have scale-0 -->
+          <!-- left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  -->
+          <div class="h-3/4 my-auto md:h-full">
+            <img
+              id="img-padding"
+              src="/images/dharmzeey.jpeg"
+              class="h-5/6 md:h-full m-auto shadow-2xl shadow-black transition-[padding] duration-700"
+              alt=""
+            />
+          </div>
         </div>
       </div>
-      <div class="mt-4 h-60 w-full bg-[url('/images/dharmzeey.jpeg')] bg-cover bg-center mb-10">
-        <div class="w-full h-full flex justify-center items-center hover:bg-slate-900/50 transition-colors duration-300 hover:cursor-pointer">
-          <small id="view-me" class="absolute p-2 cursor-pointe border hover:bg-white hover:text-black transition duration-500 uppercase tracking-widest">View Me</small>
+      <div
+        class="mt-4 h-60 w-full bg-[url('/images/dharmzeey.jpeg')] bg-cover bg-center mb-10"
+      >
+        <div
+          class="w-full h-full flex justify-center items-center hover:bg-slate-900/50 transition-colors duration-300 hover:cursor-pointer"
+        >
+          <small
+            id="view-me"
+            class="absolute p-2 cursor-pointe border hover:bg-white hover:text-black transition duration-500 uppercase tracking-widest"
+            >View Me</small
+          >
         </div>
       </div>
       <!-- <img class="h-60 mt-4 w-full" src="/images/about.jpg" alt="" /> -->
     </h1>
     <section>
       <div>
-        I am Adam Olanrewaju also go by the alais <strong>Dharmzeey</strong>, I love that nick
+        I am Adam Olanrewaju also go by the alais <strong>Dharmzeey</strong>, I
+        love that nick
       </div>
       <Card>
         <div>
-          A general intro: I am a guy who loves science and Tech <span id="intro" class="cursor-pointer hover:opacity-40 font-black uppercase"
-            >Read More <i class="fa-solid fa-angles-down"></i>
+          A general intro: I am a guy who loves science and Tech <span
+            id="intro"
+            class="cursor-pointer hover:opacity-40 font-black uppercase"
+          >
+            <span id="expand"
+              >Read More <i class="fa-solid fa-angles-down"></i>
+            </span>
+            <span class="hidden" id="collapse"
+              >Collapse <i class="fa-solid fa-angles-up"></i>
+            </span>
           </span>
         </div>
         <p class="hidden" id="personal">
-          with how it solves a lot of
-          problems and create innovations and inventions and has a strong passion
-          for it which birthed me into software development. I love to write code and seeing the instructions being written accomplishing some task is just so awesome and satisfying.
-          <br>
-          Hardware Engineering is also one of my favourite, being able to think of something to bring the idea to life and solving a problem or bringing revolution to how things are being done. Sooner or later I will upgrade and incoporate my software skill into building physical things. 
+          with how it solves a lot of problems and create innovations and
+          inventions and has a strong passion for it which birthed me into
+          software development. I love to write code and seeing the instructions
+          being written accomplishing some task is just so awesome and
+          satisfying.
+          <br />
+          Hardware Engineering is also one of my favourite, being able to think of
+          something to bring the idea to life and solving a problem or bringing revolution
+          to how things are being done. Sooner or later I will upgrade and incoporate
+          my software skill into building physical things.
           <br />
           I also love space and space adventures, hopefully I will be in the International
-          Space Station one day and also live long enough to witness life on the Red
-          Planet .🙂
+          Space Station one day and also live long enough to witness life on the
+          Red Planet .🙂
           <br />
-          I love seeing and watching exploration of our large water bodies either shallow or deep sea exploration and also the Beautiful creatures inhabiting the ecosystem.
-          <br>
-          I am a lover of cats and I admire them so much, even I do not have one and
-          also I love nature and always trying my best to preserve it.
+          I love seeing and watching exploration of our large water bodies either
+          shallow or deep sea exploration and also the Beautiful creatures inhabiting
+          the ecosystem.
+          <br />
+          I am a lover of cats and I admire them so much, even I do not have one
+          and also I love nature and always trying my best to preserve it.
           <br />
           I love and adore babies they are cute 👶
-          <br>
+          <br />
           Finally I love to analyse the Financial Market 💹.
         </p>
       </Card>
       <div class="-mt-12">
-        A self taught full stack developer with few years experience. 2+ years with Frontend and 1+ years with Django Backend
+        A self taught full stack developer with few years experience. 2+ years
+        with Frontend and 1+ years with Django Backend
         <br />
-        As a python programmer, most of my projects are built on Django which I sometimes use tailwind, django-allauth and some other frameworks and libraries
-        <br>
+        As a python programmer, most of my projects are built on Django which I sometimes
+        use tailwind, django-allauth and some other frameworks and libraries
+        <br />
         Hope to expand my knowlegde and learn more stacks with time
-        <br>
+        <br />
         I have not worked with a big tech company before 😚 but I have few projects
         I have gotten my hands wet with.
-        <br>Check my <span class="more-projects"><a href="/projects">Project</a></span> section, I hope you will like them.
+        <br />Check my <span class="more-projects"
+          ><a href="/projects">Project</a>
+        </span> section, I hope you will like them.
         <br />
         Stick around and enjoy.
       </div>
@@ -127,7 +163,7 @@ import Footer from "../components/Footer.astro";
 
     <section>
       <div class="more-projects">
-        Check out some of my projects <a href="/projects">Here </a>
+        Check out some of my projects <a href="/projects">Here</a>
         <br />
         Hope you like them?. If you do not mind kindly give a feedback
       </div>
@@ -136,43 +172,41 @@ import Footer from "../components/Footer.astro";
     <section class="mt-4">
       <div class="text-center">Best Advice and Quotes</div>
       <Card>
-        <div class="mb-8">Stay Cool😎, Keep it Simple 📝, Put in Your Best 🏆, Take Good Care of yourself 🍸, stay Fit 💪 and Spread Love 💖</div>
+        <div class="mb-8">
+          Stay Cool😎, Keep it Simple 📝, Put in Your Best 🏆, Take Good Care of
+          yourself 🍸, stay Fit 💪 and Spread Love 💖
+        </div>
 
         <span class="text-4xl">&ldquo;</span>
         I am not here to join the crowd, I am to make a difference ✨
         <span class="text-4xl">&rdquo;</span>
         <div>- Adam Olanrewaju</div>
-        <br>
+        <br />
 
         <span class="text-4xl">&ldquo;</span>
-        I have just three things to teach: simplicity, patience, compassion. These three are your greatest treasures.
+        I have just three things to teach: simplicity, patience, compassion. These
+        three are your greatest treasures.
         <span class="text-4xl">&rdquo;</span>
         <div>- Isaac Newton</div>
-        <br>
+        <br />
 
         <span class="text-4xl">&ldquo;</span>
-        Time and health are two precious assets that we don’t recognize and appreciate until they have been depleted.
+        Time and health are two precious assets that we don’t recognize and appreciate
+        until they have been depleted.
         <span class="text-4xl">&rdquo;</span>
-        <div>- Denis Waitley </div>
-        <br>
+        <div>- Denis Waitley</div>
+        <br />
 
-        <span class="text-4xl">&ldquo;</span> Six Best Doctors in the World &nbsp; &nbsp; &nbsp; &nbsp;
-        1. Sunlight &nbsp; &nbsp; &nbsp; &nbsp;
-        2. Rest &nbsp; &nbsp; &nbsp; &nbsp;
-        3. Exercise &nbsp; &nbsp; &nbsp; &nbsp;
-        4. Diet &nbsp; &nbsp; &nbsp; &nbsp;
-        5. Self Confidence and &nbsp;
-        6. Friends. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        Maintain them in all stages of Life and enjoy a healthy life.
+        <span class="text-4xl">&ldquo;</span> Six Best Doctors in the World &nbsp;
+        &nbsp; &nbsp; &nbsp; 1. Sunlight &nbsp; &nbsp; &nbsp; &nbsp; 2. Rest &nbsp;
+        &nbsp; &nbsp; &nbsp; 3. Exercise &nbsp; &nbsp; &nbsp; &nbsp; 4. Diet &nbsp;
+        &nbsp; &nbsp; &nbsp; 5. Self Confidence and &nbsp; 6. Friends. &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Maintain them in all stages of
+        Life and enjoy a healthy life.
         <span class="text-4xl">&rdquo;</span>
-        <div>- Steve Jobs </div>
-
-
-
-
+        <div>- Steve Jobs</div>
       </Card>
     </section>
-
   </div>
 
   <Footer />
@@ -210,29 +244,31 @@ import Footer from "../components/Footer.astro";
 </style>
 
 <script>
-  const readMore = document.getElementById("intro");
+  const intro = document.getElementById("intro");
   const details = document.getElementById("personal");
+  const expand = document.getElementById("expand");
+  const collapse = document.getElementById("collapse");
 
   const viewMe = document.querySelector("#view-me");
   const showMe = document.querySelector("#show-me");
   const imgPadding = document.querySelector("#img-padding");
-  
 
-  readMore.addEventListener("click", () => {
-    // details.classList.toggle("scale-up");
-    detail500s.classList.toggle("hidden");
-  })
+  // THIS IS TO TOGGLE READMORE AND COLLAPSE OF ABOUT SECTION
+  intro.addEventListener("click", () => {
+    details.classList.toggle("hidden");
+    expand.classList.toggle("hidden");
+    collapse.classList.toggle("hidden");
+  });
 
-  viewMe.addEventListener("click", ()=>{
-    showMe.style.transform = 'scale(1)';
-    // showMe.style.height = '100%';
-    imgPadding.style.padding = '2rem';
-  })
+  // THIS IS TO DISPLAY(SCALE OUT) THE PICTURE ON CLICK
+  viewMe.addEventListener("click", () => {
+    showMe.style.transform = "scale(1)";
+    imgPadding.style.padding = "2rem";
+  });
 
   // TO TAKE AWAY THE DISPLAY
-  showMe.addEventListener("click", ()=> {
-    showMe.style.transform = 'scale(0)';
-    // showMe.style.height = '0px';
-    imgPadding.style.padding = '0px';
-  })
+  showMe.addEventListener("click", () => {
+    showMe.style.transform = "scale(0)";
+    imgPadding.style.padding = "0px";
+  });
 </script>
