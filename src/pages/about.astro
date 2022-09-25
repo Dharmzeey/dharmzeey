@@ -47,7 +47,7 @@ import Footer from "../components/Footer.astro";
         <!-- <div class="w-full absolute flex justify-center"> -->
         <div
           id="show-me"
-          class="container h-full bg-slate-900/90 w-full m-auto fixed top-0 transition duration-700 cursor-pointer z-10 scale-0 origin-[50%_25%]"
+          class="container h-full bg-slate-900/90 w-full m-auto fixed top-0 transition duration-700 cursor-pointer z-10 transform scale-0 rotate-[360deg] origin-[50%_25%]"
         >
           <!-- This below is the styling I use on above div(#show-me) when it dose not by default have scale-0 -->
           <!-- left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  -->
@@ -261,14 +261,29 @@ import Footer from "../components/Footer.astro";
   });
 
   // THIS IS TO DISPLAY(SCALE OUT) THE PICTURE ON CLICK
+  // viewMe.addEventListener("click", () => {
+  //   showMe.style.transform = "scale(1)";
+  //   showMe.style.transform = "rotate(360deg)";
+  //   imgPadding.style.padding = "2rem";
+  // });
+
+  // // TO TAKE AWAY THE DISPLAY
+  // showMe.addEventListener("click", () => {
+  //   showMe.style.transform = "scale(0)";
+  //   showMe.style.transform = "rotate(0deg)";
+  //   imgPadding.style.padding = "0px";
+  // });
+
   viewMe.addEventListener("click", () => {
-    showMe.style.transform = "scale(1)";
+    showMe.classList.toggle("scale-0");
+    showMe.classList.toggle("rotate-[360deg]");
     imgPadding.style.padding = "2rem";
   });
 
   // TO TAKE AWAY THE DISPLAY
   showMe.addEventListener("click", () => {
-    showMe.style.transform = "scale(0)";
+    showMe.classList.toggle("scale-0");
+    showMe.classList.toggle("rotate-[360deg]");
     imgPadding.style.padding = "0px";
   });
 </script>
