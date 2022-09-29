@@ -16,6 +16,9 @@ Website: [Visit Web Page](https://abuadfarm.herokuapp.com)
 
 # ABUAD Farm
 
+The Idea is as a result of where I was posted to do my IT, so the organization is a Farm and also a manufacturing company, they make different products from their farm produce.
+
+They have different units and they produce different products at each units I then decided to build something channeling my focus to the mode of operation.
 
 I designed this web Application on the foundation of a Manufacturing Company.
 It is a Django Project, which I also used djangorestframework for some serialization.
@@ -24,7 +27,6 @@ Django-Allauth was used for the authentication
 
 It has different Apps that handled different functionalities
 
-You can check the mini documentation [Here](https://github.com/Dharmzeey/ABUADFarm/blob/master/code_docs.txt)
 ![image](/images/abuadfarm/Home-page.png)
 ## **Home Page**
 
