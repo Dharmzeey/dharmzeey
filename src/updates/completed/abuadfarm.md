@@ -2,7 +2,7 @@
 title: Abuad Farm
 slug: abuad-farm
 intro: This is a web application that is based off of a operation in manufacturing company with different units.
-url: https://abuadfarm.herokuapp.com
+url: https://abuadfarm.up.railway.app
 image: /images/abuadfarm/Admin-home.png
 youtubeLink: https://www.youtube.com/embed/m7tt7HRKY-4
 fullVideo: https://www.youtube.com/embed/ZQgALAhBvow
@@ -10,7 +10,7 @@ fullVideo: https://www.youtube.com/embed/ZQgALAhBvow
 ---
 
 
-Website: [Visit Web Page](https://abuadfarm.herokuapp.com)
+Website: [Visit Web Page](https://abuadfarm.up.railway.app/)
 
 **I removed all pictures(and replaced it with same dummy images) and painted the names because of some reasons**
 
@@ -29,6 +29,12 @@ It has different Apps that handled different functionalities
 
 ![image](/images/abuadfarm/Home-page.png)
 ## **Home Page**
+![image](/images/abuadfarm/units.png)
+## **Units Page**
+![image](/images/abuadfarm/about.png)
+## **About Page**
+![image](/images/abuadfarm/blog.png)
+## **Blog Page**
 
 
 # ADMIN
@@ -48,6 +54,8 @@ It has different Apps that handled different functionalities
 
 # STAFFS
 **The Staffs is also Django Staff, they only have restricted access to the models and customers concerning their units alone and has restricted access to the Django Admin panel.**
+![image](/images/abuadfarm/staff-home.png)
+## **Staff Homepage**
 - These are the users that have been assigned to each units in the company 
 ### Their Staffs status was created by the superuser (Admin) in the Admin panel 
 ## Staffs Can:
@@ -56,8 +64,7 @@ It has different Apps that handled different functionalities
 - Add customers product purchase for each customer who made purchase from their units 
 
 # USERS
-![image](/images/abuadfarm/user-homepage.png)
-## **User Homepage**
+
 **Customers only have access to their accounts alone(which contains all the units they made purchases)**
 **All accounts created have user and  profiles model**
 **But they are later given different statuses**
