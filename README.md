@@ -1,5 +1,6 @@
 # Hi there 👋 I am Adam
 I am a Django Fullstack Developer with knowledge in HTML, CSS, JS and Tailwind. 
+
 Also a flutter mobile Developer
 
 I am also skilled with some python frameworks like
