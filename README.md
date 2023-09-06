@@ -1,5 +1,6 @@
 # Hi there 👋 I am Adam
 I am a Django Fullstack Developer with knowledge in HTML, CSS, JS and Tailwind. 
+Also a flutter mobile Developer
 
 I am also skilled with some python frameworks like
 - Selenium
@@ -9,7 +10,7 @@ I am also skilled with some python frameworks like
 Currently Learning
 - Solidity
 
-I was a **flutter Student** in the past but would love to still go back and pick some few things
+
 
 I also plan to learn other frameworks like
 - Tensorflow
