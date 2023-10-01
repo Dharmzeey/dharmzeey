@@ -9,7 +9,7 @@ I am also skilled with some python frameworks like
 - Beautiful Soup
 
 Currently Learning
-- Solidity
+- More on my Mobile and web development stacks
 
 
 
