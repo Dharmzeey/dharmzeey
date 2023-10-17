@@ -42,7 +42,7 @@ STAY TUNED 😄
 
 ## Let us talk about what I also love
 - I love cats 🐱, they are cute and smart
-- I love to analyse the Financial Market 📉📈📉 
+
 <!--
 **Dharmzeey/dharmzeey** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
