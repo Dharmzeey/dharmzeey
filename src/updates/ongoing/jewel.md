@@ -1,6 +1,7 @@
 ---
 title: Jewel Clothing
 slug: jewel-clothing
+category: Web Application
 intro: An Ecommerce web App for a clothing brand
 image: /images/jewel/homepage.png
 ---

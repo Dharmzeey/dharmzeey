@@ -1,6 +1,7 @@
 ---
 title: My Blog
 slug: my-blog
+category: Web Application
 intro: Just a site where I update my daily activities or events I take part
 image: /images/blog/idea.jpg
 ---

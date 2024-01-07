@@ -1,31 +1,35 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Card from "../components/ProjectCard.astro";
 
 const completedProjects = await Astro.glob("../updates/completed/*.md");
 const ongoingProjects = await Astro.glob("../updates/ongoing/*.md");
 ---
 
 <Layout title="Dharmzeey Projects">
-  <h2 class="mb-10 heading text-center">
-    These are the two main project of my projects
+  <h2 class="my-6 mt-16 heading text-center">
+    Projects
   </h2>
   <section>
-    <div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-0">
       {
         completedProjects.map((project) => (
           <Card>
-            <h2 class="mb-4 font-bold text-2xl">{project.frontmatter.title}</h2>
-            <div class="mb-6 tracking-wider">{project.frontmatter.intro}</div>
+            <h2 class="mb-4 font-bold text-xl">{project.frontmatter.title}</h2>
+            <div class="mb-2 tracking-wider leading-6 text-justify">
+               <!--- <span>{project.frontmatter.intro}</span> -->
+              </div>
             <div class="px-4 project-img">
               <img
                 class="contain" src={`${project.frontmatter.image}`} alt={`${project.frontmatter.title}`}
               />
             </div>
-
-            <a class="mt-6 btn" href={`/${project.frontmatter.slug}`}>
+            <small class="text text-gray-300">{project.frontmatter.category}</small>
+            <div>
+              <a class="btn" href={`/${project.frontmatter.slug}`}>
               View
             </a>
+            </div>
           </Card>
         ))
       }
@@ -33,23 +37,28 @@ const ongoingProjects = await Astro.glob("../updates/ongoing/*.md");
   </section>
 
   <section>
-    <h2 class="mb-10 heading text-center">
+    <h2 class="my-4 heading text-center">
       Here are also few of my ongoing projects
     </h2>
-    <div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-0">
       {
         ongoingProjects.map((project) => (
           <Card>
-            <h2 class="mb-4 font-bold text-2xl">{project.frontmatter.title}</h2>
-            <div class="mb-6 tracking-wider">{project.frontmatter.intro}</div>
+            <h2 class="mb-4 font-bold text-xl">{project.frontmatter.title}</h2>
+            <div class="mb-6 tracking-wider leading-6 text-justify">
+              <!--- <span>{project.frontmatter.intro}</span> -->
+              </div>
             <div class="px-4 project-img">
               <img
                 class="contain" src={`${project.frontmatter.image}`} alt={`${project.frontmatter.title}`}
               />
             </div>
-            <a class="mt-6 btn" href={`/${project.frontmatter.slug}`}>
+            <small class="text text-gray-300">{project.frontmatter.category}</small>
+            <div>
+              <a class="btn" href={`/${project.frontmatter.slug}`}>
               View
             </a>
+            </div>
           </Card>
         ))
       }
@@ -57,13 +66,13 @@ const ongoingProjects = await Astro.glob("../updates/ongoing/*.md");
   </section>
 
   <Card>
-    <strong class="tracking-widest leading-6">All the above django projects are just concieved ideas and then I tried to build them so I can implement different and more complex functionalities as I progress, though some are deployed already and functionong well but are not currently being in use by any Individuals, Organizations or Company.</strong>
+    <div class="tracking-widest leading-6 text-justify">All the above django projects are just concieved ideas and then I tried to build them so I can implement different and more complex functionalities as I progress, though some are deployed already and functionong well but are not currently being in use by any Individuals, Organizations or Company.</div>
   </Card>
 
   <section>
-    <h2 class="mb-10 heading text-center">Selenium Projects</h2>
+    <h2 class="my-3 heading text-center">Selenium Projects</h2>
     <Card>
-      I wrote a web scrapping scripts which helps me get some user data and
+      A web scrapping scripts which helps me get some user data and
       writes them in a txt and excel file using <a class="uppercase" href="https://pypi.org/project/selenium/">Selenium</a> and <a class="uppercase" href="https://pypi.org/project/openpyxl/">Openpyxl</a>. 
       <br>
       It takes in username and password and then logs in and goes to the profile of the logged in user and then read and write the data to a txt file and the to an excel file.
@@ -83,7 +92,7 @@ const ongoingProjects = await Astro.glob("../updates/ongoing/*.md");
   </section>
 
   <section>
-    <h2 class="mb-10 heading text-center">My Portfolio Website 😎</h2>
+    <h2 class="my-3 heading text-center">My Portfolio Website 😎</h2>
     <Card>
     <p>Yes this awesome and beautiful website</p>
     <p>It is built with Astro and Tailwind CSS with some little Js</p>

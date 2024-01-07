@@ -1,6 +1,7 @@
 ---
 title: My Todo
 slug: my-todo
+category: Web Application
 intro: This is a web application which I keep my todos
 image: /images/todo/homepage.png
 ---

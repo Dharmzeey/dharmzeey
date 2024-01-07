@@ -1,6 +1,7 @@
 ---
 title: My Setups
 slug: my-setup
+category: Web Application
 intro: This is were I will keep all my setup and analysis
 image: /images/setups/home.png
 ---

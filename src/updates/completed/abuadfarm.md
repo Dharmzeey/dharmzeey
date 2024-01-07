@@ -1,7 +1,8 @@
 ---
 title: Abuad Farm
 slug: abuad-farm
-intro: This is a web application that is based off of a operation in manufacturing company with different units.
+category: Web Application
+intro: Web Application for manufacturing company.
 url: https://abuadfarm.up.railway.app
 image: /images/abuadfarm/Admin-home.png
 youtubeLink: https://www.youtube.com/embed/m7tt7HRKY-4

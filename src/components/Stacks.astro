@@ -1,0 +1,16 @@
+---
+export interface Props {
+  imgURL: string;
+  text: String;
+}
+const { imgURL}  = Astro.props as Props;
+const { text } = Astro.props as Props;
+---
+
+<div id=""> 
+  <div class=" w-24 h-36">
+    <img src={`${imgURL}`} alt={`${text}`}>
+  </div>
+  <div>{text}</div>
+</div>
+

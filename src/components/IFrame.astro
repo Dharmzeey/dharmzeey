@@ -13,7 +13,7 @@ const { fullVideo } = Astro.props as Props;
   <span>Quick Video:</span>
   <br>
 
-  <iframe id="video-iframe" class="m-auto" width="560" height="315" src={`${link}`} title={`${title}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe id="video-iframe" class="m-auto md:w-3/4" height="315" src={`${link}`} title={`${title}`}allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <span>Watch Detailed Video Here: <a target="_blank" href={`${fullVideo}`}>Video</a></span>
   <br>
 </div>
