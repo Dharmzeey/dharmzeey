@@ -1,12 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
 import Card from "../components/ProjectCard.astro";
 
 const completedProjects = await Astro.glob("../updates/completed/*.md");
 const ongoingProjects = await Astro.glob("../updates/ongoing/*.md");
 ---
 
-<Layout title="Dharmzeey Projects">
+<Layout title="Projects">
   <h2 class="my-6 mt-16 heading text-center">
     Projects
   </h2>
@@ -101,6 +102,7 @@ const ongoingProjects = await Astro.glob("../updates/ongoing/*.md");
     </p>
     </Card>
   </section>
+  <Footer />
 </Layout>
 
 <style>

@@ -4,36 +4,63 @@ import Footer from "../components/Footer.astro";
 import Stacks from "../components/Stacks.astro";
 ---
 
-<Layout title="Dharmzeey About">
-  <div class="p-2 pt-6">
+<Layout title="Resume">
+  <div class="p-2 text-center md:text-left pt-10">
     <section class="p-4">
-      <div>Below are my Web Development stacks</div>
-      <ul class="grid grid-cols-4 gap-3">
-        <li class="h-12 stacks"><Stacks imgURL="/images/stacks/html.svg" text={"HTML"}></Stacks></li>
-        <li class="h-12 stacks"><Stacks imgURL="/images/stacks/css.svg" text={"CSS"}></Stacks></li>
-        <li class="h-12 stacks"><Stacks imgURL="/images/stacks/htmx.png" text={"HTMX"}></Stacks></li>
-        <li class="h-12 stacks"><Stacks imgURL="/images/stacks/tailwind.svg" text={"Tailwind"}></Stacks></li>
-        <li class="h-12 stacks"><Stacks imgURL="/images/stacks/js.svg" text={"Javascript"}></Stacks></li>
-        <li class="h-12 stacks"><Stacks imgURL="/images/stacks/htmx.png" text={"Jquery"}></Stacks></li>
-        <li class="h-12 stacks"><Stacks imgURL="/images/stacks/astro.png" text={"Astro"}></Stacks></li>
-        <li class="h-12 stacks"><Stacks imgURL="/images/stacks/django.png" text={"Django"}></Stacks></li>
-    
+      <div class="my-4">Be6ow are my Web Development stacks</div>
+      <ul class="grid grid-cols-4 gap-6">
+        <li class="stacks">
+          <Stacks imgURL="/images/stacks/html.svg" text={"HTML"} />
+        </li>
+        <li class="stacks">
+          <Stacks imgURL="/images/stacks/css.svg" text={"CSS"} />
+        </li>
+        <li class="stacks">
+          <Stacks imgURL="/images/stacks/htmx.png" text={"HTMX"} />
+        </li>
+        <li class="stacks">
+          <Stacks imgURL="/images/stacks/tailwind.svg" text={"Tailwind"} />
+        </li>
+        <li class="stacks">
+          <Stacks imgURL="/images/stacks/js.svg" text={"Javascript"} />
+        </li>
+        <li class="stacks">
+          <Stacks imgURL="/images/stacks/jquery.svg" text={"Jquery"} />
+        </li>
+        <li class="stacks">
+          <Stacks imgURL="/images/stacks/astro.png" text={"Astro"} />
+        </li>
+        <li class="stacks">
+          <Stacks imgURL="/images/stacks/django.png" text={"Django"} />
+        </li>
       </ul>
-      
 
-      <div>My API stack</div>
+      <div class="my-4 pt-6">My API stack</div>
       <ul class="grid grid-cols-4 gap-3">
-        <li class="h-12 stacks"><Stacks imgURL="/images/stacks/drf.png" text={"Django REST Framework"}></Stacks></li>
+        <li class="stacks">
+          <Stacks
+            imgURL="/images/stacks/drf.png"
+            text={"Django REST Framework"}
+          />
+        </li>
       </ul>
-      <div>Mobile Development</div>
+      <div class="my-4 pt-6">Mobile Development</div>
       <ul class="grid grid-cols-4 gap-3">
-        <li class="h-12 stacks"><Stacks imgURL="/images/stacks/flutter.png" text={"Flutter"}></Stacks></li>
+        <li class="stacks">
+          <Stacks imgURL="/images/stacks/flutter.png" text={"Flutter"} />
+        </li>
       </ul>
-      <div>My Python stacks</div>
+      <div class="my-4 pt-6">My Python stacks</div>
       <ul class="grid grid-cols-4 gap-3">
-        <div class="h-12 stacks"><Stacks imgURL="/images/stacks/selenium.png" text={"Selenium"}></Stacks></div>
-        <div class="h-12 stacks"><Stacks imgURL="/images/stacks/django.png" text={"OpenpyXl"}></Stacks></div>
-        <div class="h-12 stacks"><Stacks imgURL="/images/stacks/bs.png" text={"Beautiful Soup"}></Stacks></div>
+        <div class="stacks">
+          <Stacks imgURL="/images/stacks/selenium.png" text={"Selenium"} />
+        </div>
+        <div class="stacks">
+          <Stacks imgURL="/images/stacks/openpyxl.png" text={"OpenpyXl"} />
+        </div>
+        <div class="stacks">
+          <Stacks imgURL="/images/stacks/bs.png" text={"Beautiful Soup"} />
+        </div>
       </ul>
     </section>
   </div>
@@ -56,15 +83,15 @@ import Stacks from "../components/Stacks.astro";
   }
 
   section {
-    @apply leading-10 tracking-widest;
+    @apply leading-5 tracking-widest;
   }
 
   i {
     @apply text-xl;
   }
 
-  .stacks {
-    @apply h-48;
+  .img-stack {
+    @apply rounded-full w-14 h-14 border-2 border-slate-100 m-auto;
   }
 
   .scale-up {

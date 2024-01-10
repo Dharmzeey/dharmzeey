@@ -8,9 +8,9 @@ const { text } = Astro.props as Props;
 ---
 
 <div id=""> 
-  <div class=" w-24 h-36">
-    <img src={`${imgURL}`} alt={`${text}`}>
+  <div>
+    <img class="img-stack" src={`${imgURL}`} alt={`${text}`}>
   </div>
-  <div>{text}</div>
+  <div class="text-center ">{text}</div>
 </div>
 

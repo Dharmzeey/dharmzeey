@@ -3,54 +3,75 @@ import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Dharmzeey About">
+<Layout title="About">
   <div class="p-2 mt-24">
     <h1 class="heading">
-      <div class="relative">
-        <section class="mb-3">
+      <div class="relative grid md:grid-cols-2 align-middle">
+        <section class="mb-3 py-10 flex justify-around flex-col gap-10">
+          <h3 class="text-center md:text-2xl lg:text-3xl">
+            Get in touch with me
+          </h3>
           <ul class="list-none flex justify-center gap-6">
             <li>
               <a href="mailto:olanrewajuofficiall@gmail.com"
-                ><i class="fa-solid fa-envelope"></i>
+                ><i class="fa-solid text-2xl fa-envelope"></i>
               </a>
             </li>
 
             <li>
               <a target="_blank" href="https://github.com/dharmzeey"
-                ><i class="fa-brands fa-github"></i>
+                ><i class="fa-brands text-2xl fa-github"></i>
               </a>
             </li>
 
             <li>
               <a href="https://www.linkedin.com/in/dharmzeey/">
-                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands text-2xl fa-linkedin"></i>
               </a>
             </li>
 
             <li>
               <a href="https://www.twitter.com/dharmzeey"
-                ><i class="fa-brands fa-x-twitter"></i>
-                
+                ><i class="fa-brands text-2xl fa-x-twitter"></i>
               </a>
             </li>
 
             <li>
               <a href="https://www.instagram.com/dharmzeey"
-                ><i class="fa-brands fa-instagram"></i>
+                ><i class="fa-brands text-2xl fa-instagram"></i>
               </a>
-            </li>            
+            </li>
 
             <li>
               <a href="https://www.tiktok.com/@dharmzeey">
-                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands text-2xl fa-tiktok"></i>
               </a>
             </li>
           </ul>
         </section>
+        <div>
+          <!-- <img src="../../public/images/contact.png" alt="" /> -->
+
+
+          <dotlottie-player
+            src="https://lottie.host/81812e47-33bc-4d04-aa6c-ab413c6d20ba/5IcnWX2A1e.json"
+            background="transparent"
+            speed="1"
+            style="width: 500px; height: 500px;"
+            loop
+            autoplay></dotlottie-player>
+        </div>
+      </div>
     </h1>
+    <Footer />
   </div>
-  <Footer />
 </Layout>
 
-
+<style>
+  li:hover {
+    @apply scale-110 duration-700 text-slate-300;
+  }
 </style>
+<script
+src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+type="module"></script>
