@@ -105,8 +105,10 @@ const ongoingProjects = await Astro.glob("../updates/ongoing/*.md");
   <Footer />
 </Layout>
 
-<style>
+<style is:global>
     section{
     @apply leading-10 tracking-widest
   }
+
+
 </style>

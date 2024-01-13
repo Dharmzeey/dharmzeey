@@ -1,72 +1,119 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import Card from "../components/Card.astro";
 import Footer from "../components/Footer.astro";
 import Stacks from "../components/Stacks.astro";
+import Experience from "../components/Experience.astro";
 ---
 
 <Layout title="Resume">
-  <div class="p-2 text-center md:text-left pt-10">
-    <section class="p-4">
-      <div class="my-4">Be6ow are my Web Development stacks</div>
-      <ul class="grid grid-cols-4 gap-6">
-        <li class="stacks">
-          <Stacks imgURL="/images/stacks/html.svg" text={"HTML"} />
-        </li>
-        <li class="stacks">
-          <Stacks imgURL="/images/stacks/css.svg" text={"CSS"} />
-        </li>
-        <li class="stacks">
-          <Stacks imgURL="/images/stacks/htmx.png" text={"HTMX"} />
-        </li>
-        <li class="stacks">
-          <Stacks imgURL="/images/stacks/tailwind.svg" text={"Tailwind"} />
-        </li>
-        <li class="stacks">
-          <Stacks imgURL="/images/stacks/js.svg" text={"Javascript"} />
-        </li>
-        <li class="stacks">
-          <Stacks imgURL="/images/stacks/jquery.svg" text={"Jquery"} />
-        </li>
-        <li class="stacks">
-          <Stacks imgURL="/images/stacks/astro.png" text={"Astro"} />
-        </li>
-        <li class="stacks">
-          <Stacks imgURL="/images/stacks/django.png" text={"Django"} />
-        </li>
-      </ul>
+  <div class="p-2 pt-10">
+    <Card class="leading-10">
+      <h2 class="pt-8 pb-3 text-4xl font-bold slide-in">Education</h2>
+      <div class="flex justify-evenly flex-col-reverse md:flex-row">
+        <div class="w-48 lg:w-72 md:m-0 zoom-load">
+          <dotlottie-player
+            src="https://lottie.host/53ce88e1-cd09-411a-9771-da4745c00460/wvYekV9EKz.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay></dotlottie-player>
+        </div>
+        <ProjectCard>
+         <div class="leading-9">
+          <div class="flex gap-5 pb-4">
+            <img
+              src="/images/ui.jpeg"
+              alt="Univeristy of Ibadan"
+              class="w-16 h-16 rounded-full"
+            />
+            <span class="text-xl self-center font-semibold text-gradient"
+              >University of Ibadan, Nigeria</span
+            >
+          </div>
+          <div class="">Bachelor of Forestry</div>
+          <div class="text-slate-400 ">April 2018 - May 2024</div>
+         </div>
+        </ProjectCard>
+      </div>
+    </Card>
+    <Card>
+      <h2 class="pt-8 pb-3 text-4xl font-bold slide-in">Experience</h2>
+      <Experience
+        heading="Quick Call"
+        time="August 2023 - September 2023"
+        text={"Team up with 2 other members to develop a flutter mobile app which made top 3 for the contest."}
+      />
 
-      <div class="my-4 pt-6">My API stack</div>
-      <ul class="grid grid-cols-4 gap-3">
-        <li class="stacks">
-          <Stacks
-            imgURL="/images/stacks/drf.png"
-            text={"Django REST Framework"}
-          />
-        </li>
-      </ul>
-      <div class="my-4 pt-6">Mobile Development</div>
-      <ul class="grid grid-cols-4 gap-3">
-        <li class="stacks">
-          <Stacks imgURL="/images/stacks/flutter.png" text={"Flutter"} />
-        </li>
-      </ul>
-      <div class="my-4 pt-6">My Python stacks</div>
-      <ul class="grid grid-cols-4 gap-3">
-        <div class="stacks">
-          <Stacks imgURL="/images/stacks/selenium.png" text={"Selenium"} />
-        </div>
-        <div class="stacks">
-          <Stacks imgURL="/images/stacks/openpyxl.png" text={"OpenpyXl"} />
-        </div>
-        <div class="stacks">
-          <Stacks imgURL="/images/stacks/bs.png" text={"Beautiful Soup"} />
-        </div>
-      </ul>
-    </section>
+      <Experience
+      heading="Crushing It"
+      time="December 2023"
+      text={"Made the list of top 33 in the December Crushing it Hackathon."}
+    />
+    </Card>
   </div>
+  <Card class="">
+    <h2 class="pt-4 pb-3 text-4xl font-bold slide-in">Skills</h2>
+    <div class="my-4">Web Development stacks</div>
+    <ul class="grid grid-cols-4 gap-6">
+      <li class="stacks">
+        <Stacks imgURL="/images/stacks/html.svg" text={"HTML"} />
+      </li>
+      <li class="stacks">
+        <Stacks imgURL="/images/stacks/css.svg" text={"CSS"} />
+      </li>
+      <li class="stacks">
+        <Stacks imgURL="/images/stacks/htmx.png" text={"HTMX"} />
+      </li>
+      <li class="stacks">
+        <Stacks imgURL="/images/stacks/tailwind.svg" text={"Tailwind"} />
+      </li>
+      <li class="stacks">
+        <Stacks imgURL="/images/stacks/js.svg" text={"Javascript"} />
+      </li>
+      <li class="stacks">
+        <Stacks imgURL="/images/stacks/jquery.svg" text={"Jquery"} />
+      </li>
+      <li class="stacks">
+        <Stacks imgURL="/images/stacks/astro.png" text={"Astro"} />
+      </li>
+      <li class="stacks">
+        <Stacks imgURL="/images/stacks/django.png" text={"Django"} />
+      </li>
+    </ul>
 
-  <Footer />
+    <div class="my-4 pt-6">API</div>
+    <ul class="grid grid-cols-4 gap-3">
+      <li class="stacks">
+        <Stacks
+          imgURL="/images/stacks/drf.png"
+          text={"Django REST Framework"}
+        />
+      </li>
+    </ul>
+    <div class="my-4 pt-6">Mobile Development</div>
+    <ul class="grid grid-cols-4 gap-3">
+      <li class="stacks">
+        <Stacks imgURL="/images/stacks/flutter.png" text={"Flutter"} />
+      </li>
+    </ul>
+    <div class="my-4 pt-6">Python stacks</div>
+    <ul class="grid grid-cols-4 gap-3">
+      <div class="stacks">
+        <Stacks imgURL="/images/stacks/selenium.png" text={"Selenium"} />
+      </div>
+      <div class="stacks">
+        <Stacks imgURL="/images/stacks/openpyxl.png" text={"OpenpyXl"} />
+      </div>
+      <div class="stacks">
+        <Stacks imgURL="/images/stacks/bs.png" text={"Beautiful Soup"} />
+      </div>
+    </ul>
+  </Card>
 </Layout>
+
+<Footer />
 
 <style is:global>
   #nav-link {
@@ -97,6 +144,21 @@ import Stacks from "../components/Stacks.astro";
   .scale-up {
     @apply scale-y-0 transition ease-in-out delay-150 transform;
   }
+
+  .text-gradient {
+    background: radial-gradient(
+      64.18% 64.18% at 71.16% 35.69%,
+      #def9fa 0.89%,
+      #bef3f5 17.23%,
+      #69e5e9 42.04%,
+      #7de7eb 55.12%,
+      #5ce1e6 71.54%,
+      #1fbfd7 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
 </style>
 
 <script>

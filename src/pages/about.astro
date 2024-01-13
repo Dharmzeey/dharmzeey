@@ -40,11 +40,32 @@ import Footer from "../components/Footer.astro";
       </div>
       <!-- <img class="h-60 mt-4 w-full" src="/images/about.jpg" alt="" /> -->
     </h1>
-    <section>
-      <div>
-        I am Adam Olanrewaju also go by the alais <strong>Dharmzeey</strong>, I
-        love that nick
+    <section class="text-justify">
+      <div class="text-center slide-in">
+        I am Adam Olanrewaju also go by the alais <strong>Dharmzeey</strong>.
       </div>
+      <Card>
+        <div class="mt-4">
+          A self taught django full stack developer with over 3 years experience
+          in web and mobile development.
+          <br />
+          As a python programmer, most of my projects are built on Django which I
+          sometimes use tailwind, django-allauth and some other frameworks and libraries.
+          <br />
+          Also a flutter developer with a passion for crafting seamless cross-platform
+          experiences, I bring over 2 years of self-taught expertise in Flutter development
+          to the table. Proficient in building mobile applications that blend functionality
+          and aesthetics, my skills in Flutter complement my Django full stack capabilities.
+          <br />
+          From solo ventures to collaborative projects, my diverse portfolio showcases
+          the versatility and innovation I bring to the world of web and mobile development.
+          <br />Explore my <span class="more-projects"
+            ><a href="/projects">Project</a> and feel free to share your thoughts
+            or insights.
+          </span>
+        </div>
+      </Card>
+
       <Card>
         <div>
           A general intro: I am a guy who loves science and Tech <span
@@ -87,139 +108,123 @@ import Footer from "../components/Footer.astro";
           Finally I love to analyse the Financial Market 💹. -->
         </p>
       </Card>
-      <div class="mt-12">
-        A self taught django full stack developer with over 2 years experience in web and mobile development
-        <br />
-        As a python programmer, most of my projects are built on Django which I sometimes
-        use tailwind, django-allauth and some other frameworks and libraries
-        <br />
-        Also a flutter developer..................
-        <br />
-        I have not worked with a big tech company before 😚 but I have few projects, both solo and colab which I have gotten my hands wet with.
-        <br />Check my <span class="more-projects"
-          ><a href="/projects">Project</a>
-        </span> section, I hope you will like them.
-        <br />
-        Stick around and enjoy. If you do not mind kindly give a feedback
-      </div>
+
+      <section class="mt-4">
+        <div class="text-center">Best Advice and Quotes</div>
+        <Card>
+          <div class="mb-8">
+            Stay Cool😎, Keep it Simple 📝, Put in Your Best 🏆, Take Good Care
+            of yourself 🍸, stay Fit 💪 and Spread Love 💖
+          </div>
+
+          <span class="text-4xl">&ldquo;</span>
+          I am not here to join the crowd, I am to make a difference ✨
+          <span class="text-4xl">&rdquo;</span>
+          <div>- Adam Olanrewaju</div>
+          <br />
+
+          <span class="text-4xl">&ldquo;</span>
+          I have just three things to teach: simplicity, patience, compassion. These
+          three are your greatest treasures.
+          <span class="text-4xl">&rdquo;</span>
+          <div>- Isaac Newton</div>
+          <br />
+
+          <span class="text-4xl">&ldquo;</span>
+          Time and health are two precious assets that we don’t recognize and appreciate
+          until they have been depleted.
+          <span class="text-4xl">&rdquo;</span>
+          <div>- Denis Waitley</div>
+          <br />
+
+          <span class="text-4xl">&ldquo;</span> Six Best Doctors in the World &nbsp;
+          &nbsp; &nbsp; &nbsp; 1. Sunlight &nbsp; &nbsp; &nbsp; &nbsp; 2. Rest &nbsp;
+          &nbsp; &nbsp; &nbsp; 3. Exercise &nbsp; &nbsp; &nbsp; &nbsp; 4. Diet &nbsp;
+          &nbsp; &nbsp; &nbsp; 5. Self Confidence and &nbsp; 6. Friends. &nbsp; &nbsp;
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Maintain them in all stages of
+          Life and enjoy a healthy life.
+          <span class="text-4xl">&rdquo;</span>
+          <div>- Steve Jobs</div>
+        </Card>
+      </section>
     </section>
 
-
-    <section class="mt-4">
-      <div class="text-center">Best Advice and Quotes</div>
-      <Card>
-        <div class="mb-8">
-          Stay Cool😎, Keep it Simple 📝, Put in Your Best 🏆, Take Good Care of
-          yourself 🍸, stay Fit 💪 and Spread Love 💖
-        </div>
-
-        <span class="text-4xl">&ldquo;</span>
-        I am not here to join the crowd, I am to make a difference ✨
-        <span class="text-4xl">&rdquo;</span>
-        <div>- Adam Olanrewaju</div>
-        <br />
-
-        <span class="text-4xl">&ldquo;</span>
-        I have just three things to teach: simplicity, patience, compassion. These
-        three are your greatest treasures.
-        <span class="text-4xl">&rdquo;</span>
-        <div>- Isaac Newton</div>
-        <br />
-
-        <span class="text-4xl">&ldquo;</span>
-        Time and health are two precious assets that we don’t recognize and appreciate
-        until they have been depleted.
-        <span class="text-4xl">&rdquo;</span>
-        <div>- Denis Waitley</div>
-        <br />
-
-        <span class="text-4xl">&ldquo;</span> Six Best Doctors in the World &nbsp;
-        &nbsp; &nbsp; &nbsp; 1. Sunlight &nbsp; &nbsp; &nbsp; &nbsp; 2. Rest &nbsp;
-        &nbsp; &nbsp; &nbsp; 3. Exercise &nbsp; &nbsp; &nbsp; &nbsp; 4. Diet &nbsp;
-        &nbsp; &nbsp; &nbsp; 5. Self Confidence and &nbsp; 6. Friends. &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Maintain them in all stages of
-        Life and enjoy a healthy life.
-        <span class="text-4xl">&rdquo;</span>
-        <div>- Steve Jobs</div>
-      </Card>
-    </section>
+    <Footer />
   </div>
 
-  <Footer />
+  <style is:global>
+    #nav-link {
+      @apply list-none;
+    }
+
+    #nav-link a,
+    #nav a {
+      @apply text-white no-underline;
+    }
+
+    .more-projects a {
+      @apply text-blue-800 font-bold cursor-pointer;
+    }
+
+    section {
+      @apply leading-10 tracking-widest;
+    }
+
+    ul {
+      @apply list-disc;
+    }
+
+    i {
+      @apply text-xl;
+    }
+
+    .scale-up {
+      @apply scale-y-0 transition ease-in-out delay-150 transform;
+    }
+  </style>
+
+  <script>
+    const intro = document.getElementById("intro");
+    const details = document.getElementById("personal");
+    const expand = document.getElementById("expand");
+    const collapse = document.getElementById("collapse");
+
+    const viewMe = document.querySelector("#view-me");
+    const showMe = document.querySelector("#show-me");
+    const imgPadding = document.querySelector("#img-padding");
+
+    // THIS IS TO TOGGLE READMORE AND COLLAPSE OF ABOUT SECTION
+    intro.addEventListener("click", () => {
+      details.classList.toggle("hidden");
+      expand.classList.toggle("hidden");
+      collapse.classList.toggle("hidden");
+    });
+
+    // THIS IS TO DISPLAY(SCALE OUT) THE PICTURE ON CLICK
+    // viewMe.addEventListener("click", () => {
+    //   showMe.style.transform = "scale(1)";
+    //   showMe.style.transform = "rotate(360deg)";
+    //   imgPadding.style.padding = "2rem";
+    // });
+
+    // // TO TAKE AWAY THE DISPLAY
+    // showMe.addEventListener("click", () => {
+    //   showMe.style.transform = "scale(0)";
+    //   showMe.style.transform = "rotate(0deg)";
+    //   imgPadding.style.padding = "0px";
+    // });
+
+    viewMe.addEventListener("click", () => {
+      showMe.classList.toggle("scale-0");
+      showMe.classList.toggle("rotate-[360deg]");
+      imgPadding.style.padding = "2rem";
+    });
+
+    // TO TAKE AWAY THE DISPLAY
+    showMe.addEventListener("click", () => {
+      showMe.classList.toggle("scale-0");
+      showMe.classList.toggle("rotate-[360deg]");
+      imgPadding.style.padding = "0px";
+    });
+  </script>
 </Layout>
-
-<style is:global>
-  #nav-link {
-    @apply list-none;
-  }
-
-  #nav-link a,
-  #nav a {
-    @apply text-white no-underline;
-  }
-
-  .more-projects a {
-    @apply text-blue-800 font-bold cursor-pointer;
-  }
-
-  section {
-    @apply leading-10 tracking-widest;
-  }
-
-  ul {
-    @apply list-disc;
-  }
-
-  i {
-    @apply text-xl;
-  }
-
-  .scale-up {
-    @apply scale-y-0 transition ease-in-out delay-150 transform;
-  }
-</style>
-
-<script>
-  const intro = document.getElementById("intro");
-  const details = document.getElementById("personal");
-  const expand = document.getElementById("expand");
-  const collapse = document.getElementById("collapse");
-
-  const viewMe = document.querySelector("#view-me");
-  const showMe = document.querySelector("#show-me");
-  const imgPadding = document.querySelector("#img-padding");
-
-  // THIS IS TO TOGGLE READMORE AND COLLAPSE OF ABOUT SECTION
-  intro.addEventListener("click", () => {
-    details.classList.toggle("hidden");
-    expand.classList.toggle("hidden");
-    collapse.classList.toggle("hidden");
-  });
-
-  // THIS IS TO DISPLAY(SCALE OUT) THE PICTURE ON CLICK
-  // viewMe.addEventListener("click", () => {
-  //   showMe.style.transform = "scale(1)";
-  //   showMe.style.transform = "rotate(360deg)";
-  //   imgPadding.style.padding = "2rem";
-  // });
-
-  // // TO TAKE AWAY THE DISPLAY
-  // showMe.addEventListener("click", () => {
-  //   showMe.style.transform = "scale(0)";
-  //   showMe.style.transform = "rotate(0deg)";
-  //   imgPadding.style.padding = "0px";
-  // });
-
-  viewMe.addEventListener("click", () => {
-    showMe.classList.toggle("scale-0");
-    showMe.classList.toggle("rotate-[360deg]");
-    imgPadding.style.padding = "2rem";
-  });
-
-  // TO TAKE AWAY THE DISPLAY
-  showMe.addEventListener("click", () => {
-    showMe.classList.toggle("scale-0");
-    showMe.classList.toggle("rotate-[360deg]");
-    imgPadding.style.padding = "0px";
-  });
-</script>

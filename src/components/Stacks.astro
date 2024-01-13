@@ -7,10 +7,12 @@ const { imgURL}  = Astro.props as Props;
 const { text } = Astro.props as Props;
 ---
 
-<div id=""> 
-  <div>
-    <img class="img-stack" src={`${imgURL}`} alt={`${text}`}>
+<div class="zoom-load"> 
+  <div class="animate-zoom">
+    <div>
+      <img class="img-stack" src={`${imgURL}`} alt={`${text}`}>
+    </div>
+    <div class="text-center pt-3">{text}</div>
   </div>
-  <div class="text-center ">{text}</div>
 </div>
 

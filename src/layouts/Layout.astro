@@ -20,11 +20,9 @@ const { title = "Dharmzeey Portfoilo" } = Astro.props as Props;
     <meta name="keywords" content="Adam, Olanrewaju, Dharmzeey, Adedamola, personal, website">
     <link rel="shortcut icon" href="/idea.ico" type="image/x-icon" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap"
-      rel="stylesheet"
-    />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>{title} | Dharmzeey</title>
   </head>
   <body class="container m-auto">
@@ -34,7 +32,7 @@ const { title = "Dharmzeey Portfoilo" } = Astro.props as Props;
     </div>
     <style is:global>
       html {
-          font-family: 'Readex Pro', sans-serif;
+        font-family: 'Poppins', sans-serif;
           @apply text-sm;
       }
 
@@ -70,6 +68,60 @@ const { title = "Dharmzeey Portfoilo" } = Astro.props as Props;
       .card:hover img {
         @apply scale-105 transition duration-300;
       } 
-    </style>
-  </body>
+
+        /* Normal CSS */
+  @keyframes zoom-in {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+		to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes zoom-load {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.animate-zoom {
+  transform: scale(0);
+  opacity: 0;
+  animation: zoom-in ease-in 800ms forwards;
+  animation-timeline: view();
+  /* animation-range: 20vh 50px; */
+  animation-range: entry;
+}
+
+.zoom-load {
+  animation: zoom-load ease-in 700ms;
+}
+
+@keyframes slide-in {
+    from {
+      transform: translateX(-300px);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .slide-in {
+    animation: slide-in linear 800ms;
+  }
+
+</style>
+    
+</body>
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+type="module"></script>
+  
 </html>
