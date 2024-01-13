@@ -2,3 +2,140 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
+
+
+/* Index */
+
+html {
+  font-family: 'Poppins', sans-serif;
+  @apply text-sm;
+}
+
+body {
+  @apply bg-slate-900 text-white tracking-widest;
+}
+
+button,
+.btn {
+  @apply px-4 inline-block uppercase tracking-widest rounded-full border-[1px] border-white hover:bg-white hover:text-black transition ease-in delay-100;
+}
+
+#scale-in {
+  @apply animate-[scale-in_0.6s_ease-in];
+}
+
+#scale-out,
+#scale-out-2 {
+  @apply animate-[scale-out_1s_ease-in-out];
+}
+
+#slide-in,
+#slide-in-2 {
+  @apply animate-[slide-in_1.2s_ease-in];
+}
+
+#slide-up {
+  @apply animate-[slide-up_1s_ease-in];
+}
+
+
+/* About */
+#nav-link {
+  @apply list-none;
+}
+
+#nav-link a,
+#nav a {
+  @apply text-white no-underline;
+}
+
+.more-projects a {
+  @apply text-blue-800 font-bold cursor-pointer;
+}
+
+section {
+  @apply leading-10 tracking-widest;
+}
+
+ul {
+  @apply list-disc;
+}
+
+i {
+  @apply text-xl;
+}
+
+.scale-up {
+  @apply scale-y-0 transition ease-in-out delay-150 transform;
+}
+
+
+.project-img {
+  @apply h-[20vh] w-full;
+}
+
+.contain {
+  @apply h-full w-full object-cover;
+}
+
+.heading {
+  @apply font-bold;
+}
+
+.project-info-img {
+  @apply w-2/5;
+}
+
+.card:hover {
+  @apply cursor-pointer bg-slate-700 transition;
+}
+
+.card:hover img {
+  @apply scale-105 transition duration-300 ;
+} 
+
+
+/* Resume */
+#nav-link {
+  @apply list-none;
+}
+
+li {
+  @apply list-none;
+}
+
+
+#nav-link a,
+#nav a {
+  @apply text-white no-underline;
+}
+
+.more-projects a {
+  @apply text-blue-800 font-bold cursor-pointer;
+}
+
+section {
+  @apply leading-5 tracking-widest;
+}
+
+i {
+  @apply text-xl;
+}
+
+.img-stack {
+  @apply rounded-full w-14 h-14 border-2 border-slate-100 m-auto;
+}
+
+.scale-up {
+  @apply scale-y-0 transition ease-in-out delay-150 transform;
+}
+
+/* Project */
+section{
+  @apply leading-10 tracking-widest;
+}
+
+/* Contact */
+li:hover {
+  @apply scale-110 duration-700 text-slate-300;
+}

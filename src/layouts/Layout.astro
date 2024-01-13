@@ -1,7 +1,7 @@
 ---
+import "../styles/utils.css";
+import "../styles/customs.css";
 import Header from "../components/Header.astro";
-// import Footer from "../components/Footer.astro";
-
 export interface Props {
   title: string;
 }
@@ -9,20 +9,35 @@ export interface Props {
 const { title = "Dharmzeey Portfoilo" } = Astro.props as Props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="Adam Olanrewaju personal website">
-    <meta name="description" content="This is my personal website that contains my works and my informaton">
-    <meta name="keywords" content="Adam, Olanrewaju, Dharmzeey, Adedamola, personal, website">
+    <meta name="title" content="Adam Olanrewaju (Dharmzeey) personal website" />
+    <meta
+      name="description"
+      content="This is my personal website that contains my works and my informaton"
+    />
+    <meta
+      name="keywords"
+      content="Adam, Olanrewaju, Dharmzeey, Adedamola, personal, website"
+    />
     <link rel="shortcut icon" href="/idea.ico" type="image/x-icon" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <title>{title} | Dharmzeey</title>
   </head>
   <body class="container m-auto">
@@ -30,98 +45,11 @@ const { title = "Dharmzeey Portfoilo" } = Astro.props as Props;
     <div class="">
       <slot />
     </div>
-    <style is:global>
-      html {
-        font-family: 'Poppins', sans-serif;
-          @apply text-sm;
-      }
-
-      body {
-        @apply bg-slate-900 text-white tracking-widest;
-      }
-
-      button,
-      .btn {
-        @apply px-4 inline-block uppercase tracking-widest rounded-full border-[1px] border-white hover:bg-white hover:text-black transition ease-in delay-100;
-      }
-
-      .project-img {
-        @apply h-[20vh] w-full;
-      }
-
-      .contain {
-        @apply h-full w-full object-cover;
-      }
-
-      .heading {
-        @apply font-bold;
-      }
-
-      .project-info-img {
-        @apply w-2/5;
-      }
-
-      .card:hover {
-        @apply cursor-pointer bg-slate-700 transition;
-      }
-
-      .card:hover img {
-        @apply scale-105 transition duration-300 ;
-      } 
-
-        /* Normal CSS */
-  @keyframes zoom-in {
-    from {
-      transform: scale(0);
-      opacity: 0;
-    }
-		to {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-
-  @keyframes zoom-load {
-  from {
-    transform: scale(0);
-  }
-
-  to {
-    transform: scale(1);
-  }
-}
-
-.animate-zoom {
-  transform: scale(0);
-  opacity: 0;
-  animation: zoom-in ease-in 800ms forwards;
-  animation-timeline: view();
-  /* animation-range: 20vh 50px; */
-  animation-range: entry;
-}
-
-.zoom-load {
-  animation: zoom-load ease-in 1000ms;
-}
-
-@keyframes slide-in {
-    from {
-      transform: translateX(-300px);
-    }
-
-    to {
-      transform: translateX(0);
-    }
-  }
-
-  .slide-in {
-    animation: slide-in linear 800ms;
-  }
-
-</style>
-    
-</body>
-<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-type="module"></script>
-  
+  </body>
+  <script
+    src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+    type="module"></script>
+  <script>
+    import "../scripts/script";
+  </script>
 </html>
