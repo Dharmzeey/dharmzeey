@@ -21,36 +21,43 @@ import Experience from "../components/Experience.astro";
             autoplay></dotlottie-player>
         </div>
         <ProjectCard>
-         <div class="leading-9">
-          <div class="flex gap-5 pb-4">
-            <img
-              src="/images/ui.jpeg"
-              alt="Univeristy of Ibadan"
-              class="w-16 h-16 rounded-full"
-            />
-            <span class="text-xl self-center font-semibold text-gradient"
-              >University of Ibadan, Nigeria</span
-            >
+          <div class="leading-9">
+            <div class="flex gap-5 pb-4">
+              <img
+                src="/images/ui.jpeg"
+                alt="Univeristy of Ibadan"
+                class="w-16 h-16 rounded-full"
+              />
+              <span class="text-xl self-center font-semibold text-gradient"
+                >University of Ibadan, Nigeria</span
+              >
+            </div>
+            <div class="">Bachelor of Forestry</div>
+            <div class="text-slate-400">April 2018 - May 2024</div>
           </div>
-          <div class="">Bachelor of Forestry</div>
-          <div class="text-slate-400 ">April 2018 - May 2024</div>
-         </div>
         </ProjectCard>
       </div>
     </Card>
     <Card>
       <h2 class="pt-8 pb-3 text-4xl font-bold slide-in">Experience</h2>
       <Experience
+        heading="GodHeranca"
+        role="Backend Developer"
+        time="April 2023 - ( Currently on hold )"
+        text="Worked on a supermarket Mobile Application with other developers as the backend developer. Built the fast and secure API with django and django Rest Framework."
+      />
+      <Experience
         heading="Quick Call"
+        role="Frontend Developer"
         time="August 2023 - September 2023"
         text={"Team up with 2 other members to develop a flutter mobile app which made top 3 for the contest."}
       />
-
       <Experience
-      heading="Crushing It"
-      time="December 2023"
-      text={"Made the list of top 33 in the December Crushing it Hackathon."}
-    />
+        heading="Crushing It"
+        role="Frontend Development"
+        time="December 2023"
+        text={"Made the list of top 33 in the Crushing it December Hackathon with pure HTML, CSS and JS only."}
+      />
     </Card>
   </div>
   <Card class="">
@@ -99,7 +106,7 @@ import Experience from "../components/Experience.astro";
       </li>
     </ul>
     <div class="my-4 pt-6">Python stacks</div>
-    <ul class="grid grid-cols-4 gap-3">
+    <ul class="grid grid-cols-3 gap-3">
       <div class="stacks">
         <Stacks imgURL="/images/stacks/selenium.png" text={"Selenium"} />
       </div>
@@ -148,17 +155,16 @@ import Experience from "../components/Experience.astro";
   .text-gradient {
     background: radial-gradient(
       64.18% 64.18% at 71.16% 35.69%,
-      #def9fa 0.89%,
-      #bef3f5 17.23%,
-      #69e5e9 42.04%,
-      #7de7eb 55.12%,
-      #5ce1e6 71.54%,
-      #1fbfd7 100%
+      rgb(186, 200, 241) 0.89%,
+      rgb(138, 161, 231) 17.23%,
+      rgb(93, 123, 212) 42.04%,
+      rgb(48, 90, 214) 55.12%,
+      rgb(44, 91, 232) 71.54%,
+      rgb(4, 59, 226) 100%
     );
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
 </style>
 
 <script>
