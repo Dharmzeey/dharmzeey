@@ -5,9 +5,6 @@ category: Mobile Application
 intro: Calculate and save your Grade point.
 url: https://drive.google.com/drive/folders/1XCwP7QQJi9koFY1xpfThJVbRTzyZZsJx?usp=drive_link
 image: /images/gpc/icon.png
-youtubeLink: https://www.youtube.com/embed/m7tt7HRKY-4
-fullVideo: https://www.youtube.com/embed/ZQgALAhBvow
-
 ---
 
 

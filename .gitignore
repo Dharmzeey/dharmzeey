@@ -21,6 +21,7 @@ pnpm-debug.log*
 # ADDED
 ngrok.exe
 dump.txt
+dump/
 
 
 # Local Netlify folder
