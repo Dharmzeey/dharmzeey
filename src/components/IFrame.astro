@@ -1,12 +1,12 @@
 ---
-export interface Props{
+interface Props{
   link: string;
   title: string;
   fullVideo: string;
 }
-const { link = "https://dharmzeey.netlify.com" } = Astro.props as Props;
-const { title } = Astro.props as Props;
-const { fullVideo } = Astro.props as Props;
+const { link = "https://dharmzeey.netlify.com", title, fullVideo } = Astro.props as Props;
+// const { title } = Astro.props as Props;
+// const { fullVideo } = Astro.props as Props;
 ---
 
 <div id="iframe-container" class="w-full">

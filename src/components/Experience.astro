@@ -1,15 +1,15 @@
 ---
-export interface Props {
+interface Props {
   heading: string;
   time: string;
   text: String;
   role: string;
   
 }
-const { heading}  = Astro.props as Props;
-const { time } = Astro.props as Props;
-const { text } = Astro.props as Props;
-const { role } = Astro.props as Props;
+const { heading, time, text, role}  = Astro.props as Props;
+// const { time } = Astro.props as Props;
+// const { text } = Astro.props as Props;
+// const { role } = Astro.props as Props;
 
 ---
 
