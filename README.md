@@ -1,9 +1,11 @@
 # Hi there 👋 I am Adam
-I am a Django Fullstack Developer with knowledge in HTML, CSS, JS and Tailwind. 
+I am a Django Fullstack Developer with HTML, CSS, JS and Tailwind knowledge. 
 
-Also a flutter mobile Developer
+I also build rest API with Djangorestframework 
 
-I am also skilled with some python frameworks like
+Also a Flutter Mobile Developer
+
+I am also skilled in some Python frameworks like
 - Selenium
 - Openpyxl
 - Beautiful Soup
@@ -16,19 +18,19 @@ Currently Learning
 I also plan to learn other frameworks like
 - Tensorflow
 - PyTorch
-- OpenCv
+- OpenCV
 
 
 ## My Portfolio Site
-
-Well still under construction as at 04-04-2022
+<!--
+Well, it is still under construction as of 04-04-2022
 
 Started on 07-09-2022 using [Astro](https://astro.build)
 
-Almost at Completion as at 12-09-2022
+Almost at Completion as of 12-09-2022
 
 Completed 16-09-2022 using [Astro](https://astro.build)
-
+-->
 
 ### Built with
 + Astro
