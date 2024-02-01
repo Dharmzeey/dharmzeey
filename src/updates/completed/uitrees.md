@@ -3,7 +3,7 @@ title: UI Trees Documentation
 slug: ui-trees-documentation
 category: Web Application
 intro: Documentation of University of Ibadan Trees.
-url: https://uitrees.up,railway.app
+url: https://uitrees.olanrewajuadam.com.ng
 image: /images/uitrees/homepage.png
 youtubeLink: https://www.youtube.com/embed/nzRS95f5WOU
 fullVideo: https://www.youtube.com/embed/VGAk1o3rU2I
