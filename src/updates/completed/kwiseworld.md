@@ -3,11 +3,11 @@ title: Kwiseworld
 slug: kwiseworld
 category: Web Application
 intro: A web application for a gadget store.
-url: https://kwiseworld.com
+url: https://dev.kwiseworld.com
 image: /images/kwiseworld/kwiseworld.jpg
 ---
 
-Website: [Visit Web Page](https://kwiseworld.com)  
+Website: [Visit Web Page](https://dev.kwiseworld.com)  
 
 # Kwiseworld  
 
