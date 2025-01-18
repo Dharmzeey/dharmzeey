@@ -8,26 +8,26 @@ const ongoingProjects = await Astro.glob("../updates/ongoing/*.md");
 ---
 
 <Layout title="Projects">
-  <h2 class="my-6 mt-16 heading text-center">
-    Projects
-  </h2>
-  <section>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-0">
+  <h1 class="my-6 mt-16 heading text-center">
+    Web and Mobile Application Projects
+  </h1>
+  <section class="px-5">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 md:gap-2">
       {
         completedProjects.map((project) => (
           <Card>
-            <h2 class="mb-4 font-bold text-xl">{project.frontmatter.title}</h2>
-            <div class="mb-2 tracking-wider leading-6 text-justify">
-               <!--- <span>{project.frontmatter.intro}</span> -->
+            <h2 class="project-title">{project.frontmatter.title}</h2>
+            <div class="mb-2 text-xs text-justify">
+               <span>{project.frontmatter.intro}</span> 
               </div>
-            <div class="px-4 project-img">
+            <div class="px-2 project-img">
               <img
                 class="contain" src={`${project.frontmatter.image}`} alt={`${project.frontmatter.title}`}
               />
             </div>
-            <small class="text text-gray-300">{project.frontmatter.category}</small>
+            <small class="text text-gray-100">{project.frontmatter.category}</small>
             <div>
-              <a class="btn" href={`/${project.frontmatter.slug}`}>
+              <a class="btn text-sm" href={`/${project.frontmatter.slug}`}>
               View
             </a>
             </div>
@@ -37,7 +37,7 @@ const ongoingProjects = await Astro.glob("../updates/ongoing/*.md");
     </div>
   </section>
 
-  <section>
+  <!-- <section>
     <h2 class="my-4 heading text-center">
       Here are also few of my ongoing projects
     </h2>
@@ -47,7 +47,7 @@ const ongoingProjects = await Astro.glob("../updates/ongoing/*.md");
           <Card>
             <h2 class="mb-4 font-bold text-xl">{project.frontmatter.title}</h2>
             <div class="mb-6 tracking-wider leading-6 text-justify">
-              <!--- <span>{project.frontmatter.intro}</span> -->
+              - <span>{project.frontmatter.intro}</span>
               </div>
             <div class="px-4 project-img">
               <img
@@ -64,32 +64,49 @@ const ongoingProjects = await Astro.glob("../updates/ongoing/*.md");
         ))
       }
     </div>
-  </section>
+  </section> -->
 
-  <Card>
-    <div class="tracking-widest leading-6 text-justify">All the above django projects are just concieved ideas and then I tried to build them so I can implement different and more complex functionalities as I progress, though some are deployed already and functionong well but are not currently being in use by any Individuals, Organizations or Company.</div>
-  </Card>
+  <section class="text-justify">
+    <h1 class="my-3 heading text-center">Automation and web scraping Projects</h1>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 md:gap-2">
+      <!-- Profiles UI -->
+      <Card>
+        <h2 class="project-title">Profiles</h2>
+        A web scrapping scripts which helps me get some user data and
+        writes them in a txt and excel file using <a class="uppercase intext-link" href="https://pypi.org/project/selenium/">Selenium</a> and <a class="uppercase intext-link" href="https://pypi.org/project/openpyxl/">Openpyxl</a>. 
+        <br>
+        It takes in username and password and then logs in and goes to the profile of the logged in user and then read and write the data to a txt file and the to an excel file.
+        <br>
+         You can check out the source code
+        <a class="btn" href="https://github.com/Dharmzeey/profilesIU">Here <i class="fa-brands fa-github text-xl"></i></a>
+      </Card>
+  <!-- Tspot -->
+      <Card>
+        <h2 class="project-title">Tspot Task</h2>
+        This is an automation script written with <a class="uppercase intext-link" href="https://pypi.org/project/selenium/">Selenium</a> which helps me log in some username and
+        password from a txt file and performs daily task and sign in.
+        <br>
+        Source code
+        <a class="btn" href="https://github.com/Dharmzeey/spot-login">Here <i class="fa-brands fa-github text-xl"></i></a>
+      </Card>
 
-  <section>
-    <h2 class="my-3 heading text-center">Selenium Projects</h2>
-    <Card>
-      A web scrapping scripts which helps me get some user data and
-      writes them in a txt and excel file using <a class="uppercase" href="https://pypi.org/project/selenium/">Selenium</a> and <a class="uppercase" href="https://pypi.org/project/openpyxl/">Openpyxl</a>. 
-      <br>
-      It takes in username and password and then logs in and goes to the profile of the logged in user and then read and write the data to a txt file and the to an excel file.
-      <br>
-       You can check out the source code
-      <a class="btn" href="https://github.com/Dharmzeey/profilesIU">Here <i class="fa-brands fa-github text-xl"></i></a>
-    </Card>
+      <Card>
+        <h2 class="project-title">Electoral Ward</h2>
+        This scripts was used to extract all the elctoral wards and their local government in Nigeria and saved in a csv file.
+        Also built with <a class="uppercase intext-link" href="https://pypi.org/project/selenium/">Selenium</a> and <a class="uppercase intext-link" href="https://pypi.org/project/openpyxl/">Openpyxl</a>. 
+        <br>
+         You can check out the source code and the scraped data
+        <a class="btn" href="https://github.com/Dharmzeey/webscraping-electoral">Here <i class="fa-brands fa-github text-xl"></i></a>
+      </Card>
 
-    <Card>
-      This is an automation script written with <a class="uppercase" href="https://pypi.org/project/selenium/">Selenium</a> which helps me log in some username and
-      password from a txt file and performs daily task and sign in.
-      <br>
-       You can also check the
-      source code
-      <a class="btn" href="https://github.com/Dharmzeey/spot-login">Here <i class="fa-brands fa-github text-xl"></i></a>
-    </Card>
+      <Card>
+        <h2 class="project-title">INSTITUTIONS</h2>
+        This script which was built with <a class="uppercase intext-link" href="https://pypi.org/project/selenium/">Selenium</a> and <a class="uppercase intext-link" href="https://pypi.org/project/openpyxl/">Openpyxl</a>,  was used to extract all the Tetitary institutions across Nigeria from their respective websites        
+        <br>
+         The Institutions and the code and instructions can be found here
+        <a class="btn" href="https://github.com/Dharmzeey/webscraping-electoral">Here <i class="fa-brands fa-github text-xl"></i></a>
+      </Card>
+    </div>
   </section>
 
   <section>

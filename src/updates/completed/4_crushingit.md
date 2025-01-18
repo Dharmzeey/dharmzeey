@@ -2,7 +2,7 @@
 title: Shopify Homepage Clone
 slug: shopify-homepage-clone
 category: Website
-intro: Shopify Homepage Clone
+intro: Cloning of Shopify homepage 
 url: https://crushing-it.netlify.app/
 image: /images/crushingit/shopify.png
 
