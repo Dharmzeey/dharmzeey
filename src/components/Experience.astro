@@ -1,0 +1,31 @@
+---
+interface Props {
+  heading: string;
+  time: string;
+  text: String;
+  role: string;
+  
+}
+const { heading, time, text, role}  = Astro.props as Props;
+// const { time } = Astro.props as Props;
+// const { text } = Astro.props as Props;
+// const { role } = Astro.props as Props;
+
+---
+
+
+<div class="zoom-load">
+  <div class="border-l pl-6 border-slate-500 pb-4 animate-zoom leading-9">
+    <div class="relative w-3 h-3 bg-gray-500 rounded-full -left-8 top-5"></div>
+    <div class="text-gradient text-xl pb-3">
+      {heading}
+    </div>
+    <div>{role}</div>
+    <div class="text-slate-400 text-sm pb-4">{time}</div>
+    <div>
+      {text}
+    </div>
+  </div>
+  
+  
+</div>

@@ -1,22 +1,76 @@
+---
+import "../styles/utils.css";
+import "../styles/global.css";
+export interface Props {
+  title: string;
+}
+
+const { title = "Dharmzeey" } = Astro.props as Props;
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="title"
+      content="Adam Olanrewaju, Dharmzeey's personal website"
+    />
+    <meta
+      name="description"
+      content="Software developer, proficient in fullstack web development, mobile development, web scraping and automation"
+    />
+    <meta
+      name="keywords"
+      content="Adam, Olanrewaju, Dharmzeey, Adedamola, personal, portfolio,  software developer, web and mobile developer, automation and web scraping"
+    />
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+    <link rel="shortcut icon" href="/idea.ico" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta property="og:title" content="Dharmzeey's personal website" />
+    <meta
+      property="og:description"
+      content="Dharmzeey's website containing his work and his information"
+    />
+    <meta
+      property="og:image"
+      content="https://dharmzeey.netlify.app/idea.jpg"
+    />
+    <meta property="og:url" content="https://dharmzeey.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Dharmzeey" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@dharmzeey" />
+    <meta name="twitter:title" content="Dharmzeey's portfolio website" />
+    <meta
+      name="twitter:description"
+      content="Dharmzeey's website containing his work and his information"
+    />
+    <meta
+      name="twitter:image"
+      content="https://dharmzeey.netlify.app/idea.jpg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+  <body>
+    <!-- <Header /> -->
+    <div>
+      <slot />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import IFrame from "../components/IFrame.astro";
+import Card from "../components/Card.astro";
+import type { JSX } from "astro/jsx-runtime";
+
+interface Project {
+  frontmatter:{
+    title: string;
+    slug: string;
+    youtubeLink: string;
+    fullVideo: string;
+  },
+  Content: () => JSX.Element;
+}
+
+export async function getStaticPaths() {
+  const projects: Project[] = Object.values(import.meta.glob("../updates/completed/*.md", { eager: true }));
+
+  return projects.map((project) => ({
+    params: {
+      slug: project.frontmatter.slug,
+    },
+    props: {
+      project,
+    },
+  }));
+}
+
+const { Content, frontmatter } = Astro.props.project;
+---
+
+<Layout title={frontmatter.title}>
+  <section>
+    <Card>
+      <IFrame link={frontmatter.youtubeLink} title={frontmatter.title} fullVideo={frontmatter.fullVideo} />
+      <h2 class="mb-4 heading">
+        {frontmatter.title}
+      </h2>
+      <div>
+        <Content />
+      </div>
+    </Card>
+  </section>
+</Layout>
+
+
+
+<script>
+  const videoIframe = document.querySelector("#video-iframe");
+  const iframeContainer = document.querySelector("#iframe-container");
+  if (videoIframe && videoIframe.getAttribute("src") == "https://dharmzeey.netlify.com") {
+    if (iframeContainer) {
+      (iframeContainer as HTMLElement).style.display = "none";
+    }
+  }
+</script>

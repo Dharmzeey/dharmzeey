@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+/* Index */
+
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  @apply leading-2;
+}
+
+.main-heading {
+  @apply text-center text-4xl md:text-6xl lg:text-7xl;
+}
+
+button,
+.btn {
+  @apply text-sm px-4 py-1 bg-slate-300 inline-block uppercase tracking-widest rounded-full border-[1px] border-slate-400 hover:bg-slate-400 hover:text-black transition ease-in delay-100;
+}
+
+#scale-in {
+  @apply animate-[scale-in_0.6s_ease-in];
+}
+
+#scale-out,
+#scale-out-2 {
+  @apply animate-[scale-out_1s_ease-in-out];
+}
+
+#slide-in,
+#slide-in-2 {
+  @apply animate-[slide-in_1.2s_ease-in];
+}
+
+#slide-up {
+  @apply animate-[slide-up_1s_ease-in];
+}
+
+section{
+  @apply leading-7 ;
+}
+
+/* About */
+#nav-link {
+  @apply list-none;
+}
+
+#nav-link a,
+#nav a {
+  @apply text-white no-underline;
+}
+
+.more-projects a {
+  @apply text-blue-800 font-bold cursor-pointer;
+}
+
+ul {
+  @apply list-disc;
+}
+
+i {
+  @apply text-xl;
+}
+
+.scale-up {
+  @apply scale-y-0 transition ease-in-out delay-150 transform;
+}
+
+.project-img {
+  @apply h-[16vh] w-full;
+}
+
+.contain {
+  @apply h-full w-full object-cover;
+}
+
+.heading {
+  @apply font-bold;
+}
+
+.project-info-img {
+  @apply w-2/5;
+}
+
+.card img {
+  @apply cursor-pointer;
+}
+
+.card:hover {
+  @apply bg-slate-200;
+}
+
+.card img:hover{
+  @apply scale-105 transition duration-300 ;
+} 
+
+
+/* Resume */
+#nav-link {
+  @apply list-none;
+}
+
+li {
+  @apply list-none;
+}
+
+
+#nav-link a,
+#nav a {
+  @apply text-white no-underline;
+}
+
+.more-projects a {
+  @apply text-blue-800 font-bold cursor-pointer;
+}
+
+
+
+i {
+  @apply text-xl;
+}
+
+.img-stack {
+  @apply rounded-full w-14 h-14 border-2 border-slate-100 m-auto;
+}
+
+.scale-up {
+  @apply scale-y-0 transition ease-in-out delay-150 transform;
+}
+
+
+/* Projects */
+.intext-link {
+  @apply text-blue-700;
+}
+
+.project-title {
+  @apply mb-2 md:mb-4 text-center uppercase text-lg md:text-xl ;
+}
+
+/* Contact */
+li:hover {
+  @apply scale-110 duration-700 text-slate-300;
+}

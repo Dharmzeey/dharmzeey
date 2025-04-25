@@ -1,0 +1,137 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import Card from "../components/Card.astro";
+import Footer from "../components/Footer.astro";
+import Stacks from "../components/Stacks.astro";
+import Experience from "../components/Experience.astro";
+---
+
+<Layout title="Resume">
+  <div class="p-2 pt-10">
+    <Card class="leading-10">
+      <h2 class="pt-8 pb-3 text-4xl font-bold slide-in">Education</h2>
+      <div class="flex justify-evenly flex-col-reverse md:flex-row">
+        <div class=" md:w-48 lg:w-72 m-auto md:m-0 zoom-load">
+          <dotlottie-player
+            src="https://lottie.host/53ce88e1-cd09-411a-9771-da4745c00460/wvYekV9EKz.json"
+            background="transparent"
+            speed="1"
+            class="w-2/3 m-auto"
+            loop
+            autoplay></dotlottie-player>
+        </div>
+        <ProjectCard>
+          <div class="leading-9">
+            <div class="flex gap-5 pb-4">
+              <img
+                src="/images/ui.jpeg"
+                alt="Univeristy of Ibadan"
+                class="w-16 h-16 rounded-full"
+              />
+              <span class="text-xl self-center font-semibold text-gradient"
+                >University of Ibadan, Nigeria</span
+              >
+            </div>
+            <div class="">Bachelor of Forestry</div>
+            <div class="text-slate-400">April 2018 - May 2024</div>
+          </div>
+        </ProjectCard>
+      </div>
+    </Card>
+    <Card>
+      <h2 class="pt-8 pb-3 text-4xl font-bold slide-in">Experience</h2>
+      <Experience
+        heading="GodHeranca"
+        role="Backend Developer"
+        time="April 2023 - ( Currently on hold )"
+        text="Worked on a supermarket Mobile Application with other developers as the backend developer. Built the fast and secure API with django and django Rest Framework."
+      />
+      <Experience
+        heading="Quick Call"
+        role="Frontend Developer"
+        time="August 2023 - September 2023"
+        text="Team up with 2 other members to develop a flutter mobile app which made top 3 for the contest."
+      />
+      <Experience
+        heading="Crushing It"
+        role="Frontend Development"
+        time="December 2023"
+        text="Made the list of top 33 in the Crushing it December Hackathon with pure HTML, CSS and JS only."
+      />
+    </Card>
+  </div>
+  <Card>
+    <h2 class="pt-8 pb-3 text-4xl font-bold slide-in">Membership</h2>
+    <Experience
+      heading="Google Developer Student Club, UI"
+      role="Member"
+      time="2021 - Present"
+      text="Active Participation in events and helpful contributions."
+    />
+  </Card>
+  <Card class="">
+    <h2 class="pt-4 pb-3 text-4xl font-bold slide-in">Skills</h2>
+    <div class="my-4">Web Development stacks</div>
+    <ul class="grid grid-cols-4 gap-6">
+      <li class="stacks">
+        <Stacks imgURL="/images/stacks/html.svg" text={"HTML"} />
+      </li>
+      <li class="stacks">
+        <Stacks imgURL="/images/stacks/css.svg" text={"CSS"} />
+      </li>
+       <li class="stacks">
+        <Stacks imgURL="/images/stacks/js.svg" text={"Javascript"} />
+      </li>
+     <li class="stacks">
+        <Stacks imgURL="/images/stacks/tailwind.svg" text={"Tailwind"} />
+      </li>
+      <li class="stacks">
+        <Stacks imgURL="/images/stacks/django.png" text={"Django"} />
+      </li>
+      <li class="stacks">
+        <Stacks imgURL="/images/stacks/jquery.svg" text={"Jquery"} />
+      </li>
+      <li class="stacks">
+        <Stacks imgURL="/images/stacks/nextjs.svg" text={"Next.js"} />
+      </li>      
+      <li class="stacks">
+        <Stacks imgURL="/images/stacks/htmx.png" text={"HTMX"} />
+      </li>      
+      <li class="stacks">
+        <Stacks imgURL="/images/stacks/astro.png" text={"Astro"} />
+      </li>      
+    </ul>
+
+    <div class="my-4 pt-6">API</div>
+    <ul class="grid grid-cols-4 gap-3">
+      <li class="stacks">
+        <Stacks
+          imgURL="/images/stacks/drf.png"
+          text={"Django REST Framework"}
+        />
+      </li>
+    </ul>
+    <div class="my-4 pt-6">Mobile Development</div>
+    <ul class="grid grid-cols-4 gap-3">
+      <li class="stacks">
+        <Stacks imgURL="/images/stacks/flutter.png" text={"Flutter"} />
+      </li>
+    </ul>
+    <div class="my-4 pt-6">Python stacks</div>
+    <ul class="grid grid-cols-3 gap-3">
+      <div class="stacks">
+        <Stacks imgURL="/images/stacks/selenium.png" text={"Selenium"} />
+      </div>
+      <div class="stacks">
+        <Stacks imgURL="/images/stacks/openpyxl.png" text={"OpenpyXl"} />
+      </div>
+      <div class="stacks">
+        <Stacks imgURL="/images/stacks/bs.png" text={"Beautiful Soup"} />
+      </div>
+    </ul>
+  </Card>
+</Layout>
+
+<Footer />
+

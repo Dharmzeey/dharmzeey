@@ -1,0 +1,30 @@
+---
+interface Props {
+  link: string;
+  title: string;
+  fullVideo: string;
+}
+const {
+  link = "https://www.youtube.com/@dharmzeey9942/videos",
+  title,
+  fullVideo = "https://www.youtube.com/@dharmzeey9942/videos",
+} = Astro.props as Props;
+// const { title } = Astro.props as Props;
+// const { fullVideo } = Astro.props as Props;
+---
+
+<div id="iframe-container" class="w-full">
+  <span>Quick Video:</span>
+  <br />
+
+  <iframe
+    id="video-iframe"
+    class="m-auto md:w-3/4"
+    height="315"
+    src={`${link}`}
+    title={`${title}`}
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  <span>Watch Detailed Video Here: <a target="_blank" href={`${fullVideo}`}>Video</a></span>
+  <br />
+</div>

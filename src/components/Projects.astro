@@ -1,0 +1,82 @@
+---
+import Card from "../components/ProjectCard.astro";
+
+interface Project {
+  frontmatter: {
+    title: string;
+    intro: string;
+    image: string;
+    category?: string;
+    url?: string;
+    github?: string;
+    github_api?: string;
+    summary: string;
+  };
+}
+
+const projects: Project[] = Object.values(
+  import.meta.glob("../updates/completed/*.md", { eager: true })
+) as Project[];
+---
+
+<div class="container m-auto">
+  <h1 class="main-heading pb-8">My projects</h1>
+  <!-- <h2 class="text-center">Web and Mobile Application Projects</h2> -->
+  <section>
+    <div
+      class="grid md:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-5 items-stretch"
+    >
+      {
+        projects.map((project) => (
+          <Card>
+            <h2 class="project-title">{project.frontmatter.title}</h2>
+            <div class="mb-2 text-sm text-justify">
+              <span>{project.frontmatter.intro}</span>
+            </div>
+            <div class="px-2 project-img">
+              <img
+                class="contain"
+                src={`${project.frontmatter.image}`}
+                alt={`${project.frontmatter.title}`}
+              />
+            </div>
+            <small class="text text-gray-100">
+              <br />
+              {/* {project.frontmatter.category} */}
+            </small>
+            <div class="pl-1 flex gap-7 mb-3">
+              {project.frontmatter.url && (
+                <a
+                  class=" text-sm"
+                  href={`${project.frontmatter.url}`}
+                  target="_blank"
+                >
+                  <i class="fa-solid fa-globe fa-2x" />
+                </a>
+              )}
+              {project.frontmatter.github && (
+                <a
+                  class=" text-sm"
+                  href={`${project.frontmatter.github}`}
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-github fa-2x" />
+                </a>
+              )}
+              {project.frontmatter.github_api && (
+                <a
+                  class=" text-sm"
+                  href={`${project.frontmatter.github_api}`}
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-square-github fa-2x" />
+                </a>
+              )}
+            </div>
+            <p class="p-3 text-justify">{project.frontmatter.summary}</p>
+          </Card>
+        ))
+      }
+    </div>
+  </section>
+</div>

@@ -1,0 +1,187 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Dharmzeey About">
+  <div class="p-2 mt-12">
+    <h1 class="heading">
+      <Card>
+        <div class="relative">
+          <h2 class="w-full m-auto p-2 text-center">Adam Olanrewaju</h2>
+          <div
+            id="show-me"
+            class="container h-full bg-slate-900/90 w-full m-auto fixed top-0 left-[50%] translate-x-[-50%] transition duration-700 cursor-pointer z-10 transform rotate-[360deg] origin-[50%_25%] scale-0"
+          >
+            <!-- This below is the styling I use on above div(#show-me) when it dose not by default have scale-0 -->
+            <!-- left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  -->
+            <div class="h-3/4 my-auto md:h-full">
+              <img
+                id="img-padding"
+                src="/images/Dharmzeey.jpeg"
+                class="h-5/6 md:h-full m-auto shadow-2xl shadow-black transition-[padding] duration-700"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-4 h-60 w-full bg-[url('/images/Dharmzeey.jpeg')] bg-cover bg-center mb-10"
+        >
+          <div
+            class="w-full h-full flex justify-center items-center hover:bg-slate-900/50 transition-colors duration-300 hover:cursor-pointer"
+          >
+            <small
+              id="view-me"
+              class="absolute p-2 cursor-pointe border hover:bg-white hover:text-black transition duration-500 uppercase tracking-widest"
+              >View Me</small
+            >
+          </div>
+        </div>
+      </Card>
+      <!-- <img class="h-60 mt-4 w-full" src="/images/about.jpg" alt="" /> -->
+    </h1>
+    <section class="text-justify">
+      <div class="text-center slide-in">
+        I am Adam Olanrewaju also go by the alais <strong>Dharmzeey</strong>.
+      </div>
+      <Card>
+        <div class="mt-4 zoom-load">
+          <p>
+            A self taught django full stack developer with over 3 years
+            experience in web and mobile development.
+          </p>
+          <p>
+            As a python programmer, most of my projects are built on Django
+            which I sometimes use tailwind, django-allauth and some other
+            frameworks and libraries.
+          </p>
+
+          <p>
+            Also a flutter developer with a passion for crafting seamless
+            cross-platform experiences, I bring over 2 years of self-taught
+            expertise in Flutter development to the table. Proficient in
+            building mobile applications that blend functionality and
+            aesthetics, my skills in Flutter complement my Django full stack
+            capabilities.
+          </p>
+
+          <p>
+            From solo ventures to collaborative projects, my diverse portfolio
+            showcases the versatility and innovation I bring to the world of web
+            and mobile development.
+          </p>
+          <p>
+            Explore my <span class="more-projects"
+              ><a href="/projects">Project</a> and feel free to share your thoughts
+              or insights.</span
+            >
+          </p>
+        </div>
+      </Card>
+
+      <Card>
+        <div>
+          A general intro: I am a guy who loves science and Tech <span
+            id="intro"
+            class="cursor-pointer hover:opacity-40 font-black uppercase"
+          >
+            <span id="expand"
+              >Read More <i class="fa-solid fa-angles-down"></i>
+            </span>
+            <span class="hidden" id="collapse"
+              >Collapse <i class="fa-solid fa-angles-up"></i>
+            </span>
+          </span>
+        </div>
+        <div class="hidden" id="personal">
+          <p class="animate-zoom">
+            with how it solves a lot of problems and create innovations and
+            inventions and has a strong passion for it which birthed me into
+            software development. I love to write code and seeing the
+            instructions being written accomplishing some task is just so
+            awesome and satisfying.
+          </p>
+
+          <p class="animate-zoom">
+            Hardware Engineering is also one of my favourite, being able to
+            think of something to bring the idea to life and solving a problem
+            or bringing revolution to how things are being done. Sooner or later
+            I will upgrade and incoporate my software skill into building
+            physical things.
+          </p>
+
+          <p class="animate-zoom">
+            I also love space and space adventures, hopefully I will be in the
+            International Space Station one day and also live long enough to
+            witness life on the Red Planet .🙂
+          </p>
+
+          <p class="animate-zoom">
+            I love seeing and watching exploration of our large water bodies
+            either shallow or deep sea exploration and also the Beautiful
+            creatures inhabiting the ecosystem.
+          </p>
+
+          <p class="animate-zoom">
+            I am a lover of cats and I admire them so much, even I do not have
+            one and also I love nature and always trying my best to preserve it.
+          </p>
+
+          <p class="animate-zoom">I love and adore babies they are cute 👶</p>
+          <!-- <br />
+          Finally I love to analyse the Financial Market 💹. -->
+        </div>
+      </Card>
+
+      <section class="mt-4 zoom-load">
+        <div class="text-center slide-in">
+          <span class="animate-zoom">Best Advice and Quotes</span>
+        </div>
+        <Card>
+          <div class="mb-8 animate-zoom">
+            Stay Cool😎, Keep it Simple 📝, Put in Your Best 🏆, Take Good Care
+            of yourself 🍸, stay Fit 💪 and Spread Love 💖
+          </div>
+
+          <div class="animate-zoom">
+            <span class="text-xl">&ldquo;</span>
+            I am not here to join the crowd, I am to make a difference ✨
+            <span class="text-xl">&rdquo;</span>
+            <div>- Adam Olanrewaju</div>
+          </div>
+
+          <div class="animate-zoom">
+            <span class="text-xl">&ldquo;</span>
+            I have just three things to teach: simplicity, patience, compassion.
+            These three are your greatest treasures.
+            <span class="text-xl">&rdquo;</span>
+            <div>- Isaac Newton</div>
+          </div>
+
+          <div class="animate-zoom">
+            <span class="text-xl">&ldquo;</span>
+            Time and health are two precious assets that we don&rsquo;t recognize
+            and appreciate until they have been depleted.
+            <span class="text-xl">&rdquo;</span>
+            <div>- Denis Waitley</div>
+          </div>
+
+          <div class="animate-zoom">
+            <span class="text-xl">&ldquo;</span> Six Best Doctors in the World &nbsp;
+            &nbsp; &nbsp; &nbsp; 1. Sunlight &nbsp; &nbsp; &nbsp; &nbsp; 2. Rest
+            &nbsp; &nbsp; &nbsp; &nbsp; 3. Exercise &nbsp; &nbsp; &nbsp; &nbsp; 4.
+            Diet &nbsp; &nbsp; &nbsp; &nbsp; 5. Self Confidence and &nbsp; 6. Friends.
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Maintain them
+            in all stages of Life and enjoy a healthy life.
+            <span class="text-xl">&rdquo;</span>
+            <div>- Steve Jobs</div>
+          </div>
+        </Card>
+      </section>
+    </section>
+
+    <Footer />
+  </div>
+</Layout>

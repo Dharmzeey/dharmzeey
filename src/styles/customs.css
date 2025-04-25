@@ -1,0 +1,185 @@
+
+  /* Normal CSS */
+  .text-gradient {
+    background: radial-gradient(
+      64.18% 64.18% at 71.16% 35.69%,
+      rgb(186, 200, 241) 0.89%,
+      rgb(138, 161, 231) 17.23%,
+      rgb(93, 123, 212) 42.04%,
+      rgb(48, 90, 214) 55.12%,
+      rgb(44, 91, 232) 71.54%,
+      rgb(4, 59, 226) 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes zoom-in {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+  }
+  
+  @keyframes zoom-load {
+  from {
+    transform: scale(0);
+  }
+  
+  to {
+    transform: scale(1);
+  }
+  }
+  
+  .animate-zoom {
+    transform: scale(0);
+    opacity: 0;
+    animation: zoom-in ease-in 800ms forwards;
+    animation-timeline: view();
+    /* animation-range: 20vh 50px; */
+    animation-range: entry;
+  }
+  
+  .zoom-load {
+  animation: zoom-load ease-in 1000ms;
+  }
+  
+  @keyframes slide-in {
+  from {
+    transform: translateX(-300px);
+  }
+  
+  to {
+    transform: translateX(0);
+  }
+  }
+  
+  .slide-in {
+    animation: slide-in linear 800ms;
+  }
+  
+  
+  /* Index */
+  @keyframes scale-in {
+    from {
+      transform: scale(3);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes scale-out {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateX(-700px);
+    }
+    to {
+      transform: translateX(0px);
+    }
+  }
+  
+  @keyframes slide-up {
+    from {
+      transform: translateY(400px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
+  
+  
+  @keyframes animate-connect {
+    0% {
+      color: gold;
+      border-color: saddlebrown;
+    }
+    25% {
+      color: crimson;
+      border-color: gold;
+    }
+    30% {
+      color: indigo;
+      border-color: crimson;
+    }
+    50% {
+      color: saddlebrown;
+      border-color: indigo;
+    }
+    60% {
+      color: blue;
+      border-color: saddlebrown;
+    }
+    70% {
+      color: teal;
+      border-color: blue;
+    }
+    72% {
+      color: purple;
+      border-color: teal;
+    }
+    74% {
+      color: slateblue;
+      border-color: purple;
+    }
+    80% {
+      color: darkturquoise;
+      border-color: slateblue;
+    }
+    82% {
+      color: chocolate;
+      border-color: darkturquoise;
+    }
+    84% {
+      color: hotpink;
+      border-color: chocolate;
+    }
+    86% {
+      color: yellow;
+      border-color: hotpink;
+    }
+    88% {
+      color: blanchedalmond;
+      border-color: yellow;
+    }
+    90% {
+      color: red;
+      border-color: blanchedalmond;
+    }
+    92% {
+      color: lime;
+      border-color: red;
+    }
+    94% {
+      color: greenyellow;
+      border-color: lime;
+    }
+    96% {
+      color: palevioletred;
+      border-color: greenyellow;
+    }
+    98% {
+      color: indianred;
+      border-color: palevioletred;
+    }
+    100% {
+      color: green;
+      border-color: indianred;
+    }
+  }
+  
+  .animate-connect {
+    animation: animate-connect ease-in-out 10000ms infinite alternate;
+  }
