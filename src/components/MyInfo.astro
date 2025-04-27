@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 
 <main class="min-h-[70vh] bg-indigo-950 text-white">
   <div
-    class="flex h-full flex-col-reverse justify-center items-center xl:flex-row p-10 md:p-20 pt-24 xl:pt-36 xl:container xl:m-auto"
+    class="flex h-full flex-col-reverse justify-center items-center xl:flex-row p-10 md:p-20 pt-10 xl:pt-36 xl:container xl:m-auto"
   >
     <div class="xl:w-[90%]">
       <h1 class="text-center text-6xl md:text-8xl lg:text-9xl lx:text-left">
@@ -14,12 +14,13 @@ import { Image } from "astro:assets";
         I&#39;m Adam Olanrewaju, a full-stack developer skilled in building scalable backends and user-friendly interfaces. My portfolio features projects like a tree documentation platform, manufacturing app for a company, eCommerce sites, family networking tools, and RESTful APIs—each reflecting my focus on clean code, performance, and real-world problem solving.
       </p>
     </div>
-    <div class="flex justify-center items-center md:w-2/3">
+    <div class="flex justify-center items-center w-full md:w-2/3">
       <Image
-        width={700}
-        height={700}
-        alt="Code"
-        src={"/src/assets/images/showcase.png"}
+        width={800}
+        height={800}
+        alt="Showcase"
+        class="w-full h-full"
+        src={"/images/showcase.png"}
       />
     </div>
   </div>
