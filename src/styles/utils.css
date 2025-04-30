@@ -11,7 +11,7 @@ body {
 }
 
 .main-heading {
-  @apply text-center text-4xl md:text-6xl lg:text-7xl;
+  @apply text-center text-3xl md:text-5xl lg:text-6xl;
 }
 
 button,
@@ -90,10 +90,6 @@ i {
 .card:hover {
   @apply bg-slate-200;
 }
-
-.card img:hover{
-  @apply scale-105 transition duration-300 ;
-} 
 
 
 /* Resume */

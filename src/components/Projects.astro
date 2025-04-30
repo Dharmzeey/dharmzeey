@@ -33,11 +33,11 @@ const projects: Project[] = Object.values(
             <div class="mb-2 text-sm text-justify">
               <span>{project.frontmatter.intro}</span>
             </div>
-            <div class="px-2 project-img">
+            <div class="px-2 project-img overflow-hidden rounded-lg">
               <img
-                class="contain"
-                src={`${project.frontmatter.image}`}
-                alt={`${project.frontmatter.title}`}
+              class="contain show-img transition-transform duration-200 ease-in-out hover:scale-105 rounded"
+              src={`${project.frontmatter.image}`}
+              alt={`${project.frontmatter.title}`}
               />
             </div>
             <small class="text text-gray-100">
@@ -79,4 +79,5 @@ const projects: Project[] = Object.values(
       }
     </div>
   </section>
+  <script src="../scripts/script.js"></script>
 </div>
