@@ -28,7 +28,7 @@ const projects: Project[] = Object.values(
     >
       {
         projects.map((project) => (
-          <Card>
+          <Card id={project.frontmatter.title}>
             <h2 class="project-title">{project.frontmatter.title}</h2>
             <div class="mb-2 text-sm text-justify">
               <span>{project.frontmatter.intro}</span>
