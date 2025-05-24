@@ -1,20 +1,20 @@
 ---  
-title: Family Tree
-slug: familytree
+title: Family Record
+slug: familyrecord
 category: Web Application
 intro: A web application for connecting with families and heritage.
-# url: https://familytree.dharmzeey.com
+url: https://family-record.dharmzeey.com
 github_api: https://github.com/Dharmzeey/family-tree-api
 github: https://github.com/Dharmzeey/family-tree
 image: /images/familytree/familytree.png
-summary: Family Tree is an innovative web application designed to help users connect with their families, explore their heritage, and trace their lineage. Built with a focus on fostering meaningful connections, the platform provides tools for creating detailed family trees, sharing stories, and preserving family history. With an intuitive interface and robust features, Family Tree empowers users to celebrate their heritage and strengthen family bonds across generations.
+summary: Family Record is an innovative web application designed to help users connect with their families, explore their heritage, and trace their lineage. Built with a focus on fostering meaningful connections, the platform provides tools for creating detailed family trees, sharing stories, and preserving family history. With an intuitive interface and robust features, Family Record empowers users to celebrate their heritage and strengthen family bonds across generations.
 ---
 
-Website: [Visit Web Page](https://familytree.dharmzeey.com)  
+Website: [Visit Web Page](https://family-record.dharmzeey.com)  
 
-# Family Tree  
+# Family Record  
 
-**Family Tree** is an innovative web application designed to help users connect with their families, explore their heritage, and trace their lineage.
+**Family Record** is an innovative web application designed to help users connect with their families, explore their heritage, and trace their lineage.
 
 The Backend is built with **Django** as the backend framework, utilizing **Django Rest Framework (DRF)** for API serialization.
 
