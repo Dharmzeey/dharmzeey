@@ -1,19 +1,19 @@
 ---
-title: UTM DMS Converter
-slug: utm-dms-converter
+title: UTM Converter
+slug: utm-converter
 category: Web Application
 intro: A simple and intuitive tool for converting UTM coordinates to DMS and Latitude/Longitude.
-url: https://utm-dms-converter.dharmzeey.com 
+url: https://utm-converter.dharmzeey.com 
 github: https://github.com/Dharmzeey/cartographic_converter
-image: /images/utmdmsconverter/utm-dms-converter.jpg
-summary: The UTM DMS Converter is a lightweight web application designed to help users convert Universal Transverse Mercator (UTM) coordinates into Degrees Minutes Seconds (DMS) or standard Latitude/Longitude format. Built with Flask and styled using vanilla HTML/CSS.
+image: /images/utmconverter/utm-converter.jpg
+summary: The UTM Converter is a lightweight web application designed to help users convert Universal Transverse Mercator (UTM) coordinates into Degrees Minutes Seconds (DMS) or standard Latitude/Longitude format. Built with Flask and styled using vanilla HTML/CSS.
 ---
 
-Website: [Visit Web Page](https://utm-dms-converter.dharmzeey.com) 
+Website: [Visit Web Page](https://utm-converter.dharmzeey.com) 
 
-# UTM DMS Converter
+# UTM Converter
 
-The **UTM DMS Converter** is a lightweight web application designed to help users convert **Universal Transverse Mercator (UTM)** coordinates into more readable formats such as:
+The **UTM Converter** is a lightweight web application designed to help users convert **Universal Transverse Mercator (UTM)** coordinates into more readable formats such as:
 
 - 🧭 **Degrees, Minutes, Seconds (DMS)**
 - 🌍 **Latitude & Longitude (Decimal Degrees)**
@@ -33,12 +33,12 @@ Built using **Flask** for the backend and **vanilla HTML/CSS/JavaScript** for th
 ### 1. UTM to DMS Conversion  
 Easily convert UTM coordinates into traditional **Degrees, Minutes, and Seconds** format.
 
-![UTM to DMS Form](/images/utm-dms-converter/utm-to-dms.jpg)
+![UTM to DMS Form](/images/utm-converter/utm-to-dms.jpg)
 
 ### 2. UTM to Latitude/Longitude Conversion  
 Convert UTM values into **decimal latitude and longitude** for use in GPS tools and mapping software.
 
-![UTM to LatLon Form](/images/utm-dms-converter/utm-to-latlon.jpg)
+![UTM to LatLon Form](/images/utm-converter/utm-to-latlon.jpg)
 
 ### 3. Responsive Design  
 The UI adapts seamlessly across screen sizes, making it usable on phones, tablets, and desktops.
