@@ -3,14 +3,14 @@ title: Kwiseworld
 slug: kwiseworld
 category: Web Application
 intro: A web application for a gadget store.
-url: https://dev.kwiseworld.com
+url: https://kwise.dharmzeey.com
 github_api: https://github.com/Dharmzeey/kwise-api
 github: https://github.com/Dharmzeey/kwise
 image: /images/kwiseworld/kwiseworld.jpg
 summary: Kwiseworld is a comprehensive web application tailored for a gadget store, offering a seamless e-commerce experience. Built with Django and Django Rest Framework for a robust backend and Next.js for a responsive and optimized frontend, it ensures smooth operations for both customers and administrators. The platform consist of a user-friendly home page, personalized user pages for managing orders and purchase history, and a secure environment for transactions. Kwiseworld combines intuitive design with powerful backend functionalities to deliver an exceptional shopping experience. 
 ---
 
-Website: [Visit Web Page](https://dev.kwiseworld.com)  
+Website: [Visit Web Page](https://kwise.dharmzeey.com)  
 
 # Kwiseworld  
 
