@@ -1,20 +1,20 @@
 ---
-title: UI Trees Documentation
-slug: ui-trees-documentation
+title: Tree Database
+slug: tree-database
 category: Web Application
-intro: Documentation of University of Ibadan Trees.
-url: https://uitrees.olanrewajuadam.com.ng
-github: https://github.com/Dharmzeey/uitrees
-image: /images/uitrees/homepage.png
+intro: Documentation of trees arround, providing identification and taxonomic details through a web application.
+url: https://tree-database.dharmzeey.com/
+github: https://github.com/Dharmzeey/phytolog
+image: /images/uitrees/homepage.jpg
 youtubeLink: https://www.youtube.com/embed/nzRS95f5WOU
 fullVideo: https://www.youtube.com/embed/VGAk1o3rU2I
-summary: The project is a web application designed to document trees within the University of Ibadan. It aims to help identify trees and their taxonomic details, addressing the challenge of limited expertise in this area. Only authorized users with taxonomic knowledge can upload tree information. The process involves taking a picture of the tree, selecting its scientific name, filling in details, and automatically capturing its coordinates using JavaScript. For general users, the application provides search functionality. Users can perform a general search, which matches keywords across scientific, common, or local names, or a specific search, which allows filtering by criteria such as common name, local name, scientific name, location, or coordinates. If a tree is not found, users can request its identification, and authorized individuals will handle the request. The application is built using Django and related extensions.
+summary: The project is a web application designed to document trees within a specific area. It aims to help identify trees and provide their taxonomic details, addressing the challenge of limited expertise in this field. Only authorized users with taxonomic knowledge can upload tree information. The process involves taking a picture of the tree, selecting its scientific name, filling in details, and automatically capturing its coordinates using JavaScript. For general users, the application provides search functionality. Users can perform a general search, which matches keywords across scientific, common, or local names, or a specific search, which allows filtering by criteria such as common name, local name, scientific name, location, or coordinates. If a tree is not found, users can request its identification, and authorized individuals will handle the request. The application is built using Django and related extensions.
 ---
-Website: [Visit Web Page](https://uitrees.olanrewajuadam.com.ng/)
+Website: [Visit Web Page](https://tree-database.dharmzeey.com//)
 
-Source Code: [GitHub](https://github.com/Dharmzeey/uitrees)
+Source Code: [GitHub](https://github.com/Dharmzeey/phytolog)
 
-![image](/images/uitrees/homepage.png)
+![image](/images/uitrees/homepage.jpg)
 ## **Home Page**
 
 + This is a web Application which is used to document trees in the vivinity of University of Ibadan. 
