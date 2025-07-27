@@ -13,7 +13,7 @@ Currently Learning
 - More on my Mobile and web development stacks (next. js) 
 
 
-## View Here [Dharmzeey](https://dharmzeey.netlify.app/)
+## View Here [Dharmzeey](https://dharmzeey.com)
 
 
 ## Let us talk about what I also love
