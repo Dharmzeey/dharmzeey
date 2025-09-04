@@ -6,7 +6,7 @@ intro: A web application for connecting with families and heritage.
 url: https://family-record.dharmzeey.com
 github_api: https://github.com/Dharmzeey/family-tree-api
 github: https://github.com/Dharmzeey/family-tree
-image: /images/familytree/familytree.png
+image: /images/familytree/familytree.jpg
 summary: Family Record is an innovative web application designed to help users connect with their families, explore their heritage, and trace their lineage. Built with a focus on fostering meaningful connections, the platform provides tools for creating detailed family trees, sharing stories, and preserving family history. With an intuitive interface and robust features, Family Record empowers users to celebrate their heritage and strengthen family bonds across generations.
 ---
 
