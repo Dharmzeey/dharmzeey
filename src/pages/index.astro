@@ -5,9 +5,36 @@ import TopDesign from "../components/TopDesign.astro";
 import Projects from "../components/Projects.astro";
 import BottomDesign from "../components/BottomDesign.astro";
 import Footer from "../components/Footer.astro";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Adam Olanrewaju (Dharmzeey) Portfolio",
+  "url": "https://dharmzeey.com",
+  "author": {
+    "@type": "Person",
+    "name": "Adam Adedamola Olanrewaju",
+    "alternateName": "Dharmzeey",
+    "jobTitle": "Full Stack Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance"
+    }
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://dharmzeey.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
 ---
 
-<Layout title="Dharmzeey">
+<Layout 
+  title="Adam Olanrewaju (Dharmzeey) - Full Stack Developer | Django, Next.js, Flutter Expert"
+  description="Adam Adedamola Olanrewaju (Dharmzeey) - Expert Full Stack Developer from Nigeria specializing in Django, Next.js, Flutter, and modern web technologies. Building scalable applications and innovative solutions for global clients."
+  keywords="Adam Olanrewaju, Dharmzeey, Adedamola, Django developer Nigeria, Next.js developer, Flutter developer, Full Stack Developer Nigeria, Python developer, React developer, Web developer Nigeria, Software engineer, API development, Mobile app developer, Nigerian developer, University of Ibadan graduate"
+  structuredData={structuredData}
+>
   <MyInfo />
   <TopDesign />
   <Projects />

@@ -2,9 +2,31 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Footer from "../components/Footer.astro";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Adam Adedamola Olanrewaju",
+    "alternateName": "Dharmzeey",
+    "jobTitle": "Full Stack Developer",
+    "description": "Self-taught Django full stack developer with over 3 years experience in web and mobile development",
+    "knowsAbout": ["Django", "Flutter", "Python", "JavaScript", "Web Development", "Mobile Development"],
+    "alumniOf": {
+      "@type": "EducationalOrganization", 
+      "name": "University of Ibadan"
+    }
+  }
+};
 ---
 
-<Layout title="Dharmzeey About">
+<Layout 
+  title="About Adam Olanrewaju (Dharmzeey) - Full Stack Developer Story"
+  description="Learn about Adam Adedamola Olanrewaju (Dharmzeey), a self-taught Django full stack developer with 3+ years experience in web and mobile development. University of Ibadan graduate passionate about technology and innovation."
+  keywords="Adam Olanrewaju about, Dharmzeey story, Django developer background, Full stack developer Nigeria, University of Ibadan, self-taught developer, web development journey"
+  structuredData={structuredData}
+>
   <div class="p-2 mt-12">
     <h1 class="heading">
       <Card>

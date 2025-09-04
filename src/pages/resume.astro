@@ -5,9 +5,41 @@ import Card from "../components/Card.astro";
 import Footer from "../components/Footer.astro";
 import Stacks from "../components/Stacks.astro";
 import Experience from "../components/Experience.astro";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Adam Adedamola Olanrewaju",
+  "alternateName": "Dharmzeey",
+  "jobTitle": "Full Stack Developer",
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Bachelor of Forestry",
+      "educationalLevel": "Bachelor's Degree",
+      "credentialCategory": "degree",
+      "recognizedBy": {
+        "@type": "EducationalOrganization",
+        "name": "University of Ibadan"
+      }
+    }
+  ],
+  "workExample": [
+    {
+      "@type": "CreativeWork",
+      "name": "GodHeranca Backend Development",
+      "description": "Backend developer for supermarket mobile application"
+    }
+  ]
+};
 ---
 
-<Layout title="Resume">
+<Layout 
+  title="Adam Olanrewaju (Dharmzeey) Resume - Full Stack Developer CV"
+  description="Download Adam Olanrewaju's resume. Full Stack Developer with expertise in Django, Next.js, Flutter. University of Ibadan graduate with 3+ years experience in web and mobile development."
+  keywords="Adam Olanrewaju resume, Dharmzeey CV, Django developer resume, Full stack developer CV, Python developer resume, Flutter developer CV, Nigeria developer resume"
+  structuredData={structuredData}
+>
   <div class="p-2 pt-10">
     <Card class="leading-10">
       <h2 class="pt-8 pb-3 text-4xl font-bold slide-in">Education</h2>

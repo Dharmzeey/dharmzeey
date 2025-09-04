@@ -1,15 +1,14 @@
 ---
 interface Props {
   id: string;
+  class?: string;
 }
-const { id } = Astro.props as Props;
+const { id, class: className = "" } = Astro.props as Props;
 ---
-
 
 <div class="h-full" id={id}>
   <div
-    class="card h-full w-11/12 md:w-[99%] p-3 m-auto mb-2 bg-slate-100 shadow-xl shadow-slate-400 rounded-2xl "
+    class={`modern-card h-full w-full p-6 m-auto mb-2 ${className}`}
   >
     <slot />
   </div>
-</div>

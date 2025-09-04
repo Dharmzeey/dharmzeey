@@ -2,43 +2,105 @@
 import { Image } from "astro:assets";
 ---
 
-<main class="min-h-[70vh] bg-indigo-950 text-white -mb-1">
+<main class="min-h-[80vh] bg-gradient-to-br from-indigo-950 via-purple-900 to-indigo-900 text-white -mb-1 relative overflow-hidden">
+  <!-- Animated background elements -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+    <div class="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+    <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+  </div>
+  
   <div
-    class="flex h-full flex-col-reverse justify-center items-center xl:flex-row p-10 md:p-20 pt-10 xl:pt-36 xl:container xl:m-auto"
+    class="relative z-10 flex h-full flex-col-reverse justify-center items-center xl:flex-row p-10 md:p-20 pt-10 xl:pt-36 xl:container xl:m-auto"
   >
-    <div class="xl:w-[90%] flex flex-col gap-4">
-      <h1 class="text-center text-2xl md:text-4xl lg:text-5xl xl:text-left">
-        Turning Ideas into Interfaces  <br class="hidden md:block" />
-        Problems into Products.
+    <div class="xl:w-[90%] flex flex-col gap-6">
+      <!-- Status Badge -->
+      <div class="flex justify-center xl:justify-start">
+        <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-green-500/20 text-green-300 border border-green-500/30 backdrop-blur-sm">
+          <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+          Available for Projects
+        </span>
+      </div>
+      
+      <h1 class="text-center text-3xl md:text-5xl lg:text-6xl xl:text-left font-bold bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent leading-tight">
+        Hi, I'm <span class="text-blue-400">Adam Olanrewaju</span><br class="hidden md:block" />
+        <span class="text-2xl md:text-4xl lg:text-5xl text-gray-300">Full Stack Developer</span>
       </h1>
-      <p class="text-center text-lg xl:text-left w-full leading-8">
-        I’m Adam Olanrewaju — a full-stack developer passionate about clean
-        architecture, efficient systems, and human-centered design. I build
-        scalable backends, intuitive frontends, and smart automation tools that
-        quietly solve real problems.
+      
+      <!-- Tech Stack Pills -->
+      <div class="flex flex-wrap justify-center xl:justify-start gap-2 mb-4">
+        {["Django", "Next.js", "Flutter", "Python", "React", "TypeScript"].map((tech) => (
+          <span class="px-3 py-1 text-sm bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
+            {tech}
+          </span>
+        ))}
+      </div>
+      
+      <p class="text-center text-lg xl:text-left w-full leading-8 text-gray-200 max-w-2xl">
+        I'm <strong>Adam Olanrewaju</strong> (also known as <strong>Dharmzeey</strong>) — a passionate full-stack developer from Nigeria specializing in 
+        <span class="text-blue-300 font-semibold">Django</span>, 
+        <span class="text-blue-300 font-semibold">Next.js</span>, and 
+        <span class="text-blue-300 font-semibold">Flutter</span>. 
+        I build scalable backends, intuitive frontends, and smart automation tools that solve real-world problems.
       </p>
-      <p class="text-center text-lg xl:text-left w-full leading-8">
-        Every project below tells its own story — of function, form, and the
-        kind of software that gets things done.
+      
+      <p class="text-center text-lg xl:text-left w-full leading-8 text-gray-300 max-w-2xl">
+        With over 3 years of experience in web and mobile development, I've helped businesses transform their ideas into powerful digital solutions. 
+        Every project tells its own story of innovation, efficiency, and user-centered design.
       </p>
-      <a
-        href="/Adam-Olanrewaju-Resume.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="mt-2 px-5 py-5 bg-indigo-800 text-white rounded-lg shadow hover:bg-indigo-700 transition-colors duration-200 w-fit self-center xl:self-start"
-      >
-        View Resume
-        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-      </a>
+      
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center xl:justify-start mt-6">
+        <a
+          href="/Adam-Olanrewaju-Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-fit self-center xl:self-start font-semibold flex items-center gap-2"
+        >
+          <i class="fa-solid fa-download"></i>
+          Download Resume
+          <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        
+        <a
+          href="mailto:olanrewajuofficiall@gmail.com"
+          class="group px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-xl border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300 w-fit self-center xl:self-start font-semibold flex items-center gap-2"
+        >
+          <i class="fa-solid fa-envelope"></i>
+          Let's Talk
+          <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+      
+      <!-- Quick Stats -->
+      <div class="grid grid-cols-3 gap-6 mt-8 max-w-md mx-auto xl:mx-0">
+        <div class="text-center">
+          <div class="text-2xl font-bold text-blue-400">3+</div>
+          <div class="text-sm text-gray-400">Years Experience</div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-purple-400">15+</div>
+          <div class="text-sm text-gray-400">Projects Completed</div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-green-400">100%</div>
+          <div class="text-sm text-gray-400">Client Satisfaction</div>
+        </div>
+      </div>
     </div>
-    <div class="flex justify-center items-center w-full md:w-2/3">
+    
+    <div class="flex justify-center items-center w-full md:w-2/3 relative">
+      <!-- Floating elements around image -->
+      <div class="absolute -top-4 -left-4 w-8 h-8 bg-blue-500 rounded-full animate-bounce opacity-60"></div>
+      <div class="absolute -bottom-4 -right-4 w-6 h-6 bg-purple-500 rounded-full animate-bounce animation-delay-1000 opacity-60"></div>
+      <div class="absolute top-1/2 -right-8 w-4 h-4 bg-pink-500 rounded-full animate-pulse opacity-60"></div>
+      
       <Image
         width={800}
         height={800}
-        alt="Showcase"
-        class="w-full h-full"
+        alt="Adam Olanrewaju (Dharmzeey) - Full Stack Developer"
+        class="w-full h-full rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500 border-4 border-white/10"
         src={"/images/showcase.png"}
       />
     </div>
   </div>
-</main>

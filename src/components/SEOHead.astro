@@ -1,0 +1,71 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+  canonicalURL?: string;
+  structuredData?: any;
+  noindex?: boolean;
+}
+
+const {
+  title = "Adam Olanrewaju (Dharmzeey) - Full Stack Developer | Django, Next.js, Flutter Expert",
+  description = "Adam Adedamola Olanrewaju (Dharmzeey) - Expert Full Stack Developer specializing in Django, Next.js, Flutter, and modern web technologies. Building scalable applications and innovative solutions.",
+  keywords = "Adam Olanrewaju, Dharmzeey, Adedamola, Django developer, Next.js developer, Flutter developer, Full Stack Developer, Python developer, React developer, Web developer, Software engineer, API development, Mobile app developer, Nigeria developer",
+  ogImage = "https://dharmzeey.com/images/showcase.png",
+  canonicalURL = Astro.url.href,
+  structuredData,
+  noindex = false
+} = Astro.props as Props;
+
+const jsonLd = structuredData || {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Adam Adedamola Olanrewaju",
+  "alternateName": ["Dharmzeey", "Adam Olanrewaju"],
+  "jobTitle": "Full Stack Developer",
+  "description": description,
+  "url": "https://dharmzeey.com",
+  "image": ogImage,
+  "sameAs": [
+    "https://github.com/dharmzeey",
+    "https://www.linkedin.com/in/dharmzeey/",
+    "https://www.twitter.com/dharmzeey"
+  ]
+};
+---
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+<meta name="author" content="Adam Adedamola Olanrewaju (Dharmzeey)" />
+<meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="Dharmzeey Portfolio" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={ogImage} />
+<meta name="twitter:creator" content="@dharmzeey" />
+<meta name="twitter:site" content="@dharmzeey" />
+
+<!-- Structured Data -->
+{structuredData && (
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
+)}

@@ -1,11 +1,60 @@
 ---
 import "../styles/utils.css";
 import "../styles/global.css";
+import "../styles/customs.css";
 export interface Props {
   title: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+  canonicalURL?: string;
+  structuredData?: any;
 }
 
-const { title = "Dharmzeey" } = Astro.props as Props;
+const { 
+  title = "Adam Olanrewaju (Dharmzeey) - Full Stack Developer | Django, Next.js, Flutter Expert",
+  description = "Adam Adedamola Olanrewaju (Dharmzeey) - Expert Full Stack Developer specializing in Django, Next.js, Flutter, and modern web technologies. Building scalable applications and innovative solutions.",
+  keywords = "Adam Olanrewaju, Dharmzeey, Adedamola, Django developer, Next.js developer, Flutter developer, Full Stack Developer, Python developer, React developer, Web developer, Software engineer, API development, Mobile app developer, Nigeria developer",
+  ogImage = "https://dharmzeey.com/images/showcase.png",
+  canonicalURL = Astro.url.href,
+  structuredData
+} = Astro.props as Props;
+
+const jsonLd = structuredData || {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Adam Adedamola Olanrewaju",
+  "alternateName": ["Dharmzeey", "Adam Olanrewaju"],
+  "jobTitle": "Full Stack Developer",
+  "description": "Expert Full Stack Developer specializing in Django, Next.js, Flutter, and modern web technologies",
+  "url": "https://dharmzeey.com",
+  "image": "https://dharmzeey.com/images/showcase.png",
+  "sameAs": [
+    "https://github.com/dharmzeey",
+    "https://www.linkedin.com/in/dharmzeey/",
+    "https://www.twitter.com/dharmzeey"
+  ],
+  "knowsAbout": [
+    "Django",
+    "Next.js",
+    "Flutter",
+    "Python",
+    "JavaScript",
+    "React",
+    "API Development",
+    "Mobile App Development",
+    "Web Development",
+    "Software Engineering"
+  ],
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "University of Ibadan"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "Nigeria"
+  }
+};
 ---
 
 <!doctype html>
@@ -14,44 +63,74 @@ const { title = "Dharmzeey" } = Astro.props as Props;
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="title"
-      content="Adam Olanrewaju, Dharmzeey's personal website"
-    />
-    <meta
-      name="description"
-      content="Software developer, proficient in fullstack web development, mobile development, web scraping and automation"
-    />
-    <meta
-      name="keywords"
-      content="Adam, Olanrewaju, Dharmzeey, Adedamola, personal, portfolio,  software developer, web and mobile developer, automation and web scraping"
-    />
-
-    <link rel="shortcut icon" href="/idea.ico" type="image/x-icon" />
-    <meta charset="UTF-8" />
-    <meta property="og:title" content="Dharmzeey's personal website" />
-    <meta
-      property="og:description"
-      content="Dharmzeey's website containing his work and his information"
-    />
-    <meta
-      property="og:image"
-      content="https://dharmzeey.netlify.app/idea.jpg"
-    />
-    <meta property="og:url" content="https://dharmzeey.netlify.app/" />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Adam Adedamola Olanrewaju (Dharmzeey)" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Dharmzeey" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Dharmzeey Portfolio" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImage} />
+    <meta name="twitter:creator" content="@dharmzeey" />
     <meta name="twitter:site" content="@dharmzeey" />
-    <meta name="twitter:title" content="Dharmzeey's portfolio website" />
-    <meta
-      name="twitter:description"
-      content="Dharmzeey's website containing his work and his information"
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#1e1a4d" />
+    <meta name="msapplication-TileColor" content="#1e1a4d" />
+    <meta name="application-name" content="Dharmzeey Portfolio" />
+    <meta name="apple-mobile-web-app-title" content="Dharmzeey" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="NG" />
+    <meta name="geo.country" content="Nigeria" />
+    <meta name="ICBM" content="7.3775, 3.9470" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//github.com" />
+    <link rel="dns-prefetch" href="//linkedin.com" />
+    <link rel="dns-prefetch" href="//twitter.com" />
+    
+    <!-- Favicon and Icons -->
+    <link rel="shortcut icon" href="/idea.ico" type="image/x-icon" />
+    <link rel="icon" type="image/x-icon" href="/idea.ico" />
+    <link rel="apple-touch-icon" href="/idea.jpg" />
+    
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
     />
-    <meta
-      name="twitter:image"
-      content="https://dharmzeey.netlify.app/idea.jpg"
-    />
+    
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -59,18 +138,26 @@ const { title = "Dharmzeey" } = Astro.props as Props;
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
+    
+    <!-- Performance Hints -->
+    <link rel="preload" href="/images/showcase.png" as="image" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https:;"
     />
-    <title>{title}</title>
   </head>
   <body>
-    <!-- <Header /> -->
     <div>
       <slot />
     </div>
+    
+    <!-- Google Analytics (replace with your tracking ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
   </body>
 </html>

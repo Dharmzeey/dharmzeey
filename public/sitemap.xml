@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://dharmzeey.com/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://dharmzeey.com/images/showcase.png</image:loc>
+      <image:title>Adam Olanrewaju (Dharmzeey) - Full Stack Developer</image:title>
+    </image:image>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://dharmzeey.com/about</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Resume Page -->
+  <url>
+    <loc>https://dharmzeey.com/resume</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Resume PDF -->
+  <url>
+    <loc>https://dharmzeey.com/Adam-Olanrewaju-Resume.pdf</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Project Pages -->
+  <url>
+    <loc>https://dharmzeey.com/kwiseworld</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://dharmzeey.com/images/kwiseworld/kwiseworld.jpg</image:loc>
+      <image:title>Kwiseworld - E-commerce Web Application</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://dharmzeey.com/familyrecord</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://dharmzeey.com/images/familytree/familytree.jpg</image:loc>
+      <image:title>Family Record - Family Tree Application</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://dharmzeey.com/utm-converter</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://dharmzeey.com/images/utmconverter/utm-converter.jpg</image:loc>
+      <image:title>UTM Converter - Coordinate Conversion Tool</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://dharmzeey.com/tree-database</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://dharmzeey.com/images/uitrees/homepage.jpg</image:loc>
+      <image:title>Tree Database - Tree Documentation System</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://dharmzeey.com/abuad-farm</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://dharmzeey.com/images/abuadfarm/Admin-home.png</image:loc>
+      <image:title>ABUAD Farm - Manufacturing Company Web Application</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://dharmzeey.com/shopify-homepage-clone</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://dharmzeey.com/images/crushingit/shopify.png</image:loc>
+      <image:title>Shopify Homepage Clone</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://dharmzeey.com/ctm-api</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://dharmzeey.com/images/ctmapi/api.png</image:loc>
+      <image:title>CTM API - E-commerce API</image:title>
+    </image:image>
+  </url>
+  
+</urlset>
