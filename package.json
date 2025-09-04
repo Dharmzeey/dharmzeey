@@ -10,10 +10,10 @@
     "sitemap": "astro build && astro preview"
   },
   "dependencies": {
-    "@astrojs/netlify": "^6.3.3",
+    "@astrojs/netlify": "^6.5.9",
     "@astrojs/sitemap": "^3.5.1",
     "@tailwindcss/vite": "^4.1.4",
-    "astro": "^5.7.13",
+    "astro": "^5.13.5",
     "tailwindcss": "^4.1.4"
   }
 }
