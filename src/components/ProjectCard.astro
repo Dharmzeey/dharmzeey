@@ -8,7 +8,7 @@ const { id, class: className = "" } = Astro.props as Props;
 
 <div class="h-full" id={id}>
   <div
-    class={`modern-card h-full w-full p-6 m-auto mb-2 ${className}`}
+    class={`modern-card h-full w-full shadow-sm shadow-white rounded-2xl p-6 m-auto mb-2 ${className}`}
   >
     <slot />
   </div>
