@@ -44,12 +44,12 @@ body {
 }
 
 .main-heading {
-  @apply text-center text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+  @apply text-center text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-gray-900 via-gray-950 to-black bg-clip-text text-transparent;
 }
 
 button,
 .btn {
-  @apply text-sm px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white inline-block font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300;
+  @apply text-sm px-6 py-3 bg-gradient-to-r from-gray-900 via-gray-950 to-black text-white inline-block font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300;
 }
 
 #scale-in {
