@@ -11,30 +11,31 @@ export interface Props {
   structuredData?: any;
 }
 
-const { 
+const {
   title = "Adam Olanrewaju (Dharmzeey) - Full Stack Developer | Django, Next.js, Flutter Expert",
   description = "Adam Adedamola Olanrewaju (Dharmzeey) - Expert Full Stack Developer specializing in Django, Next.js, Flutter, and modern web technologies. Building scalable applications and innovative solutions.",
   keywords = "Adam Olanrewaju, Dharmzeey, Adedamola, Django developer, Next.js developer, Flutter developer, Full Stack Developer, Python developer, React developer, Web developer, Software engineer, API development, Mobile app developer, Nigeria developer",
   ogImage = "https://dharmzeey.com/images/showcase.png",
   canonicalURL = Astro.url.href,
-  structuredData
+  structuredData,
 } = Astro.props as Props;
 
 const jsonLd = structuredData || {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Adam Adedamola Olanrewaju",
-  "alternateName": ["Dharmzeey", "Adam Olanrewaju"],
-  "jobTitle": "Full Stack Developer",
-  "description": "Expert Full Stack Developer specializing in Django, Next.js, Flutter, and modern web technologies",
-  "url": "https://dharmzeey.com",
-  "image": "https://dharmzeey.com/images/showcase.png",
-  "sameAs": [
+  name: "Adam Adedamola Olanrewaju",
+  alternateName: ["Dharmzeey", "Adam Olanrewaju"],
+  jobTitle: "Full Stack Developer",
+  description:
+    "Expert Full Stack Developer specializing in Django, Next.js, Flutter, and modern web technologies",
+  url: "https://dharmzeey.com",
+  image: "https://dharmzeey.com/images/showcase.png",
+  sameAs: [
     "https://github.com/dharmzeey",
     "https://www.linkedin.com/in/dharmzeey/",
-    "https://www.twitter.com/dharmzeey"
+    "https://www.twitter.com/dharmzeey",
   ],
-  "knowsAbout": [
+  knowsAbout: [
     "Django",
     "Next.js",
     "Flutter",
@@ -44,16 +45,16 @@ const jsonLd = structuredData || {
     "API Development",
     "Mobile App Development",
     "Web Development",
-    "Software Engineering"
+    "Software Engineering",
   ],
-  "alumniOf": {
+  alumniOf: {
     "@type": "EducationalOrganization",
-    "name": "University of Ibadan"
+    name: "University of Ibadan",
   },
-  "address": {
+  address: {
     "@type": "PostalAddress",
-    "addressCountry": "Nigeria"
-  }
+    addressCountry: "Nigeria",
+  },
 };
 ---
 
@@ -63,16 +64,19 @@ const jsonLd = structuredData || {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- Primary Meta Tags -->
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
     <meta name="author" content="Adam Adedamola Olanrewaju (Dharmzeey)" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
     <link rel="canonical" href={canonicalURL} />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
@@ -83,7 +87,7 @@ const jsonLd = structuredData || {
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Dharmzeey Portfolio" />
     <meta property="og:locale" content="en_US" />
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
@@ -92,44 +96,44 @@ const jsonLd = structuredData || {
     <meta property="twitter:image" content={ogImage} />
     <meta name="twitter:creator" content="@dharmzeey" />
     <meta name="twitter:site" content="@dharmzeey" />
-    
+
     <!-- Additional SEO Meta Tags -->
     <meta name="theme-color" content="#1e1a4d" />
     <meta name="msapplication-TileColor" content="#1e1a4d" />
     <meta name="application-name" content="Dharmzeey Portfolio" />
-    <meta name="apple-mobile-web-app-title" content="Dharmzeey" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    
+    <meta name="mobile-web-app-title" content="Dharmzeey" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-status-bar-style" content="default" />
+
     <!-- Geo Tags -->
     <meta name="geo.region" content="NG" />
     <meta name="geo.country" content="Nigeria" />
     <meta name="ICBM" content="7.3775, 3.9470" />
-    
+
     <!-- Structured Data -->
-    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
-    
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-    
+
     <!-- DNS Prefetch -->
     <link rel="dns-prefetch" href="//github.com" />
     <link rel="dns-prefetch" href="//linkedin.com" />
     <link rel="dns-prefetch" href="//twitter.com" />
-    
+
     <!-- Favicon and Icons -->
     <link rel="shortcut icon" href="/idea.ico" type="image/x-icon" />
     <link rel="icon" type="image/x-icon" href="/idea.ico" />
     <link rel="apple-touch-icon" href="/idea.jpg" />
-    
+
     <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    
+
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -138,26 +142,62 @@ const jsonLd = structuredData || {
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    
+
     <!-- Performance Hints -->
     <link rel="preload" href="/images/showcase.png" as="image" />
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https:;"
     />
+    <!-- Google Tag Manager -->
+    <!-- <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TR8V7QRD");
+    </script> -->
+    <!-- End Google Tag Manager -->
   </head>
   <body>
     <div>
       <slot />
     </div>
-    
+
     <!-- Google Analytics (replace with your tracking ID) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TR8V7QRD"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) --><!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TR8V7QRD"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+    ></script> -->
+    <!-- <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "GA_MEASUREMENT_ID");
+    </script> -->
   </body>
 </html>

@@ -45,6 +45,7 @@
 
 // TOGGLE FULL IMAGE VIEW ON CLICK FOR MULTIPLE IMAGES
 const projectImages = document.querySelectorAll(".show-img");
+console.log(projectImages)
 const fullImageView = document.createElement("div");
 const fullImage = document.createElement("img");
 
@@ -72,6 +73,7 @@ document.body.appendChild(fullImageView);
 // Add click event to each image
 projectImages.forEach((projectImage) => {
   projectImage.addEventListener("click", () => {
+    console.log(projectImage);
     fullImage.src = projectImage.src;
     fullImage.alt = projectImage.alt;
     fullImageView.style.display = "flex";
