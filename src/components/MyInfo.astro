@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 <main
   class="min-h-[80vh] bg-gradient-to-br from-gray-900 via-gray-950 to-black text-white mb-20 relative overflow-hidden"
 >
-  <!-- Subtle animated background blobs (dark only) -->
+  <!-- Subtle animated background blobs -->
   <div class="absolute inset-0 opacity-10">
     <div
       class="absolute top-20 left-10 w-72 h-72 bg-gray-800 rounded-full mix-blend-multiply filter blur-xl animate-blob"
@@ -20,30 +20,21 @@ import { Image } from "astro:assets";
   </div>
 
   <div
-    class="relative z-10 flex h-full flex-col-reverse justify-center items-center xl:flex-row p-10 md:p-20 pt-10 xl:pt-36 xl:container xl:m-auto"
+    class="relative z-10 flex h-full flex-col-reverse gap-4 justify-center items-center xl:flex-row p-10 md:p-20 pt-10 xl:pt-36 xl:container xl:m-auto"
   >
     <div class="xl:w-[90%] flex flex-col gap-6">
-      <!-- Status Badge -->
-      <div class="flex justify-center xl:justify-start mt-5">
-        <span
-          class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-green-900/40 text-green-300 border border-green-700/40 backdrop-blur-sm"
-        >
-          <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-          Available for Projects
-        </span>
-      </div>
 
-      <!-- Name & Title -->
+      
       <h1
         class="text-center text-3xl md:text-5xl lg:text-6xl xl:text-left font-bold bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 bg-clip-text text-transparent leading-tight"
       >
-        Hi, I'm <span class="text-gray-100">Adam Olanrewaju</span><br class="hidden md:block" />
+        <span class="text-gray-100">Adam Olanrewaju</span><br class="hidden md:block" />
         <span class="text-2xl md:text-4xl lg:text-5xl text-gray-400 font-normal">
           Full Stack Developer
         </span>
       </h1>
 
-      <!-- Tech Stack Pills -->
+      
       <div class="flex flex-wrap justify-center xl:justify-start gap-2 mb-4">
         {[
           "Django",
@@ -62,7 +53,7 @@ import { Image } from "astro:assets";
       <!-- Description Paragraphs -->
       <p class="text-center text-lg xl:text-left w-full leading-8 text-gray-300 max-w-2xl">
         I'm <strong class="text-white">Adam Olanrewaju</strong> alias <strong class="text-gray-200">Dharmzeey</strong> — a
-        passionate full-stack developer from Nigeria specializing in
+        passionate full-stack developer specializing in
         <span class="text-gray-200 font-semibold">Django</span>,
         <span class="text-gray-200 font-semibold">Django Rest Framework</span>, and
         <span class="text-gray-200 font-semibold">Next.js</span>.
@@ -71,9 +62,9 @@ import { Image } from "astro:assets";
       </p>
 
       <p class="text-center text-lg xl:text-left w-full leading-8 text-gray-200 max-w-2xl">
-        With over 3 years of experience in web and mobile development, I've
-        helped businesses transform their ideas into powerful digital solutions.
-        Every project tells its own story of innovation, efficiency, and
+        With over 3 years of experience in web, I've
+        have transformed and birthed ideas into powerful digital solutions.
+        Different project with its unique backstory, innovation, challegnes, efficiency, and
         user-centered design.
       </p>
 
@@ -93,7 +84,7 @@ import { Image } from "astro:assets";
 
         <!-- Secondary Button -->
         <a
-          href="mailto:olanrewajuofficiall@gmail.com"
+          href="mailto:olanrewajuadam2020gmail.com"
           class="group px-8 py-4 bg-black backdrop-blur-sm text-white rounded-xl border border-gray-600/50 hover:bg-gray-900 hover:scale-105 transition-all duration-300 w-fit self-center xl:self-start font-semibold flex items-center gap-2"
         >
           <i class="fa-solid fa-envelope"></i>
@@ -112,10 +103,7 @@ import { Image } from "astro:assets";
           <div class="text-2xl font-bold text-gray-200">10+</div>
           <div class="text-sm text-gray-500">Projects Completed</div>
         </div>
-        <div class="text-center">
-          <div class="text-2xl font-bold text-green-400">100%</div>
-          <div class="text-sm text-gray-500">Client Satisfaction</div>
-        </div>
+       
       </div>
     </div>
 
