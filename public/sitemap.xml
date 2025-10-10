@@ -15,20 +15,20 @@
   </url>
   
   <!-- About Page -->
-  <url>
+  <!-- <url>
     <loc>https://dharmzeey.com/about</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
+  </url> -->
   
   <!-- Resume Page -->
-  <url>
+  <!-- <url>
     <loc>https://dharmzeey.com/resume</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
+  </url> -->
   
   <!-- Resume PDF -->
   <url>
@@ -39,7 +39,7 @@
   </url>
   
   <!-- Project Pages -->
-  <url>
+  <!-- <url>
     <loc>https://dharmzeey.com/kwiseworld</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -48,9 +48,9 @@
       <image:loc>https://dharmzeey.com/images/kwiseworld/kwiseworld.jpg</image:loc>
       <image:title>Kwiseworld - E-commerce Web Application</image:title>
     </image:image>
-  </url>
+  </url> -->
   
-  <url>
+  <!-- <url>
     <loc>https://dharmzeey.com/familyrecord</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -59,9 +59,9 @@
       <image:loc>https://dharmzeey.com/images/familytree/familytree.jpg</image:loc>
       <image:title>Family Record - Family Tree Application</image:title>
     </image:image>
-  </url>
+  </url> -->
   
-  <url>
+  <!-- <url>
     <loc>https://dharmzeey.com/utm-converter</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -70,9 +70,9 @@
       <image:loc>https://dharmzeey.com/images/utmconverter/utm-converter.jpg</image:loc>
       <image:title>UTM Converter - Coordinate Conversion Tool</image:title>
     </image:image>
-  </url>
+  </url> -->
   
-  <url>
+  <!-- <url>
     <loc>https://dharmzeey.com/tree-database</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -81,9 +81,9 @@
       <image:loc>https://dharmzeey.com/images/uitrees/homepage.jpg</image:loc>
       <image:title>Tree Database - Tree Documentation System</image:title>
     </image:image>
-  </url>
+  </url> -->
   
-  <url>
+  <!-- <url>
     <loc>https://dharmzeey.com/abuad-farm</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -92,9 +92,9 @@
       <image:loc>https://dharmzeey.com/images/abuadfarm/Admin-home.png</image:loc>
       <image:title>ABUAD Farm - Manufacturing Company Web Application</image:title>
     </image:image>
-  </url>
+  </url> -->
   
-  <url>
+  <!-- <url>
     <loc>https://dharmzeey.com/shopify-homepage-clone</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -103,9 +103,9 @@
       <image:loc>https://dharmzeey.com/images/crushingit/shopify.png</image:loc>
       <image:title>Shopify Homepage Clone</image:title>
     </image:image>
-  </url>
+  </url> -->
   
-  <url>
+  <!-- <url>
     <loc>https://dharmzeey.com/ctm-api</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -114,6 +114,6 @@
       <image:loc>https://dharmzeey.com/images/ctmapi/api.png</image:loc>
       <image:title>CTM API - E-commerce API</image:title>
     </image:image>
-  </url>
+  </url> -->
   
 </urlset>
