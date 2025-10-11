@@ -1,8 +1,8 @@
 ---  
 title: Dharmzeey Shop
 slug: dharmzeey-shop
-category: Web Application
-intro: An ecommerce web application.
+category: Ecommerce Platform
+intro: A modern ecommerce web application offering a seamless shopping experience, featuring secure payments, user dashboards, and fast browsing across multiple product categories.
 url: https://shop.dharmzeey.com
 github_api: https://github.com/Dharmzeey/shop-api
 github: https://github.com/Dharmzeey/shop
