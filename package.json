@@ -12,10 +12,12 @@
   "dependencies": {
     "@astrojs/netlify": "^6.5.9",
     "@astrojs/sitemap": "^3.5.1",
+    "@netlify/blobs": "^10.1.0",
     "@tailwindcss/vite": "^4.1.4",
     "astro": "^5.13.5",
     "contentful": "^11.8.5",
     "tailwindcss": "^4.1.4",
-    "terser": "^5.44.0"
+    "terser": "^5.44.0",
+    "unstorage": "^1.17.1"
   }
 }
