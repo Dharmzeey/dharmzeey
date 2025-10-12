@@ -2,6 +2,7 @@
 import "../styles/utils.css";
 import "../styles/global.css";
 import "../styles/customs.css";
+
 export interface Props {
   title: string;
   description?: string;
@@ -9,20 +10,22 @@ export interface Props {
   ogImage?: string;
   canonicalURL?: string;
   structuredData?: any;
+  type?: "website" | "article"; // Add this to differentiate between blog and portfolio pages
 }
 
 const {
   title = "Adam Olanrewaju (Dharmzeey) - Full Stack Developer | Django, Next.js",
   description = "Adam Adedamola Olanrewaju (Dharmzeey) - Expert Full Stack Developer specializing in Django, Next.js, and modern web technologies. Building scalable applications and innovative solutions.",
-  keywords = "Adam Olanrewaju, Dharmzeey, Adedamola, Django developer, Next.js developer, , Full Stack Developer, Python developer, React developer, Web developer, Software engineer, API development, Mobile app developer, Nigeria developer",
+  keywords = "Adam Olanrewaju, Dharmzeey, Adedamola, Django developer, Next.js developer, Full Stack Developer, Python developer, React developer, Web developer, Software engineer, API development, Mobile app developer, Nigeria developer",
   ogImage = "https://dharmzeey.com/idea.jpg",
   canonicalURL = Astro.url.href,
   structuredData,
+  type = "website",
 } = Astro.props as Props;
 
 const jsonLd = structuredData || {
   "@context": "https://schema.org",
-  "@type": "Person",
+  "@type": type === "article" ? "BlogPosting" : "Person",
   name: "Adam Adedamola Olanrewaju",
   alternateName: ["Dharmzeey", "Adam Olanrewaju"],
   jobTitle: "Full Stack Developer",
@@ -35,25 +38,6 @@ const jsonLd = structuredData || {
     "https://www.linkedin.com/in/dharmzeey/",
     "https://www.twitter.com/dharmzeey",
   ],
-  knowsAbout: [
-    "Django",
-    "Next.js",
-    "Python",
-    "JavaScript",
-    "React",
-    "API Development",
-    "Mobile App Development",
-    "Web Development",
-    "Software Engineering",
-  ],
-  alumniOf: {
-    "@type": "EducationalOrganization",
-    name: "University of Ibadan",
-  },
-  address: {
-    "@type": "PostalAddress",
-    addressCountry: "Nigeria",
-  },
 };
 ---
 
@@ -61,41 +45,37 @@ const jsonLd = structuredData || {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Primary Meta Tags -->
+    <!-- ✅ Primary Meta -->
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
     <meta name="author" content="Adam Adedamola Olanrewaju (Dharmzeey)" />
-    <meta
-      name="robots"
-      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-    />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href={canonicalURL} />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
+    <!-- ✅ Open Graph -->
+    <meta property="og:type" content={type} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:site_name" content="Dharmzeey Portfolio" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Dharmzeey" />
 
-    <!-- Twitter -->
+    <!-- ✅ Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={ogImage} />
     <meta name="twitter:creator" content="@dharmzeey" />
-    <meta name="twitter:site" content="@dharmzeey" />
 
+    
     <!-- Additional SEO Meta Tags -->
     <meta name="theme-color" content="#1e1a4d" />
     <meta name="msapplication-TileColor" content="#1e1a4d" />
@@ -104,36 +84,22 @@ const jsonLd = structuredData || {
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-status-bar-style" content="default" />
 
-    <!-- Geo Tags -->
-    <meta name="geo.region" content="NG" />
-    <meta name="geo.country" content="Nigeria" />
-    <meta name="ICBM" content="7.3775, 3.9470" />
-
-    <!-- Structured Data -->
+    <!-- ✅ Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-
-    <!-- Preconnect for Performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//github.com" />
-    <link rel="dns-prefetch" href="//linkedin.com" />
-    <link rel="dns-prefetch" href="//twitter.com" />
 
     <!-- Favicon and Icons -->
     <link rel="shortcut icon" href="/idea.ico" type="image/x-icon" />
     <link rel="icon" type="image/x-icon" href="/idea.ico" />
     <link rel="apple-touch-icon" href="/idea.jpg" />
-
-    <!-- Fonts -->
+    
+    <!-- ✅ UI + Performance -->
+    <meta name="theme-color" content="#1e1a4d" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -141,36 +107,18 @@ const jsonLd = structuredData || {
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <!-- Performance Hints -->
-    <link rel="preload" href="/idea.jpg" as="image" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https:;"
-    />
-
   </head>
-  <body>
-    <div>
-      <slot />
-    </div>
 
+  <body class="text-white font-inter overflow-x-hidden antialiased">
+    <slot />
 
-    <noscript
-      ><iframe
+    <noscript>
+      <iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-TR8V7QRD"
         height="0"
         width="0"
-        style="display:none;visibility:hidden"></iframe></noscript
-    >
-    
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-TR8V7QRD"
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"></iframe></noscript
-    >
-
+        style="display:none;visibility:hidden"
+      ></iframe>
+    </noscript>
   </body>
 </html>

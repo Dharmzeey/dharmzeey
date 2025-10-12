@@ -6,7 +6,7 @@ html {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   scroll-behavior: smooth;
   /* @apply bg-[#141414]; */
-  @apply bg-gradient-to-b from-black via-gray-950 to-gray-900;
+  @apply bg-gradient-to-b from-gray-950 to-gray-900;
 }
 
 body {
