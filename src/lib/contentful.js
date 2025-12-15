@@ -52,15 +52,15 @@ export async function getAllPosts() {
 
     return entries.items.map(item => {
 
-        const nodes = item.fields.content?.content || [];
+        const nodes = item.fields?.content?.content || [];
         const content = renderRichTextContent(nodes);
 
         return {
-            title: item.fields.title,
-            slug: item.fields.slug,
-            image: item.fields.featuredImage?.fields?.file?.url,
-            date: item.fields.publishedDate,
-            author: item.fields.author.fields.name,
+            title: item.fields?.title || 'Untitled',
+            slug: item.fields?.slug || '',
+            image: item.fields?.featuredImage?.fields?.file?.url,
+            date: item.fields?.publishedDate,
+            author: item.fields?.author?.fields?.name || 'Anonymous',
             content: content,
         }
     });
