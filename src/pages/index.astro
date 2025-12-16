@@ -5,6 +5,8 @@ import TopDesign from "../components/TopDesign.astro";
 import Projects from "../components/Projects.astro";
 import BottomDesign from "../components/BottomDesign.astro";
 import Footer from "../components/Footer.astro";
+import FloatingNav from "../components/FloatingNav.astro";
+import CursorTrail from "../components/CursorTrail.astro";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -29,15 +31,21 @@ const structuredData = {
 };
 ---
 
-<Layout 
+<Layout
   title="Adam Olanrewaju (Dharmzeey) - Full Stack Developer | Django, Next.js, Flutter Expert"
   description="Full Stack Developer specializing in Django, Next.js, and modern web technologies."
   keywords="Full Stack Developer, Django, Next.js, Python, Nigeria Developer"
   structuredData={structuredData}
 >
-  <MyInfo />
+  <CursorTrail />
+  <FloatingNav />
+  <div id="home">
+    <MyInfo />
+  </div>
   <!-- <TopDesign /> -->
-  <Projects />
+  <div id="projects">
+    <Projects />
+  </div>
   <!-- <BottomDesign /> -->
   <Footer />
 </Layout>

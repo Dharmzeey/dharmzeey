@@ -3,20 +3,20 @@ import { Image } from "astro:assets";
 ---
 
 <main
-  class="min-h-[80vh] bg-gradient-to-br from-gray-900 via-gray-950 to-black text-white mb-20 relative overflow-hidden"
+  class="min-h-[80vh] bg-black text-white mb-20 relative overflow-hidden"
 >
   <!-- Subtle animated background blobs -->
   <div class="absolute inset-0 opacity-10">
     <div
-      class="absolute top-20 left-10 w-72 h-72 bg-gray-800 rounded-full mix-blend-multiply filter blur-xl animate-blob"
+      class="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full mix-blend-screen filter blur-3xl animate-blob"
     >
     </div>
     <div
-      class="absolute top-40 right-10 w-72 h-72 bg-gray-900 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"
+      class="absolute top-40 right-10 w-72 h-72 bg-white/3 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-2000"
     >
     </div>
     <div
-      class="absolute -bottom-8 left-20 w-72 h-72 bg-black rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"
+      class="absolute -bottom-8 left-20 w-72 h-72 bg-white/5 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-4000"
     >
     </div>
   </div>
@@ -26,7 +26,7 @@ import { Image } from "astro:assets";
   >
     <div class="xl:w-[90%] flex flex-col gap-6">
       <h1
-        class="text-center text-2xl md:text-4xl lg:text-5xl xl:text-left font-bold bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 bg-clip-text text-transparent leading-tight"
+        class="text-center text-2xl md:text-4xl lg:text-5xl xl:text-left font-bold text-white leading-tight"
       >
         <span class="text-gray-100">Adam Olanrewaju</span><br
           class="hidden md:block"
@@ -41,16 +41,17 @@ import { Image } from "astro:assets";
       <div class="flex flex-wrap justify-center xl:justify-start gap-2 mb-4">
         {
           [
-            "Django",
-            "Next.js",
-            "Selenium",
-            "Python",
-            "PostgreSQL",
-            "Docker",
-            "TypeScript",
+            { name: "Django", icon: "fa-brands fa-python" },
+            { name: "Next.js", icon: "fa-brands fa-react" },
+            { name: "Selenium", icon: "fa-solid fa-robot" },
+            { name: "Python", icon: "fa-brands fa-python" },
+            { name: "PostgreSQL", icon: "fa-solid fa-database" },
+            { name: "Docker", icon: "fa-brands fa-docker" },
+            { name: "TypeScript", icon: "fa-brands fa-js" },
           ].map((tech) => (
-            <span class="px-3 py-1 text-sm bg-gray-800/60 backdrop-blur-sm rounded-full border border-gray-700/50 hover:bg-gray-700/70 transition-all duration-300 text-white">
-              {tech}
+            <span class="group px-3 py-1.5 text-sm bg-black/40 backdrop-blur-sm rounded-full border border-white/10 hover:bg-white/5 hover:border-white/20 transition-all duration-300 text-white cursor-default">
+              <i class={`${tech.icon} mr-1.5 text-white/60 group-hover:text-white transition-colors`}></i>
+              {tech.name}
             </span>
           ))
         }
@@ -86,7 +87,7 @@ import { Image } from "astro:assets";
           href="/Adam-Olanrewaju-Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          class="group px-8 py-4 bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-xl shadow-lg shadow-black/30 hover:shadow-gray-900/50 hover:scale-105 transition-all duration-300 w-fit self-center xl:self-start font-semibold flex items-center gap-2 border border-gray-700/60"
+          class="group px-8 py-4 bg-white text-black rounded-xl shadow-lg shadow-black/30 hover:shadow-white/20 hover:scale-105 transition-all duration-300 w-fit self-center xl:self-start font-semibold flex items-center gap-2"
         >
           <i class="fa-solid fa-download"></i>
           Download Resume
@@ -98,7 +99,7 @@ import { Image } from "astro:assets";
         <!-- Secondary Button -->
         <a
           href="mailto:olanrewajuadam2020gmail.com"
-          class="group px-8 py-4 bg-black backdrop-blur-sm text-white rounded-xl border border-gray-600/50 hover:bg-gray-900 hover:scale-105 transition-all duration-300 w-fit self-center xl:self-start font-semibold flex items-center gap-2"
+          class="group px-8 py-4 bg-black backdrop-blur-sm text-white rounded-xl border border-white/20 hover:bg-white/5 hover:border-white/40 hover:scale-105 transition-all duration-300 w-fit self-center xl:self-start font-semibold flex items-center gap-2"
         >
           <i class="fa-solid fa-envelope"></i>
           Let's Talk
@@ -109,7 +110,7 @@ import { Image } from "astro:assets";
         <!-- Blog Button -->
         <a
           href="/blogs"
-          class="group px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-900 text-white rounded-xl border border-gray-600/50 hover:bg-gray-800 hover:scale-105 transition-all duration-300 w-fit self-center xl:self-start font-semibold flex items-center gap-2"
+          class="group px-8 py-4 bg-gray-800/80 text-white rounded-xl border border-white/10 hover:bg-gray-700/80 hover:border-white/30 hover:shadow-lg hover:scale-105 transition-all duration-300 w-fit self-center xl:self-start font-semibold flex items-center gap-2"
         >
           <i class="fa-solid fa-pen-nib"></i>
           Read Blog
@@ -119,15 +120,15 @@ import { Image } from "astro:assets";
         </a>
       </div>
 
-      <!-- Quick Stats -->
-      <div class="grid grid-cols-3 gap-6 mt-8 max-w-md mx-auto xl:mx-0">
-        <div class="text-center">
-          <div class="text-2xl font-bold text-gray-200">3+</div>
-          <div class="text-sm text-gray-500">Years Experience</div>
+      <!-- Quick Stats - Bento Grid -->
+      <div class="grid grid-cols-2 gap-4 mt-8 max-w-md mx-auto xl:mx-0">
+        <div class="text-center p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 group">
+          <div class="text-3xl font-bold text-white group-hover:text-white/90 transition-colors">3+</div>
+          <div class="text-sm text-gray-400 mt-2">Years Experience</div>
         </div>
-        <div class="text-center">
-          <div class="text-2xl font-bold text-gray-200">10+</div>
-          <div class="text-sm text-gray-500">Projects Completed</div>
+        <div class="text-center p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 group">
+          <div class="text-3xl font-bold text-white group-hover:text-white/90 transition-colors">10+</div>
+          <div class="text-sm text-gray-400 mt-2">Projects Completed</div>
         </div>
       </div>
     </div>

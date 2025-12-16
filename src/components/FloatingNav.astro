@@ -1,0 +1,49 @@
+---
+---
+
+<nav id="floating-nav" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 opacity-0 pointer-events-none transition-all duration-500">
+  <div class="bg-black/80 backdrop-blur-md border border-white/20 rounded-full px-6 py-3 shadow-lg shadow-black/40">
+    <ul class="flex items-center gap-6">
+      <li>
+        <a href="#home" class="text-white/70 hover:text-white transition-colors duration-300 text-sm font-medium">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="#projects" class="text-white/70 hover:text-white transition-colors duration-300 text-sm font-medium">
+          Projects
+        </a>
+      </li>
+      <li>
+        <a href="/blogs" class="text-white/70 hover:text-white transition-colors duration-300 text-sm font-medium">
+          Blog
+        </a>
+      </li>
+      <li>
+        <a href="/Adam-Olanrewaju-Resume.pdf" target="_blank" class="text-white/70 hover:text-white transition-colors duration-300 text-sm font-medium">
+          Resume
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  // Show floating nav on scroll
+  let lastScroll = 0;
+  const nav = document.getElementById('floating-nav');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > 300) {
+      nav?.classList.remove('opacity-0', 'pointer-events-none');
+      nav?.classList.add('opacity-100', 'pointer-events-auto');
+    } else {
+      nav?.classList.add('opacity-0', 'pointer-events-none');
+      nav?.classList.remove('opacity-100', 'pointer-events-auto');
+    }
+
+    lastScroll = currentScroll;
+  });
+</script>

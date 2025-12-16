@@ -1,6 +1,4 @@
 ---
-import Card from "../components/ProjectCard.astro";
-
 interface Project {
   frontmatter: {
     title: string;
@@ -28,81 +26,232 @@ const projects: Project[] = Object.values(
     </p>
   </div>
   <section>
-    <div
-      class="grid md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 items-stretch"
-    >
+    <!-- Apple-style Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-6 auto-rows-[280px] gap-4 md:gap-6">
       {
-        projects.map((project) => (
-          <Card id={project.frontmatter.title} class="group">
-            <div class="relative overflow-hidden rounded-xl mb-4 ">
-              <img
-                class="w-full show-img h-48 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110 z-30 cursor-pointer"
-                src={`${project.frontmatter.image}`}
-                alt={`${project.frontmatter.title}`}
-                loading="lazy"
-              />
-              {/* <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" /> */}
-            </div>
+        projects.map((project, index) => {
+          // Define bento grid patterns (Apple style)
+          const patterns = [
+            "md:col-span-4 md:row-span-2", // Large
+            "md:col-span-2 md:row-span-2", // Medium tall
+            "md:col-span-3 md:row-span-1", // Medium wide
+            "md:col-span-3 md:row-span-1", // Medium wide
+            "md:col-span-2 md:row-span-1", // Small
+            "md:col-span-2 md:row-span-1", // Small
+            "md:col-span-2 md:row-span-1", // Small
+            "md:col-span-3 md:row-span-2", // Medium tall
+            "md:col-span-3 md:row-span-1", // Medium wide
+          ];
+          const gridClass = patterns[index % patterns.length];
 
-            <h2 class="project-title gradient-text">
-              {project.frontmatter.title}
-            </h2>
-
-            <div class="mb-4 text-sm text-gray-400 leading-relaxed">
-              <span>{project.frontmatter.intro}</span>
-            </div>
-
-            <div class="flex justify-center gap-4 mb-4">
-              {project.frontmatter.url && (
-                <a
-                  title="Live Demo"
-                  class="flex items-center justify-center w-12 h-12 bg-blue-100 hover:bg-blue-200 rounded-full transition-colors duration-300 group"
-                  href={`${project.frontmatter.url}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fa-solid fa-globe text-blue-600 group-hover:scale-110 transition-transform" />
-                </a>
-              )}
-              {project.frontmatter.github && (
-                <a
-                  title="Source Code"
-                  class="flex items-center justify-center w-12 h-12 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors duration-300 group"
-                  href={`${project.frontmatter.github}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fa-brands fa-github text-gray-700 group-hover:scale-110 transition-transform" />
-                </a>
-              )}
-              {project.frontmatter.github_api && (
-                <a
-                  title="Backend API"
-                  class="flex items-center justify-center w-12 h-12 bg-green-100 hover:bg-green-200 rounded-full transition-colors duration-300 group"
-                  href={`${project.frontmatter.github_api}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fa-solid fa-server text-green-600 group-hover:scale-110 transition-transform" />
-                </a>
-              )}
-            </div>
-
-            <p class="text-gray-300 text-sm text-justify leading-relaxed ">
-              {project.frontmatter.summary}
-            </p>
-
-            {project.frontmatter.category && (
-              <div class="mt-4 pt-4 border-t border-gray-200">
-                <span class="inline-block px-3 py-1 text-xs font-medium bg-purple-100 text-purple-600 rounded-full">
-                  {project.frontmatter.category}
-                </span>
+          return (
+            <div
+              id={project.frontmatter.title}
+              data-category={project.frontmatter.category || "Uncategorized"}
+              data-project-index={index}
+              class={`group relative overflow-hidden rounded-3xl bg-black/40 border border-white/10 hover:border-white/30 transition-all duration-500 hover:scale-[1.02] cursor-pointer ${gridClass} fade-in-up stagger-${Math.min(index + 1, 6)} project-card`}
+            >
+              {/* Background Image */}
+              <div class="absolute inset-0">
+                <img
+                  src={project.frontmatter.image}
+                  alt={project.frontmatter.title}
+                  class="w-full h-full object-cover opacity-30 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
               </div>
-            )}
-          </Card>
-        ))
+
+              {/* Content */}
+              <div class="relative h-full flex flex-col justify-end p-6 md:p-8">
+                <h3 class="text-xl md:text-2xl font-bold text-white mb-2 line-clamp-1">
+                  {project.frontmatter.title}
+                </h3>
+
+                <p class="text-white/70 text-sm md:text-base leading-relaxed mb-4 line-clamp-2">
+                  {project.frontmatter.intro}
+                </p>
+
+                {/* Links */}
+                <div class="flex gap-3">
+                  {project.frontmatter.url && (
+                    <a
+                      href={project.frontmatter.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full text-white text-sm transition-all duration-300"
+                      title="Live Demo"
+                    >
+                      <i class="fa-solid fa-globe text-sm"></i>
+                      <span class="hidden sm:inline">View</span>
+                    </a>
+                  )}
+                  {project.frontmatter.github && (
+                    <a
+                      href={project.frontmatter.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full text-white text-sm transition-all duration-300"
+                      title="Source Code"
+                    >
+                      <i class="fa-brands fa-github text-sm"></i>
+                      <span class="hidden sm:inline">Code</span>
+                    </a>
+                  )}
+                  {project.frontmatter.github_api && (
+                    <a
+                      href={project.frontmatter.github_api}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full text-white text-sm transition-all duration-300"
+                      title="Backend API"
+                    >
+                      <i class="fa-solid fa-server text-sm"></i>
+                      <span class="hidden sm:inline">API</span>
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          );
+        })
       }
     </div>
   </section>
+
+  <!-- Project Detail Modal -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-black border border-white/20 rounded-3xl shadow-2xl">
+      <!-- Close Button -->
+      <button
+        id="close-modal"
+        class="sticky top-4 right-4 float-right z-10 w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300"
+        aria-label="Close"
+      >
+        <i class="fa-solid fa-times text-white"></i>
+      </button>
+
+      <!-- Modal Content -->
+      <div id="modal-content" class="p-8 md:p-12">
+        <!-- Content will be injected here -->
+      </div>
+    </div>
+  </div>
+
   <script src="../scripts/script.js"></script>
+
+  <script define:vars={{ projects }}>
+    // Project modal functionality
+    const modal = document.getElementById('project-modal');
+    const modalContent = document.getElementById('modal-content');
+    const closeBtn = document.getElementById('close-modal');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    // Open modal
+    projectCards.forEach(card => {
+      card.addEventListener('click', (e) => {
+        // Don't open modal if clicking on a link
+        if (e.target.closest('a')) return;
+
+        const index = parseInt(card.getAttribute('data-project-index'));
+        const project = projects[index];
+
+        // Inject content
+        modalContent.innerHTML = `
+          <div class="space-y-6">
+            <img
+              src="${project.frontmatter.image}"
+              alt="${project.frontmatter.title}"
+              class="w-full h-64 md:h-96 object-cover rounded-2xl"
+            />
+
+            <div>
+              <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">
+                ${project.frontmatter.title}
+              </h2>
+              ${project.frontmatter.category ? `
+                <span class="inline-block px-3 py-1 text-xs font-medium bg-white/10 text-white/70 rounded-full">
+                  ${project.frontmatter.category}
+                </span>
+              ` : ''}
+            </div>
+
+            <p class="text-lg text-white/90 leading-relaxed">
+              ${project.frontmatter.intro}
+            </p>
+
+            <div class="prose prose-invert max-w-none">
+              <p class="text-white/80 leading-relaxed">
+                ${project.frontmatter.summary}
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-4 pt-4">
+              ${project.frontmatter.url ? `
+                <a
+                  href="${project.frontmatter.url}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full font-semibold hover:scale-105 transition-all duration-300"
+                >
+                  <i class="fa-solid fa-globe"></i>
+                  View Live Demo
+                </a>
+              ` : ''}
+              ${project.frontmatter.github ? `
+                <a
+                  href="${project.frontmatter.github}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center gap-2 px-6 py-3 bg-white/10 text-white rounded-full font-semibold hover:bg-white/20 transition-all duration-300"
+                >
+                  <i class="fa-brands fa-github"></i>
+                  View Source Code
+                </a>
+              ` : ''}
+              ${project.frontmatter.github_api ? `
+                <a
+                  href="${project.frontmatter.github_api}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center gap-2 px-6 py-3 bg-white/10 text-white rounded-full font-semibold hover:bg-white/20 transition-all duration-300"
+                >
+                  <i class="fa-solid fa-server"></i>
+                  View Backend API
+                </a>
+              ` : ''}
+            </div>
+          </div>
+        `;
+
+        // Show modal
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    // Close modal
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+
+    // Close on backdrop click
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+  </script>
 </div>

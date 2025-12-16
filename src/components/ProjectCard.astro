@@ -2,11 +2,12 @@
 interface Props {
   id: string;
   class?: string;
+  "data-category"?: string;
 }
-const { id, class: className = "" } = Astro.props as Props;
+const { id, class: className = "", "data-category": dataCategory } = Astro.props as Props;
 ---
 
-<div class="h-full" id={id}>
+<div class="h-full" id={id} data-category={dataCategory}>
   <div
     class={`modern-card h-full w-full shadow-sm shadow-white rounded-2xl p-6 m-auto mb-2 ${className}`}
   >

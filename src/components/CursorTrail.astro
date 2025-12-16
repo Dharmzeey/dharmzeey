@@ -1,0 +1,46 @@
+---
+---
+
+<div id="cursor-trail" class="hidden lg:block"></div>
+
+<style>
+  #cursor-trail {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 70%, transparent 100%);
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease-out;
+    transform: translate(-50%, -50%);
+  }
+</style>
+
+<script>
+  const trail = document.getElementById('cursor-trail');
+  let mouseX = 0;
+  let mouseY = 0;
+  let trailX = 0;
+  let trailY = 0;
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function animate() {
+    // Smooth following effect
+    trailX += (mouseX - trailX) * 0.1;
+    trailY += (mouseY - trailY) * 0.1;
+
+    if (trail) {
+      trail.style.left = trailX + 'px';
+      trail.style.top = trailY + 'px';
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
