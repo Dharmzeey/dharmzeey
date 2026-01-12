@@ -3,7 +3,7 @@ title: Kwiseworld Inventory
 slug: kwiseworld-inventory
 category: Inventory Management
 intro: A comprehensive inventory management system designed to streamline stock tracking, sales management, and business operations for retail and wholesale businesses.
-url: https://inventory.kwiseworld.com
+url: https://youtu.be/O0a6Ow7uhu4
 github: https://github.com/Dharmzeey/kwisew-inventory
 image: /images/kwi/kwi.jpg
 summary: Kwiseworld Inventory is an in-organization modern inventory management system built to help businesses efficiently track products, manage stock levels, process sales, and generate insightful reports. The application provides an intuitive interface for managing inventory operations, from product entry to sales tracking, with real-time updates and comprehensive reporting features. Built with scalability and ease of use in mind, it's perfect for small to medium-sized businesses looking to digitize their inventory management processes.
