@@ -2,7 +2,6 @@
 import Layout from "../../layouts/Layout.astro";
 import { getAllPosts } from "../../lib/contentful.js";
 
-// Generate static paths
 export async function getStaticPaths() {
   const posts = await getAllPosts();
   return posts.map((post) => ({
@@ -14,9 +13,17 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const content = post.content;
 
-// Format SEO fields safely
+const allPosts = await getAllPosts();
+const otherPosts = allPosts
+  .filter((p) => p.slug !== post.slug)
+  .slice(0, 3);
+
+function stripHtml(html: string) {
+  return html.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+}
+
 const title = `${post.title} | Dharmzeey Blog`;
-const description = `Read "${post.title}" by ${post.author}. ${post.content?.toString().slice(0, 140)}...`;
+const description = `Read "${post.title}" by ${post.author}. ${stripHtml(post.content).slice(0, 140)}...`;
 const ogImage = post.image || "https://dharmzeey.com/idea.jpg";
 const canonicalURL = `https://dharmzeey.com/blogs/${post.slug}`;
 ---
@@ -40,42 +47,109 @@ const canonicalURL = `https://dharmzeey.com/blogs/${post.slug}`;
     publisher: {
       "@type": "Organization",
       name: "Dharmzeey",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://dharmzeey.com/idea.jpg",
-      },
+      logo: { "@type": "ImageObject", url: "https://dharmzeey.com/idea.jpg" },
     },
     url: canonicalURL,
     datePublished: post.date,
     description: description,
   }}
 >
-  <body class="text-white mb-20 relative overflow-hidden">
-    <main class="min-h-screen max-w-3xl mx-auto px-6 py-16">
-      <article>
-        <h1 class="text-4xl font-bold mb-4">{post.title}</h1>
-        <p class="text-gray-400 text-sm mb-8">
-          <!-- By {post.author} • {new Date(post.date).toLocaleDateString()} -->
-        </p>
+  <body class="text-white relative overflow-hidden">
+    <!-- Top nav bar -->
+    <div class="max-w-3xl mx-auto px-6 pt-10 flex justify-between items-center text-sm text-gray-400">
+      <a href="/blogs" class="flex items-center gap-1.5 hover:text-blue-400 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        All Posts
+      </a>
+      <a href="/" class="hover:text-blue-400 transition-colors">dharmzeey.com</a>
+    </div>
 
-        {
-          post.image && (
-            <img
-              src={post.image}
-              alt={post.title?.toString()}
-              class="rounded-xl w-full mb-10 shadow-lg"
-            />
-          )
-        }
+    <main class="max-w-3xl mx-auto px-6 py-10">
+      <article>
+        <!-- Post meta -->
+        <div class="mb-6 flex flex-wrap items-center gap-3 text-sm text-gray-500">
+          <span>{post.author}</span>
+          {post.date && (
+            <>
+              <span>·</span>
+              <span>{new Date(String(post.date)).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>
+            </>
+          )}
+        </div>
+
+        <h1 class="text-3xl md:text-4xl font-bold mb-8 leading-tight">{post.title}</h1>
+
+        {post.image && (
+          <img
+            src={post.image}
+            alt={post.title?.toString()}
+            class="rounded-2xl w-full mb-10 shadow-lg object-cover max-h-[420px]"
+          />
+        )}
 
         <div class="blog-content" set:html={content} />
-
-        <div class="mt-10">
-          <a href="/blogs" class="text-blue-400 hover:text-blue-300 text-sm"
-            >← Back to Blogs</a
-          >
-        </div>
       </article>
+
+      <!-- Divider -->
+      <hr class="border-white/10 my-14" />
+
+      <!-- Portfolio CTA -->
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-8 text-center mb-14">
+        <p class="text-gray-400 text-sm mb-2">Want to see what I build?</p>
+        <h2 class="text-2xl font-bold mb-4">Check out my portfolio</h2>
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-medium px-6 py-2.5 rounded-xl transition-colors"
+        >
+          View Portfolio
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- More posts -->
+      {otherPosts.length > 0 && (
+        <section>
+          <h2 class="text-xl font-bold mb-6 text-gray-100">More from the blog</h2>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {otherPosts.map((p) => (
+              <a
+                href={`/blogs/${p.slug}`}
+                class="group block bg-black/40 border border-white/10 rounded-2xl overflow-hidden hover:border-white/30 hover:scale-[1.02] transition-all duration-300 shadow-md"
+              >
+                {p.image && (
+                  <img
+                    src={p.image}
+                    alt={p.title?.toString()}
+                    class="w-full h-36 object-cover group-hover:opacity-90 transition-opacity"
+                  />
+                )}
+                <div class="p-4">
+                  <h3 class="text-sm font-semibold text-gray-100 group-hover:text-blue-400 transition-colors line-clamp-2 mb-1">
+                    {p.title}
+                  </h3>
+                  <p class="text-xs text-gray-500 line-clamp-2">{stripHtml(p.content).slice(0, 80)}...</p>
+                  <span class="text-blue-400 text-xs mt-2 inline-block">Read →</span>
+                </div>
+              </a>
+            ))}
+          </div>
+          <div class="mt-8 text-center">
+            <a
+              href="/blogs"
+              class="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-gray-300 hover:text-white px-5 py-2 rounded-xl text-sm transition-colors"
+            >
+              Browse all posts
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </section>
+      )}
     </main>
   </body>
 </Layout>
