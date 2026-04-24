@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { getAllPosts, getSinglePost } from "../../lib/contentful.js";
+import { getAllPosts } from "../../lib/contentful.js";
 
 // Generate static paths
 export async function getStaticPaths() {
@@ -68,10 +68,7 @@ const canonicalURL = `https://dharmzeey.com/blogs/${post.slug}`;
           )
         }
 
-        <div
-          class="prose prose-invert prose-lg max-w-none"
-          set:html={content}
-        />
+        <div class="blog-content" set:html={content} />
 
         <div class="mt-10">
           <a href="/blogs" class="text-blue-400 hover:text-blue-300 text-sm"
@@ -82,3 +79,19 @@ const canonicalURL = `https://dharmzeey.com/blogs/${post.slug}`;
     </main>
   </body>
 </Layout>
+
+<script>
+  document.querySelectorAll('.copy-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const code = btn.nextElementSibling?.querySelector('code')?.innerText ?? '';
+      navigator.clipboard.writeText(code).then(() => {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    });
+  });
+</script>
