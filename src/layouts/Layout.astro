@@ -25,14 +25,20 @@ const {
 
 const jsonLd = structuredData || {
   "@context": "https://schema.org",
-  "@type": type === "article" ? "BlogPosting" : "Person",
+  "@type": "Person",
   name: "Adam Adedamola Olanrewaju",
-  alternateName: ["Dharmzeey", "Adam Olanrewaju"],
+  alternateName: ["Dharmzeey", "Adam Olanrewaju", "Olanrewaju Adam"],
   jobTitle: "Full Stack Developer",
   description:
-    "Expert Full Stack Developer specializing in Django, Next.js, and modern web technologies",
+    "Full Stack Developer specializing in Django, Next.js, Python, and modern web technologies. Building scalable web applications and APIs.",
   url: "https://dharmzeey.com",
   image: "https://dharmzeey.com/idea.jpg",
+  nationality: { "@type": "Country", name: "Nigeria" },
+  knowsAbout: [
+    "Django", "Next.js", "Python", "React", "JavaScript", "TypeScript",
+    "Flutter", "REST API", "Web Development", "Full Stack Development",
+    "Software Engineering", "Tailwind CSS", "PostgreSQL"
+  ],
   sameAs: [
     "https://github.com/dharmzeey",
     "https://www.linkedin.com/in/dharmzeey/",
@@ -47,6 +53,9 @@ const jsonLd = structuredData || {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Google Tag Manager -->
+    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TR8V7QRD');</script>
+    <!-- End Google Tag Manager -->
 
     <!-- ✅ Primary Meta -->
     <title>{title}</title>
@@ -83,6 +92,9 @@ const jsonLd = structuredData || {
     <meta name="mobile-web-app-title" content="Dharmzeey" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-status-bar-style" content="default" />
+    <meta name="twitter:site" content="@dharmzeey" />
+    <meta name="geo.region" content="NG" />
+    <meta name="geo.placename" content="Nigeria" />
 
     <!-- ✅ Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

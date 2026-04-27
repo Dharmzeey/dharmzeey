@@ -22,36 +22,45 @@ function stripHtml(html: string) {
   return html.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
 }
 
-const title = `${post.title} | Dharmzeey Blog`;
-const description = `Read "${post.title}" by ${post.author}. ${stripHtml(post.content).slice(0, 140)}...`;
+const title = `${post.title} | Adam Olanrewaju (Dharmzeey) Blog`;
+const description = `${stripHtml(post.content).slice(0, 155)}...`;
 const ogImage = post.image || "https://dharmzeey.com/idea.jpg";
 const canonicalURL = `https://dharmzeey.com/blogs/${post.slug}`;
+const wordCount = stripHtml(post.content).split(/\s+/).length;
 ---
 
 <Layout
   title={title}
   description={description}
-  keywords="Dharmzeey blog, web development articles, tech insights, programming tutorials, design tips, coding best practices, software development blog, tech trends, developer resources"
+  keywords={`${post.title}, Adam Olanrewaju, Dharmzeey, web development, Django, Next.js, Python, software development, programming tutorial, tech blog, full stack developer`}
   ogImage={ogImage}
   canonicalURL={canonicalURL}
+  type="article"
   structuredData={{
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    mainEntityOfPage: { "@type": "WebPage", "@id": canonicalURL },
     headline: post.title,
     image: ogImage,
     author: {
       "@type": "Person",
-      name: post.author || "Dharmzeey",
+      name: "Adam Adedamola Olanrewaju",
+      alternateName: ["Dharmzeey", "Adam Olanrewaju"],
       url: "https://dharmzeey.com",
     },
     publisher: {
-      "@type": "Organization",
-      name: "Dharmzeey",
-      logo: { "@type": "ImageObject", url: "https://dharmzeey.com/idea.jpg" },
+      "@type": "Person",
+      name: "Adam Adedamola Olanrewaju",
+      alternateName: "Dharmzeey",
+      url: "https://dharmzeey.com",
+      image: { "@type": "ImageObject", url: "https://dharmzeey.com/idea.jpg" },
     },
     url: canonicalURL,
     datePublished: post.date,
+    dateModified: post.date,
     description: description,
+    wordCount: wordCount,
+    inLanguage: "en-US",
   }}
 >
   <body class="text-white relative overflow-hidden">

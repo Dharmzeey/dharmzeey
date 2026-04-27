@@ -15,7 +15,18 @@ export default defineConfig({
         {
             changefreq: 'weekly',
             lastmod: new Date(),
-            priority: 0.9,
+            serialize(item) {
+                if (item.url === 'https://dharmzeey.com/') {
+                    return { ...item, priority: 1.0 };
+                }
+                if (item.url === 'https://dharmzeey.com/blogs/') {
+                    return { ...item, priority: 0.9 };
+                }
+                if (item.url.startsWith('https://dharmzeey.com/blogs/')) {
+                    return { ...item, priority: 0.8 };
+                }
+                return { ...item, priority: 0.7 };
+            },
         }
     )],
     vite: {

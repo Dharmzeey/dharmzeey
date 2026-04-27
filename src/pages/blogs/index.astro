@@ -9,12 +9,39 @@ function stripHtml(html: string) {
 }
 
 const [featured, ...rest] = posts;
+
+const blogStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "Adam Olanrewaju (Dharmzeey) Blog",
+  url: "https://dharmzeey.com/blogs",
+  description: "Articles on web development, Django, Next.js, Python, and software engineering by Adam Adedamola Olanrewaju (Dharmzeey).",
+  author: {
+    "@type": "Person",
+    name: "Adam Adedamola Olanrewaju",
+    alternateName: ["Dharmzeey", "Adam Olanrewaju"],
+    url: "https://dharmzeey.com",
+  },
+  blogPost: posts.slice(0, 10).map((p) => ({
+    "@type": "BlogPosting",
+    headline: p.title,
+    url: `https://dharmzeey.com/blogs/${p.slug}`,
+    datePublished: p.date,
+    author: {
+      "@type": "Person",
+      name: "Adam Adedamola Olanrewaju",
+      alternateName: "Dharmzeey",
+    },
+  })),
+};
 ---
 
 <Layout
-  title="Dharmzeey Blog - Insights on Web Development, Tech, and How-To Guides"
-  description="Discover articles, findings, and insights from Dharmzeey on web development, how-to guides, and creative tech."
-  keywords="Dharmzeey blog, web development articles, tech insights, programming tutorials, how-to guides, coding best practices, software development blog, tech trends, developer resources"
+  title="Adam Olanrewaju (Dharmzeey) Blog - Web Development, Django, Next.js Articles"
+  description="Read articles and insights from Adam Olanrewaju (Dharmzeey), a Full Stack Developer from Nigeria. Topics include Django, Next.js, Python, React, web development tutorials, and software engineering."
+  keywords="Adam Olanrewaju blog, Dharmzeey blog, web development articles, Django tutorials, Next.js tutorials, Python programming, React tutorials, software development blog, tech insights, programming how-to guides, full stack developer blog, Nigeria tech blog, coding best practices"
+  canonicalURL="https://dharmzeey.com/blogs"
+  structuredData={blogStructuredData}
 >
   <body class="text-white relative overflow-hidden">
     <main class="min-h-screen max-w-5xl mx-auto px-6 py-14">

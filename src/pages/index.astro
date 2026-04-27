@@ -8,33 +8,47 @@ import Footer from "../components/Footer.astro";
 import FloatingNav from "../components/FloatingNav.astro";
 import CursorTrail from "../components/CursorTrail.astro";
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Adam Olanrewaju (Dharmzeey) Portfolio",
-  "url": "https://dharmzeey.com",
-  "author": {
-    "@type": "Person",
-    "name": "Adam Adedamola Olanrewaju",
-    "alternateName": "Dharmzeey",
-    "jobTitle": "Full Stack Developer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Freelance"
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Adam Olanrewaju (Dharmzeey) Portfolio",
+    "url": "https://dharmzeey.com",
+    "description": "Portfolio and blog of Adam Adedamola Olanrewaju (Dharmzeey), Full Stack Developer specializing in Django, Next.js, and modern web technologies.",
+    "author": {
+      "@type": "Person",
+      "name": "Adam Adedamola Olanrewaju",
+      "alternateName": "Dharmzeey"
     }
   },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://dharmzeey.com/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Adam Adedamola Olanrewaju",
+    "alternateName": ["Dharmzeey", "Adam Olanrewaju", "Olanrewaju Adam"],
+    "jobTitle": "Full Stack Developer",
+    "description": "Full Stack Developer from Nigeria specializing in Django, Next.js, Python, React, and modern web technologies. Building scalable web applications.",
+    "url": "https://dharmzeey.com",
+    "image": "https://dharmzeey.com/idea.jpg",
+    "nationality": { "@type": "Country", "name": "Nigeria" },
+    "knowsAbout": [
+      "Django", "Next.js", "Python", "React", "JavaScript", "TypeScript",
+      "Flutter", "REST API", "Web Development", "Full Stack Development",
+      "Software Engineering", "Tailwind CSS", "PostgreSQL"
+    ],
+    "sameAs": [
+      "https://github.com/dharmzeey",
+      "https://www.linkedin.com/in/dharmzeey/",
+      "https://www.twitter.com/dharmzeey"
+    ]
   }
-};
+];
 ---
 
 <Layout
-  title="Adam Olanrewaju (Dharmzeey) - Full Stack Developer | Django, Next.js, Flutter Expert"
-  description="Full Stack Developer specializing in Django, Next.js, and modern web technologies."
-  keywords="Full Stack Developer, Django, Next.js, Python, Nigeria Developer"
+  title="Adam Olanrewaju (Dharmzeey) - Full Stack Developer | Django, Next.js, Python"
+  description="Adam Adedamola Olanrewaju (Dharmzeey) is a Full Stack Developer from Nigeria specializing in Django, Next.js, Python, and React. Building fast, scalable web applications and APIs."
+  keywords="Adam Olanrewaju, Olanrewaju Adam, Adam Adedamola Olanrewaju, Dharmzeey, dharmzeey, Full Stack Developer Nigeria, Django developer, Next.js developer, Python developer, React developer, JavaScript developer, TypeScript developer, Flutter developer, web developer Nigeria, software engineer Nigeria, software developer, API development, backend developer, frontend developer, freelance developer Nigeria, web development"
   structuredData={structuredData}
 >
   <CursorTrail />
